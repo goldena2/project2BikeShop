@@ -1,14 +1,15 @@
   <nav-bar></nav-bar>
   <div class="bg-img">
-      <form action="/action_page.php" class="container">
+      <form class="container">
         <h1>Login</h1>
     
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <label for="username"><b>Username</b></label>
+        <input #username type="text" placeholder="Enter Username" name="username" required>
     
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input required #password type="password" placeholder="Enter Password" name="psw" required>
     
-        <button (click)="login()" class="btn">Login</button>
+        <button type="button" (click)="login(username.value, password.value); $event.preventDefault()" class="btn">Login</button>
+        <a routerLink="makeAcount">Make an acount</a>
       </form>
     </div>

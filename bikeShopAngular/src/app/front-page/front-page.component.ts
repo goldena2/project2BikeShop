@@ -5,9 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './front-page.component.html',
   styleUrls: ['./front-page.component.css']
 })
+
+
 export class FrontPageComponent {
-  login(){
-    console.log('wat');
+  
+  login(username: string, password: string){
+    console.log(username);
   }
 
 }
