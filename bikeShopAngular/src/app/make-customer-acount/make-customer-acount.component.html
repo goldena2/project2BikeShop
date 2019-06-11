@@ -1,3 +1,27 @@
-<p>
-  make-customer-acount works!
-</p>
+<nav-bar></nav-bar>
+<div class="bg-img">
+    <form class="container">
+      <h1>Make an acount</h1>
+      <label for="username"><b>Username</b></label>
+      <input class="form-cotrol" #username type="text" placeholder="Enter Username" name="username" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input required #password type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="number"><b>Phone number</b></label>
+      <input required #number type="tel" placeholder="(360) 345-5937" minlength="10" maxlength="10" name="number">
+    
+      <label for="fname"><b>First name</b></label>
+      <input required #fname class="name" type="text" placeholder="joe" name="fname">
+        
+      <label for="lname"><b>Last name</b></label>
+      <input required #lname class="name" type="text" placeholder="smith" name="lname">
+      
+      <label for="email"><b>Email</b></label>
+      <input required #email type="text" placeholder="joesmith@example.com" name="email">
+
+      <button type="button" 
+      (click)="makeAcount(username.value, password.value, number.value, fname.value, lname.value, email.value); $event.preventDefault()" 
+      class="btn">Create</button>
+    </form>
+  </div>
