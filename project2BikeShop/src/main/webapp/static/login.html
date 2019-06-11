@@ -1,0 +1,19 @@
+<script>
+let xhttp= new XMLHttpRequest();
+		    // Step 2: Set a callback function for ReadyStateChange event
+		   xhttp.onreadystatechange=done;
+		    // Step 3: Open the request
+			
+		   xhttp.open("GET", "/bikeShop/users");
+		   xhttp.send();
+		   function done(){
+		       if(xhttp.readyState===4 && xhttp.status===200){
+		           
+					let response = xhttp.responseText;
+					response     = JSON.parse(response);
+					console.log(response);
+					
+				}
+			}
+			</script>
+hello
