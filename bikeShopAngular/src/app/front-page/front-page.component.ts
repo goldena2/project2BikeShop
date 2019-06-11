@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 
 
 export class FrontPageComponent {
-  
   login(username: string, password: string){
     console.log(username);
   }

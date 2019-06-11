@@ -9,6 +9,8 @@ import { MakeCustomerAcountComponent } from './make-customer-acount/make-custome
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MakeAccountService } from './make-account.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     MakeCustomerAcountComponent,
     PageNotFoundComponent,
+    FooterComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
