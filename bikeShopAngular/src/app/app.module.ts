@@ -7,6 +7,9 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MakeCustomerAcountComponent } from './make-customer-acount/make-customer-acount.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MakeAccountService } from './make-account.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MakeAccountService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
