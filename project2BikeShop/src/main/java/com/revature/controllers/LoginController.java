@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.beans.User;
 import com.revature.data.UserDAO;
 
 @CrossOrigin
@@ -29,6 +30,13 @@ public class LoginController {
 	@PostMapping
 	public String login(String username, String password, HttpSession session) {//String username, String password, HttpSession session) {
 		System.out.println("Getting log in post request");
+		User user = userDAO.getUser(username, password);
+		if(user!=null) {
+			System.out.println("sending user value");
+			session.setAttribute("user", user);
+			return "redirect:home";
+		}
+		
 		return "redirect:home";
 	}
 }
