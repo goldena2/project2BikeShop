@@ -23,7 +23,7 @@ GRANT create table TO project2;
 GRANT create view TO project2;
 
 conn project2/password
-
+create sequence users_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -142,8 +142,7 @@ ALTER TABLE shift ADD CONSTRAINT FK_dayid
 /*******************************************************************************
    Manually inserted table entries
 ********************************************************************************/
-insert into title(id, title)
-values(0, 'test');
+
 
 insert into USERS(id, username, password, fname, lname, title, phone_number, email)
 values(1, 'user', 'pass', 'firstname', 'lastname', 0, '111-1111', 'email@email.com');
