@@ -7,14 +7,16 @@ import { MakeAccountService } from '../make-account.service';
   styleUrls: ['./make-customer-acount.component.css']
 })
 export class MakeCustomerAcountComponent{
-  accountBuilder : MakeAccountService;
-  constructor(accountBuilder : MakeAccountService) { 
-    this.accountBuilder = accountBuilder;
+  constructor(private accountBuilder : MakeAccountService) { 
   }
 
 
   makeAcount(username: string, password: string, number: string, fname: string, lname: string, email:string){
-    this.accountBuilder.create(username, password, number, fname, lname, email, 'customer');
+    this.accountBuilder.create(username, password, number, fname, lname, email, 'customer').subscribe(data => {
+        if(data['success']){
+          console.log('wat')
+        }
+      });
   }
 
 }
