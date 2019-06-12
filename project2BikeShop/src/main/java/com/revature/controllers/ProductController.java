@@ -14,8 +14,7 @@ public class ProductController {
 	private ProductDAO pd;
 	
 	@PostMapping
-	public String addProduct(@RequestBody Product p) {
-		Integer i = pd.addProduct(p);
-		return "Success";
+	public void addProduct(@RequestBody Product p) {
+		pd.addProduct(p);
 	}
 }

@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     FooterComponent,
     AboutComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

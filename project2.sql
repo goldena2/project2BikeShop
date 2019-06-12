@@ -3,26 +3,26 @@
    Drop database if it exists
 ********************************************************************************/
 
-DROP USER project2 CASCADE;
+DROP USER projectTwo CASCADE;
 
 /*******************************************************************************
    Create database
 ********************************************************************************/
 
 
-CREATE USER project2
+CREATE USER projectTwo
 IDENTIFIED BY password
 DEFAULT TABLESPACE users
 TEMPORARY TABLESPACE temp
 QUOTA 10M ON users;
 
-GRANT connect to project2;
-GRANT resource to project2;
-GRANT create session TO project2;
-GRANT create table TO project2;
-GRANT create view TO project2;
+GRANT connect to projectTwo;
+GRANT resource to projectTwo;
+GRANT create session TO projectTwo;
+GRANT create table TO projectTwo;
+GRANT create view TO projectTwo;
 
-conn project2/password
+conn projectTwo/password
 
 /*******************************************************************************
    Create Tables
@@ -34,7 +34,7 @@ create table users(
 	fname VARCHAR(20) not NULL,
 	lname VARCHAR(20) not NULL,
 	title number not null,
-	phone_numer VARCHAR(16),
+	phone_number VARCHAR(16),
 	email VARCHAR(32),
 	CONSTRAINT user_pk PRIMARY KEY (id)
 );
@@ -138,6 +138,23 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
+
+/*******************************************************************************
+Creating the Sequences
+********************************************************************************/
+create sequence product_seq;
+
+create or replace trigger prod_pk_trig
+before insert or update on product
+for each row
+begin
+    if INSERTING then
+        select product_seq.nextVal into :new.id from dual;
+    elsif UPDATING then
+        select :old.id into :new.id from dual;
+    end if;
+end;
+/
 
 /*******************************************************************************
    Manually inserted table entries
