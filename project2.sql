@@ -22,7 +22,8 @@ GRANT create session TO projectTwo;
 GRANT create table TO projectTwo;
 GRANT create view TO projectTwo;
 
-conn projectTwo/password
+conn project2/password
+create sequence users_seq;
 
 /*******************************************************************************
    Create Tables
@@ -144,23 +145,11 @@ Creating the Sequences
 ********************************************************************************/
 create sequence product_seq;
 
-create or replace trigger prod_pk_trig
-before insert or update on product
-for each row
-begin
-    if INSERTING then
-        select product_seq.nextVal into :new.id from dual;
-    elsif UPDATING then
-        select :old.id into :new.id from dual;
-    end if;
-end;
-/
 
 /*******************************************************************************
    Manually inserted table entries
 ********************************************************************************/
-insert into title(id, title)
-values(0, 'test');
+
 
 insert into USERS(id, username, password, fname, lname, title, phone_number, email)
 values(1, 'user', 'pass', 'firstname', 'lastname', 0, '111-1111', 'email@email.com');

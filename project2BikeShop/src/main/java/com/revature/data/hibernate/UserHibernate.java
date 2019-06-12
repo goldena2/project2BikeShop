@@ -1,14 +1,17 @@
 package com.revature.data.hibernate;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Component;
 
 import com.revature.beans.User;
 import com.revature.data.UserDAO;
 import com.revature.utils.HibernateUtil;
 
+@Component
 public class UserHibernate implements UserDAO {
-	private HibernateUtil hu = HibernateUtil.getInstance();
+	private static HibernateUtil hu = HibernateUtil.getInstance();
 	
 	@Override
 	public User getUser(String username, String password) {
@@ -22,5 +25,24 @@ public class UserHibernate implements UserDAO {
 		q.setParameter("password", password);
 		user = q.uniqueResult();
 		return user;
+	}
+
+	@Override
+	public boolean creatUser(User newUser) {
+		Session s = hu.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.save(newUser);
+			tx.commit();
+		} catch (Exception e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+			return false;
+		} finally {
+			s.close();
+		}
+		return true;
 	}
 }
