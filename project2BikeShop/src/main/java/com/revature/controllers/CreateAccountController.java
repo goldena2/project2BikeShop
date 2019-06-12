@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.beans.CreateAccountResponse;
 import com.revature.beans.User;
 import com.revature.data.UserDAO;
-import com.revature.data.hibernate.UserHibernate;
 
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value="/createAccount")	
 public class CreateAccountController {
-	private UserDAO ud = new UserHibernate();
+	@Autowired
+	private UserDAO ud;
 	
 	@GetMapping
 	public CreateAccountResponse temp(HttpSession session) {
@@ -28,6 +29,8 @@ public class CreateAccountController {
 	@RequestMapping(method=RequestMethod.POST)
 	public CreateAccountResponse goLogin(HttpSession session,
 		@RequestBody User newUser) {
+		System.out.println(newUser);
+		
 		CreateAccountResponse status = new CreateAccountResponse();
 		status.setSuccess(ud.creatUser(newUser));
 		return status;

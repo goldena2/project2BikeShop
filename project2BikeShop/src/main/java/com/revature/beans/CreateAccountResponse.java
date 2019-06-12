@@ -14,4 +14,9 @@ public class CreateAccountResponse {
 	public void setSuccess(boolean success) {
 		this.success = success;
 	}
+
+	@Override
+	public String toString() {
+		return "CreateAccountResponse [success=" + success + "]";
+	}
 }

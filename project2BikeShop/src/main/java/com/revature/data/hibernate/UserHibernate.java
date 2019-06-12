@@ -3,11 +3,13 @@ package com.revature.data.hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Component;
 
 import com.revature.beans.User;
 import com.revature.data.UserDAO;
 import com.revature.utils.HibernateUtil;
 
+@Component
 public class UserHibernate implements UserDAO {
 	private static HibernateUtil hu = HibernateUtil.getInstance();
 	
@@ -36,8 +38,8 @@ public class UserHibernate implements UserDAO {
 		} catch (Exception e) {
 			if (tx != null)
 				tx.rollback();
+			e.printStackTrace();
 			return false;
-			// log the exception
 		} finally {
 			s.close();
 		}
