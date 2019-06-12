@@ -8,9 +8,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MakeCustomerAcountComponent } from './make-customer-acount/make-customer-acount.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MakeAccountService } from './make-account.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -25,9 +28,10 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [MakeAccountService, HttpClientModule],
+  providers: [MakeAccountService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
