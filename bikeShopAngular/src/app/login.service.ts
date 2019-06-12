@@ -10,7 +10,7 @@ export class LoginService {
   constructor( private httpClient: HttpClient, private portNumber: PortConfigService ) {}
 
   login(username: string, password: string) {
-      return this.httpClient.post<boolean>('http://localhost:' + this.portNumber.getPort() + '/', {
+      return this.httpClient.post<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/login', {
         'username': username,
         'password': password,
       });

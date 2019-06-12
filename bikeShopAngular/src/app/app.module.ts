@@ -1,3 +1,4 @@
+import { LoginService } from './login.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -31,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [MakeAccountService, HttpClient],
+  providers: [MakeAccountService, HttpClient, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
