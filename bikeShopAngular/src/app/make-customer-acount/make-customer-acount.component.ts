@@ -15,8 +15,9 @@ export class MakeCustomerAcountComponent{
     this.accountBuilder.create(username, password, number, fname, lname, email, 1).subscribe(data => {
         if(data['success']){
           console.log('wat')
+        }else{
+          alert("Unable to make an account at this time please try again later");
         }
       });
   }
-
 }
