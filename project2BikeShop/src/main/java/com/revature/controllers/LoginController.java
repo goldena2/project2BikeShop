@@ -2,10 +2,7 @@ package com.revature.controllers;
 
 import javax.servlet.http.HttpSession;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Controller;
-=======
->>>>>>> 195defa54c3e7799cd539f57fbc2e39ad63aa6e6
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +13,6 @@ import com.revature.data.UserDAO;
 
 @CrossOrigin
 @RestController
-
 @RequestMapping(value="/login")
 public class LoginController {
 	//@Autowired
@@ -33,7 +29,7 @@ public class LoginController {
 	
 
 	@PostMapping
-	public String login(String username, String password, HttpSession session) {//String username, String password, HttpSession session) {
+	public String login(String username, String password, HttpSession session) {
 		System.out.println("Getting log in post request");
 		return "redirect:home";
 	}
