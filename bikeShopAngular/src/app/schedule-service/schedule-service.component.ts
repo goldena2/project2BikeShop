@@ -12,4 +12,8 @@ export class ScheduleServiceComponent implements OnInit {
   ngOnInit() {
   }
 
+  log(value){
+    console.log(value.split(':'));
+  }
+
 }
