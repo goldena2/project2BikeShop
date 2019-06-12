@@ -12,7 +12,7 @@ export class MakeCustomerAcountComponent{
 
 
   makeAcount(username: string, password: string, number: string, fname: string, lname: string, email:string){
-    this.accountBuilder.create(username, password, number, fname, lname, email, 'customer').subscribe(data => {
+    this.accountBuilder.create(username, password, number, fname, lname, email, 1).subscribe(data => {
         if(data['success']){
           console.log('wat')
         }

@@ -13,7 +13,15 @@ export class MakeAccountService {
    }
 
   create(username: string, password: string, number: string, 
-    fname: string, lname: string, email:string, type: string) {
-      return this.httpClient.post<Boolean>('http://localhost:8081/bikeShop/createAccount', {'username': username});
+    fname: string, lname: string, email:string, type: number) {
+      return this.httpClient.post<Boolean>('http://localhost:8081/bikeShop/createAccount', {
+        'username': username,
+        'password': password,
+        'phoneNumber': number,
+        'fname': fname,
+        'lname': lname,
+        'email': email,
+        'title': type,
+      });
   }
 }
