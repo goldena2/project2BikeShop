@@ -1,0 +1,268 @@
+2019-06-12 10:34:06 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:35:05 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:39:07 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:39:08 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 10:39:09 ERROR ProductHibernate:11 - class org.hibernate.MappingException: Unknown entity: com.revature.beans.Product
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 620: org.hibernate.metamodel.internal.MetamodelImpl
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 1636: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 104: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 10:39:09 WARN  ProductHibernate:13 - 16: com.revature.controllers.Driver
+2019-06-12 10:39:33 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:39:34 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 10:39:35 ERROR ProductHibernate:11 - class org.hibernate.MappingException: Unknown entity: com.revature.beans.Product
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 620: org.hibernate.metamodel.internal.MetamodelImpl
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 1636: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 104: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 10:39:35 WARN  ProductHibernate:13 - 16: com.revature.controllers.Driver
+2019-06-12 10:42:34 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:42:35 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 10:42:35 ERROR ProductHibernate:11 - class org.hibernate.MappingException: Unknown entity: com.revature.beans.Product
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 620: org.hibernate.metamodel.internal.MetamodelImpl
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 1636: org.hibernate.internal.SessionImpl
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 104: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 10:42:35 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 10:47:19 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:47:20 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 10:47:21 ERROR ProductHibernate:11 - class org.hibernate.MappingException: Unknown entity: com.revature.beans.Product
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 620: org.hibernate.metamodel.internal.MetamodelImpl
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 1636: org.hibernate.internal.SessionImpl
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 104: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 10:47:21 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 11:03:51 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 11:03:53 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:03:53 ERROR ProductHibernate:11 - class org.hibernate.MappingException: Unknown entity: com.revature.beans.Product
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 620: org.hibernate.metamodel.internal.MetamodelImpl
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 1636: org.hibernate.internal.SessionImpl
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 104: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 11:03:53 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 11:11:05 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 11:11:06 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:11:07 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:11:07 WARN  SqlExceptionHelper:129 - SQL Error: 2289, SQLState: 42000
+2019-06-12 11:11:07 ERROR SqlExceptionHelper:131 - ORA-02289: sequence does not exist
+
+2019-06-12 11:11:07 ERROR ProductHibernate:11 - class org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 63: org.hibernate.exception.internal.SQLExceptionTypeDelegate
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 42: org.hibernate.exception.internal.StandardSQLExceptionConverter
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 111: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 97: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 69: org.hibernate.engine.jdbc.internal.ResultSetReturnImpl
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 116: org.hibernate.id.SequenceGenerator
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 62: org.hibernate.id.SequenceHiLoGenerator
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 105: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 11:11:07 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 11:13:40 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 11:13:42 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:13:42 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:13:42 WARN  SqlExceptionHelper:129 - SQL Error: 2289, SQLState: 42000
+2019-06-12 11:13:42 ERROR SqlExceptionHelper:131 - ORA-02289: sequence does not exist
+
+2019-06-12 11:13:42 ERROR ProductHibernate:11 - class org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 63: org.hibernate.exception.internal.SQLExceptionTypeDelegate
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 42: org.hibernate.exception.internal.StandardSQLExceptionConverter
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 111: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 97: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 69: org.hibernate.engine.jdbc.internal.ResultSetReturnImpl
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 116: org.hibernate.id.SequenceGenerator
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 62: org.hibernate.id.SequenceHiLoGenerator
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 105: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 11:13:42 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 11:24:27 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 11:24:28 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:24:28 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:24:28 WARN  SqlExceptionHelper:129 - SQL Error: 2289, SQLState: 42000
+2019-06-12 11:24:28 ERROR SqlExceptionHelper:131 - ORA-02289: sequence does not exist
+
+2019-06-12 11:24:29 ERROR ProductHibernate:11 - class org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 63: org.hibernate.exception.internal.SQLExceptionTypeDelegate
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 42: org.hibernate.exception.internal.StandardSQLExceptionConverter
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 111: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 97: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 69: org.hibernate.engine.jdbc.internal.ResultSetReturnImpl
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 116: org.hibernate.id.SequenceGenerator
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 62: org.hibernate.id.SequenceHiLoGenerator
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 105: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 11:24:29 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 11:27:43 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 11:27:45 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:27:45 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 11:27:45 WARN  SqlExceptionHelper:129 - SQL Error: 2289, SQLState: 42000
+2019-06-12 11:27:45 ERROR SqlExceptionHelper:131 - ORA-02289: sequence does not exist
+
+2019-06-12 11:27:45 ERROR ProductHibernate:11 - class org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 63: org.hibernate.exception.internal.SQLExceptionTypeDelegate
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 42: org.hibernate.exception.internal.StandardSQLExceptionConverter
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 111: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 97: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 69: org.hibernate.engine.jdbc.internal.ResultSetReturnImpl
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 116: org.hibernate.id.SequenceGenerator
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 62: org.hibernate.id.SequenceHiLoGenerator
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 105: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 11:27:45 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 12:25:58 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:26:00 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:26:00 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:30:13 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:30:14 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:30:14 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:31:23 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:31:25 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:31:25 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:33:20 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:33:21 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:33:21 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:36:13 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:36:15 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:36:15 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:40:58 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:41:00 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:41:00 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:42:17 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:42:19 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:42:19 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:42:19 WARN  SqlExceptionHelper:129 - SQL Error: 2289, SQLState: 42000
+2019-06-12 12:42:19 ERROR SqlExceptionHelper:131 - ORA-02289: sequence does not exist
+
+2019-06-12 12:42:20 ERROR ProductHibernate:11 - class org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 63: org.hibernate.exception.internal.SQLExceptionTypeDelegate
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 42: org.hibernate.exception.internal.StandardSQLExceptionConverter
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 111: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 97: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 69: org.hibernate.engine.jdbc.internal.ResultSetReturnImpl
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 116: org.hibernate.id.SequenceGenerator
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 62: org.hibernate.id.SequenceHiLoGenerator
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 105: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 12:42:20 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 12:42:24 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:42:26 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:42:26 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:42:26 WARN  SqlExceptionHelper:129 - SQL Error: 2289, SQLState: 42000
+2019-06-12 12:42:26 ERROR SqlExceptionHelper:131 - ORA-02289: sequence does not exist
+
+2019-06-12 12:42:26 ERROR ProductHibernate:11 - class org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 63: org.hibernate.exception.internal.SQLExceptionTypeDelegate
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 42: org.hibernate.exception.internal.StandardSQLExceptionConverter
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 111: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 97: org.hibernate.engine.jdbc.spi.SqlExceptionHelper
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 69: org.hibernate.engine.jdbc.internal.ResultSetReturnImpl
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 116: org.hibernate.id.SequenceGenerator
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 62: org.hibernate.id.SequenceHiLoGenerator
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 105: org.hibernate.event.internal.AbstractSaveEventListener
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 192: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 38: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 177: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 32: org.hibernate.event.internal.DefaultSaveEventListener
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 73: org.hibernate.event.internal.DefaultSaveOrUpdateEventListener
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 691: org.hibernate.internal.SessionImpl
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 683: org.hibernate.internal.SessionImpl
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 678: org.hibernate.internal.SessionImpl
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 20: com.revature.data.hibernate.ProductHibernate
+2019-06-12 12:42:26 WARN  ProductHibernate:13 - 17: com.revature.controllers.Driver
+2019-06-12 12:43:35 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:43:37 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:43:37 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:45:06 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:45:08 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:45:08 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:45:14 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:45:15 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:45:15 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:49:04 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 12:49:06 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 12:49:06 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 13:00:26 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 13:00:28 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 13:00:28 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 13:02:42 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 13:02:44 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-06-12 13:02:44 WARN  deprecation:87 - HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
