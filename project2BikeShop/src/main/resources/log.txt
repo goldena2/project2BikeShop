@@ -1,0 +1,2 @@
+2019-06-12 10:34:06 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-06-12 10:35:05 WARN  pooling:70 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)

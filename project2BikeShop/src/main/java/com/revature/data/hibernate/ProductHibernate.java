@@ -1,11 +1,12 @@
 package com.revature.data.hibernate;
 
-import javax.transaction.Transaction;
-
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
+import com.revature.utils.HibernateUtil;
+import com.revature.utils.LogUtil;
 
 public class ProductHibernate implements ProductDAO {
 	private HibernateUtil hu = HibernateUtil.getInstance();
