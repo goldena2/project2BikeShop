@@ -1,3 +1,7 @@
 node_modules
+<<<<<<< HEAD
 database.*
 hibernate.cfg.xml
+=======
+database
+>>>>>>> ff495fbee8d1444f700a4f96c61f86f663cc1403
