@@ -34,7 +34,7 @@ create table users(
 	fname VARCHAR(20) not NULL,
 	lname VARCHAR(20) not NULL,
 	title number not null,
-	phone_number VARCHAR(16),
+	phone_numer VARCHAR(16),
 	email VARCHAR(32),
 	CONSTRAINT user_pk PRIMARY KEY (id)
 );
@@ -139,6 +139,14 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
 
+/*******************************************************************************
+   Manually inserted table entries
+********************************************************************************/
+insert into title(id, title)
+values(0, 'test');
+
+insert into USERS(id, username, password, fname, lname, title, phone_number, email)
+values(1, 'user', 'pass', 'firstname', 'lastname', 0, '111-1111', 'email@email.com');
 
 commit;
 exit;
