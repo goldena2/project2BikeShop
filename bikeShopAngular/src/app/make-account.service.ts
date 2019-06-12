@@ -15,7 +15,7 @@ export class MakeAccountService {
 
   create(username: string, password: string, number: string, 
     fname: string, lname: string, email:string, type: number) {
-      return this.httpClient.post<Boolean>('http://localhost:'+this.portNumber.getPort()+'/bikeShop/createAccount', {
+      return this.httpClient.post<boolean>('http://localhost:'+this.portNumber.getPort()+'/bikeShop/createAccount', {
         'username': username,
         'password': password,
         'phoneNumber': number,

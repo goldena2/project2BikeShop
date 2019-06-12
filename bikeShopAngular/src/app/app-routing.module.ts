@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,8 +12,7 @@ const routes: Routes = [
   {path:'', component: FrontPageComponent},
   {path: 'makeAcount', component: MakeCustomerAcountComponent},
   {path: 'about', component: AboutComponent},
-  //inserting product add button - Patrick
-  {path: 'products', component: ProductComponent},
+  {path: 'home', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

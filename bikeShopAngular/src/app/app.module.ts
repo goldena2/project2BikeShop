@@ -1,3 +1,5 @@
+import { GetUserService } from './get-user.service';
+import { LoginService } from './login.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,8 +14,8 @@ import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductComponent } from './product/product.component';
-
+import { HomeComponent } from './home/home.component';
+import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 
 
 
@@ -26,14 +28,18 @@ import { ProductComponent } from './product/product.component';
     PageNotFoundComponent,
     FooterComponent,
     AboutComponent,
-    ProductComponent,
+    HomeComponent,
+    ScheduleServiceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [MakeAccountService, HttpClient],
+  providers: [MakeAccountService, HttpClient, GetUserService, LoginService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  currUser : object;
+
+ }
