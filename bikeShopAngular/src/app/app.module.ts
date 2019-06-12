@@ -1,3 +1,4 @@
+import { GetUserService } from './get-user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +13,8 @@ import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { HomeComponent } from './home/home.component';
+import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 
 
 
@@ -25,13 +27,18 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     FooterComponent,
     AboutComponent,
+    HomeComponent,
+    ScheduleServiceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [MakeAccountService, HttpClient],
+  providers: [MakeAccountService, HttpClient, GetUserService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  currUser : object;
+
+ }
