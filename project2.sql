@@ -34,7 +34,7 @@ create table users(
 	fname VARCHAR(20) not NULL,
 	lname VARCHAR(20) not NULL,
 	title number not null,
-	phone_numer VARCHAR(16),
+	phone_number VARCHAR(16),
 	email VARCHAR(32),
 	CONSTRAINT user_pk PRIMARY KEY (id)
 );
