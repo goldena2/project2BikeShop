@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
+import com.revature.data.hibernate.ProductHibernate;
 import com.revature.utils.HibernateUtil;
 import com.revature.utils.LogUtil;
 
@@ -61,6 +62,25 @@ public class ProductHibernate implements ProductDAO {
 		Set<Product> productSet = new HashSet<Product>();
 		productSet.addAll(productList);
 		return productSet;
+	}
+
+	@Override
+	public void deleteProduct(Product product) {
+		Session s = hu.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.delete(product);
+			tx.commit();
+		} catch(Exception e) {
+			if (tx != null) {
+				tx.rollback();
+			}
+			LogUtil.logException(e, ProductHibernate.class);
+		} finally {
+			s.close();
+		}
+			
 	}
 	
 	

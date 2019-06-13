@@ -2,7 +2,7 @@ package com.revature.services;
 
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
-import com.revature.data.ProductHibernate;
+import com.revature.data.hibernate.ProductHibernate;
 
 public class ProductServiceHibernate implements ProductService {
 	private static ProductDAO pd = new ProductHibernate();
@@ -14,8 +14,7 @@ public class ProductServiceHibernate implements ProductService {
 
 	@Override
 	public void deleteProduct(Product product) {
-		pd.deleteProduct(product);
-		
+		pd.deleteProduct(product);	
 	}
 
 }
