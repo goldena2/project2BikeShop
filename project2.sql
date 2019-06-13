@@ -23,7 +23,7 @@ GRANT create table TO project2;
 GRANT create view TO project2;
 
 conn project2/password
-
+create sequence users_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -139,6 +139,14 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
 
+/*******************************************************************************
+   Manually inserted table entries
+********************************************************************************/
+insert into TITLE(id, title)
+values(1, 'non-employee');
+
+insert into USERS(id, username, password, fname, lname, title, phone_number, email)
+values(1, 'user', 'pass', 'firstname', 'lastname', 0, '111-1111', 'email@email.com');
 
 commit;
 exit;

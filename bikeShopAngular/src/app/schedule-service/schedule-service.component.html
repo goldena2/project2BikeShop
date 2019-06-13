@@ -1,0 +1,25 @@
+<nav-bar [otherLinks]="[
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
+<form>
+  <div class="form-group">
+    <label for="description">What do you need service for</label>
+    <textarea #desc maxlength="1024" id="description" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="date">Date and time</label>
+    <input #day pattern="\d{2}-\d{2}-\d{2}" (change)="log(day)" id="date">
+    <input #time  type="time" id="appt" name="appt"min="9:00" max="18:00" required>  
+    <small id="dayHelp" class="form-text">day must be in 00-00-00 format</small>
+    
+  </div>
+  <div class="form-group">
+    <label for="bike">What bike are youi bringing in</label>
+    <input #bike maxlength="24" id="bike" class="form-control">
+  </div>  
+  <button id="submit" (click)="submitForm(desc.value, day.value, time.value, bike.value)" type="button" class="btn btn-primary">Submit</button>
+</form>
+<app-footer></app-footer>
