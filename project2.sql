@@ -24,6 +24,7 @@ GRANT create view TO project2;
 
 conn project2/password
 create sequence users_seq;
+create sequence services_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -81,6 +82,14 @@ create table availibility(
 	start_time number default 0,
 	end_time number default 0,
 	CONSTRAINT availibility_pk PRIMARY KEY (id)
+);
+
+create table services(
+	id number not null,
+	user_id number not null,
+	day varchar(12),
+	appointment_time number,
+	CONSTRAINT services_pk PRIMARY KEY (id)
 );
 
 create table day_of_week(
