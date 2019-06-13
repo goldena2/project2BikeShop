@@ -28,12 +28,8 @@ public class CreateAccountController {
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public CreateAccountResponse goLogin(HttpSession session,
-		@RequestBody User newUser) {
-		System.out.println(newUser);
-		
-		CreateAccountResponse status = new CreateAccountResponse();
-		status.setSuccess(ud.creatUser(newUser));
-		return status;
+		@RequestBody User newUser) {		
+		return ud.creatUser(newUser);
 		
 	}
 	
