@@ -5,15 +5,13 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+
+export class NavBarComponent{
   @Input() otherLinks: object[];
 
 
-  constructor() { 
-    console.log(this.otherLinks);
-  }
+  constructor() {
 
-  ngOnInit() {
   }
 
 }

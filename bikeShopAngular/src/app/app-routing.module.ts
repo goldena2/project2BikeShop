@@ -1,3 +1,6 @@
+import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
+import { AllProductsComponent } from './all-products/all-products.component';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,8 +10,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   {path:'', component: FrontPageComponent},
+  {path: 'scheduleService', component: ScheduleServiceComponent},
   {path: 'makeAcount', component: MakeCustomerAcountComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'allProducts', component: AllProductsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

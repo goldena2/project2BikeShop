@@ -12,7 +12,7 @@ export class MakeCustomerAcountComponent{
   }
 
 
-  makeAcount(username: string, password: string, number: string, fname: string, lname: string, email:string){
+  makeAcount(username: string, password: string, number: string, fname: string, lname: string, email:string) {
     this.accountBuilder.create(username, password, number, fname, lname, email, 1).subscribe(data => {
         if(data['success']){
           this.router.navigateByUrl('');

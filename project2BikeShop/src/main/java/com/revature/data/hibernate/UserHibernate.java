@@ -15,6 +15,7 @@ public class UserHibernate implements UserDAO {
 	
 	@Override
 	public User getUser(String username, String password) {
+		System.out.println(username);
 		Session s = hu.getSession();
 		User user;
 		// in queries, you must use the Java side name, not the actual table name, 
