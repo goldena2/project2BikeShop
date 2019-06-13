@@ -9,3 +9,14 @@ input, textarea{
 form{
     background-image: url('https://www.virtualblueridge.com/wp-content/uploads/gallery-scenic-cycling.jpg');
 }
+
+#dayHelp{
+    color: green;
+}
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }

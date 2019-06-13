@@ -23,10 +23,6 @@ public class getUser {
 
 	@GetMapping
 	public User getCurr(HttpSession session){
-		System.out.println("wat");
-		User temp = new User();
-		temp.setFname("bob");
-		return temp;
-		//return ((User) session.getAttribute("user"));
+		return ((User) session.getAttribute("user"));
 	}
 }
