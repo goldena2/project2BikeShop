@@ -1,4 +1,5 @@
 <nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
 {'link': 'allProducts', 'name': 'All Products'},
 {'link': 'bikes', 'name': 'Bikes'},
 {'link': 'parts', 'name': 'Parts'},
@@ -17,7 +18,7 @@
     
   </div>
   <div class="form-group">
-    <label for="bike">What bike are youi bringing in</label>
+    <label for="bike">What bike are you bringing in</label>
     <input #bike maxlength="24" id="bike" class="form-control">
   </div>  
   <button id="submit" (click)="submitForm(desc.value, day.value, time.value, bike.value)" type="button" class="btn btn-primary">Submit</button>

@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.beans.User;
 import com.revature.data.UserDAO;
 
-@CrossOrigin
+@CrossOrigin//(origins="*")
 @RestController
 @RequestMapping(value="/login")
 public class LoginController {
-	//@Autowired
+	@Autowired
 	private UserDAO userDAO;
 	
 	@RequestMapping(method=RequestMethod.GET)
