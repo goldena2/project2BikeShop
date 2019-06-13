@@ -29,7 +29,7 @@ public class ProductOracle implements ProductDAO {
 			ResultSet rs = pstm.executeQuery();
 			if (rs.next()) {
 				log.trace("Product found.");
-				
+				p.setId(rs.getInt(productId));
 				p.setName(rs.getString("name"));
 				p.setUpc(rs.getString("upc"));
 				p.setPrice(rs.getInt("price"));
@@ -51,7 +51,7 @@ public class ProductOracle implements ProductDAO {
 		log.trace("Removing product from database.");
 		try(Connection conn = cu.getConnection()){
 			conn.setAutoCommit(false);
-			String sql = "delete from product where productId = ?";
+			String sql = "delete from product where Id = ?";
 			PreparedStatement pstm = conn.prepareStatement(sql);
 			pstm.setInt(1, product.getId());
 			int number = pstm.executeUpdate();

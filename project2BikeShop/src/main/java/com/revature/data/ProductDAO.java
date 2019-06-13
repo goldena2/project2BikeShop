@@ -4,7 +4,7 @@ import com.revature.beans.Product;
 
 public interface ProductDAO {
 	
-	public Product getProductById(int productId);
+	public Product getProduct(int productId);
 	
 	public void deleteProduct(Product product);
 }

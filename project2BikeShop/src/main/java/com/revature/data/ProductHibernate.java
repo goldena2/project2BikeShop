@@ -9,10 +9,14 @@ import com.revature.utils.LogUtil;
 
 public class ProductHibernate implements ProductDAO{
 	private HibernateUtil hu = HibernateUtil.getInstance();
+	
 	@Override
-	public Product getProductById(int productId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Product getProduct(int productId) {
+		Product p;
+		Session s = hu.getSession();
+		p = s.get(Product.class, productId);
+		s.close();
+		return p;
 	}
 
 	@Override

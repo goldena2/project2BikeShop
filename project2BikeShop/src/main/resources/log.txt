@@ -1,1 +1,63 @@
 2019-06-13 05:11:30 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 09:17:55 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 09:17:59 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 09:18:00 ERROR ProductOracle:11 - class java.lang.NullPointerException: null
+2019-06-13 09:18:00 WARN  ProductOracle:13 - 56: com.revature.data.ProductOracle
+2019-06-13 09:18:00 WARN  ProductOracle:13 - 12: com.revature.beans.driver
+2019-06-13 09:19:51 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 09:19:54 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 09:19:54 ERROR ProductOracle:11 - class java.lang.NullPointerException: null
+2019-06-13 09:19:54 WARN  ProductOracle:13 - 56: com.revature.data.ProductOracle
+2019-06-13 09:19:54 WARN  ProductOracle:13 - 12: com.revature.beans.driver
+2019-06-13 09:22:32 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 09:22:34 TRACE ProductOracle:31 - Product found.
+2019-06-13 09:22:35 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 09:22:35 ERROR ProductOracle:11 - class java.lang.NullPointerException: null
+2019-06-13 09:22:35 WARN  ProductOracle:13 - 56: com.revature.data.ProductOracle
+2019-06-13 09:22:35 WARN  ProductOracle:13 - 12: com.revature.beans.driver
+2019-06-13 10:12:55 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 10:12:59 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 10:12:59 ERROR ProductOracle:11 - class java.lang.NullPointerException: null
+2019-06-13 10:12:59 WARN  ProductOracle:13 - 56: com.revature.data.ProductOracle
+2019-06-13 10:12:59 WARN  ProductOracle:13 - 12: com.revature.beans.driver
+2019-06-13 10:15:20 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 10:15:23 TRACE ProductOracle:14 - Product [Id=null, Name=null, Upc=null, Price=null, Description=null, Stock=null]
+2019-06-13 10:15:23 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 10:15:24 ERROR ProductOracle:11 - class java.lang.NullPointerException: null
+2019-06-13 10:15:24 WARN  ProductOracle:13 - 56: com.revature.data.ProductOracle
+2019-06-13 10:15:24 WARN  ProductOracle:13 - 15: com.revature.beans.driver
+2019-06-13 10:16:20 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 10:16:23 TRACE ProductOracle:31 - Product found.
+2019-06-13 10:16:23 TRACE ProductOracle:14 - Product [Id=null, Name=newbike, Upc=12323432, Price=2500, Description=description, Stock=10]
+2019-06-13 10:16:23 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 10:16:24 ERROR ProductOracle:11 - class java.lang.NullPointerException: null
+2019-06-13 10:16:24 WARN  ProductOracle:13 - 56: com.revature.data.ProductOracle
+2019-06-13 10:16:24 WARN  ProductOracle:13 - 15: com.revature.beans.driver
+2019-06-13 10:17:08 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 10:17:11 TRACE ProductOracle:31 - Product found.
+2019-06-13 10:17:11 TRACE ProductOracle:14 - Product [Id=1, Name=newbike, Upc=12323432, Price=2500, Description=description, Stock=10]
+2019-06-13 10:17:11 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 10:17:11 ERROR ProductOracle:11 - class java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTID": invalid identifier
+
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 509: oracle.jdbc.driver.T4CTTIoer11
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 461: oracle.jdbc.driver.T4CTTIoer11
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 1104: oracle.jdbc.driver.T4C8Oall
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 550: oracle.jdbc.driver.T4CTTIfun
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 268: oracle.jdbc.driver.T4CTTIfun
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 655: oracle.jdbc.driver.T4C8Oall
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 270: oracle.jdbc.driver.T4CPreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 91: oracle.jdbc.driver.T4CPreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 970: oracle.jdbc.driver.T4CPreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 1205: oracle.jdbc.driver.OracleStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 3666: oracle.jdbc.driver.OraclePreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 1426: oracle.jdbc.driver.T4CPreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 3756: oracle.jdbc.driver.OraclePreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 3736: oracle.jdbc.driver.OraclePreparedStatement
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 1063: oracle.jdbc.driver.OraclePreparedStatementWrapper
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 57: com.revature.data.ProductOracle
+2019-06-13 10:17:11 WARN  ProductOracle:13 - 15: com.revature.beans.driver
+2019-06-13 10:18:39 TRACE ProductOracle:22 - Retrieving product from database
+2019-06-13 10:18:42 TRACE ProductOracle:31 - Product found.
+2019-06-13 10:18:42 TRACE ProductOracle:14 - Product [Id=1, Name=newbike, Upc=12323432, Price=2500, Description=description, Stock=10]
+2019-06-13 10:18:42 TRACE ProductOracle:51 - Removing product from database.
+2019-06-13 10:18:42 TRACE ProductOracle:62 - Product deleted

@@ -17,4 +17,10 @@ public class ProductServiceOracle implements ProductService{
 		pd.deleteProduct(product);
 	}
 
+	@Override
+	public Product getProductById(int productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
