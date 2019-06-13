@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 
 
 
@@ -32,6 +33,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
     HomeComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
+    ProductListElementComponent,
   ],
   imports: [
     BrowserModule,
