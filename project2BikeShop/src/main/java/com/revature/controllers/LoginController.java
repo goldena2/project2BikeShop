@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +17,12 @@ import com.revature.data.UserDAO;
 @RestController
 @RequestMapping(value="/login")
 public class LoginController {
-	@Autowired
+	//@Autowired
 	private UserDAO userDAO;
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String goLogin(HttpSession session) {
+	public String goLogin(@RequestBody User newUser, HttpSession session) {
+		System.out.println(userDAO.getUser(newUser.getUsername(), newUser.getPassword()));
 		if(session.getAttribute("user")!=null) {
 			System.out.println("User already logged in");
 			return "redirect:home";
@@ -28,10 +30,14 @@ public class LoginController {
 		return "static/login.html";
 	}
 	
-
 	@PostMapping
-	public Boolean login(String username, String password, HttpSession session) {
-		System.out.println("Getting log in post request");
-		return true;
+	public User login(@RequestBody User newUser, HttpSession session) {
+		System.out.println(newUser);
+		User user = userDAO.getUser(newUser.getUsername(), newUser.getPassword());
+		if(user != null) {
+			session.setAttribute("user", user);
+			return user;
+		}
+		return user;
 	}
 }

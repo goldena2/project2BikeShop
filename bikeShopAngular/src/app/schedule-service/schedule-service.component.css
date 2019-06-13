@@ -1,0 +1,22 @@
+label{
+    font-family:Arial;
+    color: azure;
+    font-size: 15;
+}
+input, textarea{
+    max-width: 75%;
+}
+form{
+    background-image: url('https://www.virtualblueridge.com/wp-content/uploads/gallery-scenic-cycling.jpg');
+}
+
+#dayHelp{
+    color: green;
+}
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }

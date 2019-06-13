@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schedule-service.component.css']
 })
 export class ScheduleServiceComponent implements OnInit {
-
+  date;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  log(value){
+    console.log(value.value);
+  }
+  submitForm(desc: string, date: string , time: string, bike: string){
+    console.log(date);
+    console.log(desc);
+    console.log(bike);
+
   }
 
 }

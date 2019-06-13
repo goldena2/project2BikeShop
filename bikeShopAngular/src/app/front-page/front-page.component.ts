@@ -1,3 +1,4 @@
+import { CurrUserService } from './../curr-user.service';
 import { Router } from '@angular/router';
 import { LoginService } from './../login.service';
 import { Component } from '@angular/core';
@@ -10,11 +11,15 @@ import { Component } from '@angular/core';
 
 
 export class FrontPageComponent {
-  constructor(private loginBuilder: LoginService, private router: Router) {}
+  constructor(private loginBuilder: LoginService, private router: Router, private getUser: CurrUserService) {}
 
   login(username: string, password: string){
     this.loginBuilder.login(username, password).subscribe(data =>{
-      console.log(data);
+      if(data != null){
+        this.getUser.setuser(data);
+        console.log(data)
+        this.router.navigateByUrl('home');
+      }
   });
   }
 }
