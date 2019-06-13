@@ -6,8 +6,10 @@ import com.revature.beans.Product;
 
 public interface ProductDAO {
 	
-	public void deleteProduct(Product product);
+	
 	public boolean addProduct(Product p);
-	public Set<Product> getProducts();
 	public Product getProduct(String upc);
+	public Set<Product> getProducts();
+	public void deleteProduct(Product product);
+	
 }

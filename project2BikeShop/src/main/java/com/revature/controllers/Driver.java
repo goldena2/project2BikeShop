@@ -10,17 +10,19 @@ public class Driver {
 	public static void main(String[] args) {
 		ProductDAO pd = new ProductHibernate();
 		Product p = new Product();
-		//p.setId(1);
-		p.setDescription("Example product");
-		p.setName("Example part");
-		p.setPrice(10.00);
-		p.setStock(25);
-		p.setUPC("298832593260053762");
-		pd.addProduct(p);
+//		//p.setId(1);
+//		p.setDescription("Example product");
+//		p.setName("Example part");
+//		p.setPrice(10.00);
+//		p.setStock(25);
+//		p.setUPC("298832593260053762");
+//		pd.addProduct(p);
 		Set<Product> products = pd.getProducts();
 		for (Product product : products) {
 			System.out.println(product);
+			pd.deleteProduct(product);
 		}
+		
 		
 		//System.out.println(pd.getProduct(id));
 	}
