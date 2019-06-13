@@ -53,6 +53,7 @@ create table product(
 	price number not null,
 	description varchar(64) not null,
 	stock number,
+    type number,
 	CONSTRAINT product_pk PRIMARY KEY (id)
 );
 
