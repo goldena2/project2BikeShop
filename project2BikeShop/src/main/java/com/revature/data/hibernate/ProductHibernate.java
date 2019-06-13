@@ -31,6 +31,7 @@ public class ProductHibernate implements ProductDAO {
 				tx.rollback();
 			}
 			LogUtil.logException(e, ProductHibernate.class);
+			return false;
 		} finally {
 			s.close();
 		}

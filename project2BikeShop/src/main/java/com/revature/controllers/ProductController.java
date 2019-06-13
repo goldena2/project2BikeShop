@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.beans.CreateAccountResponse;
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
 
@@ -18,8 +19,9 @@ public class ProductController {
 	private ProductDAO pd;
 	
 	@PostMapping
-	public Product addProduct(@RequestBody Product p) {
-		pd.addProduct(p);
-		return pd.getProduct(p.getUPC());
+	public CreateAccountResponse addProduct(@RequestBody Product p) {
+		CreateAccountResponse status = new CreateAccountResponse();
+		status.setSuccess(pd.addProduct(p));
+		return status;
 	}
 }
