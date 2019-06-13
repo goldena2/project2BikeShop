@@ -17,7 +17,7 @@ import com.revature.data.UserDAO;
 @RestController
 @RequestMapping(value="/login")
 public class LoginController {
-	//@Autowired
+	@Autowired
 	private UserDAO userDAO;
 	
 	@RequestMapping(method=RequestMethod.GET)

@@ -1,1 +1,26 @@
-<button class="btn btn-primary" (click)="submit()">Submit</button>
+<nav-bar [otherLinks]="[]"></nav-bar>
+<div class="bg-img">
+    <form class="container">
+      <h1>Add a product</h1>
+      <label for="name"><b>Name</b></label>
+      <input class="form-cotrol" #name type="text" placeholder="Enter Name" name="name" required>
+  
+      <label for="upc"><b>UPC</b></label>
+      <input required #upc type="text" placeholder="Enter UPC code" name="upc" required>
+
+      <label for="number"><b>Price</b></label>
+      <input required #price type="number" placeholder="10.00" minlength="10" maxlength="10" name="number">
+    
+      <label for="desc"><b>Description</b></label>
+      <input required #desc class="name" type="text" placeholder="Example description" name="desc">
+        
+      <label for="stock"><b>Stock</b></label>
+      <input required #stock class="name" type="number" placeholder="25" name="stock">
+
+      <button type="button" 
+      (click)="addProduct(name.value, upc.value, price.value, desc.value, stock.value); $event.preventDefault()" 
+      class="btn">Create</button>
+    </form>
+  </div>
+  <app-footer></app-footer>
+

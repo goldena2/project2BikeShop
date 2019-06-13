@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  ngOnInit(){}
 
-  constructor() { }
+  constructor(private productService: ProductService, private router: Router) { }
 
-  ngOnInit() {
+  addProduct(name: string, upc: string, price: number, description: string, stock: number) {
+    this.productService.create(name, upc, price, description, stock).subscribe(data => {
+        if(data['success']){
+          this.router.navigateByUrl('');
+        }else{
+          alert("Unable to add a product at this time please try again later");
+        }
+      });
   }
 
 }

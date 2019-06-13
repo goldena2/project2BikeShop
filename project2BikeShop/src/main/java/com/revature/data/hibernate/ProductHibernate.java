@@ -7,17 +7,19 @@ import java.util.Set;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Component;
 
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
 import com.revature.utils.HibernateUtil;
 import com.revature.utils.LogUtil;
 
+@Component
 public class ProductHibernate implements ProductDAO {
 	private HibernateUtil hu = HibernateUtil.getInstance();
 
 	@Override
-	public void addProduct(Product p) {
+	public boolean addProduct(Product p) {
 		Session s = hu.getSession();
 		Transaction tx = null;
 		try {
@@ -32,15 +34,21 @@ public class ProductHibernate implements ProductDAO {
 		} finally {
 			s.close();
 		}
+		return true;
 	}
 
 	@Override
-	public Product getProduct(Integer id) {
-		Product p;
+	public Product getProduct(String upc) {
+		System.out.println(upc);
 		Session s = hu.getSession();
-		p = s.get(Product.class, id);
-		s.close();
-		return p;
+		Product product;
+		// in queries, you must use the Java side name, not the actual table name, 
+		// so the names are case sensitive
+		String query = "from Product p where p.UPC=:upc";
+		Query<Product> q = s.createQuery(query, Product.class);
+		q.setParameter("upc", upc);
+		product = q.uniqueResult();
+		return product;
 	}
 
 	@Override
