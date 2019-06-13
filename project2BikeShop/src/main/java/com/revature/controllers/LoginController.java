@@ -21,7 +21,8 @@ public class LoginController {
 	private UserDAO userDAO;
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String goLogin(HttpSession session) {
+	public String goLogin(@RequestBody User newUser, HttpSession session) {
+		System.out.println(userDAO.getUser(newUser.getUsername(), newUser.getPassword()));
 		if(session.getAttribute("user")!=null) {
 			System.out.println("User already logged in");
 			return "redirect:home";
@@ -30,17 +31,13 @@ public class LoginController {
 	}
 	
 	@PostMapping
-	public Boolean login(@RequestBody User login, HttpSession session) {//String username, String password, HttpSession session) {
-		System.out.println("Getting log in post request");
-		System.out.println(login);
-		User user = userDAO.getUser(login.getUsername(), login.getPassword());
-		System.out.println(user);
-		if(user!=null) {
-			System.out.println("sending user value");
+	public User login(@RequestBody User newUser, HttpSession session) {
+		System.out.println(newUser);
+		User user = userDAO.getUser(newUser.getUsername(), newUser.getPassword());
+		if(user != null) {
 			session.setAttribute("user", user);
-			return true;
+			return user;
 		}
-		System.out.println("No user found.");
-		return false;
+		return user;
 	}
 }

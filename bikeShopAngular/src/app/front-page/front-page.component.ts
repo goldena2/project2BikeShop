@@ -14,7 +14,10 @@ export class FrontPageComponent {
 
   login(username: string, password: string){
     this.loginBuilder.login(username, password).subscribe(data =>{
-      console.log(data);
+      if(data){
+        console.log(data)
+        //this.router.navigateByUrl('home');
+      }
   });
   }
 }
