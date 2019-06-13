@@ -17,7 +17,7 @@ import com.revature.data.UserDAO;
 @RestController
 @RequestMapping(value="/login")
 public class LoginController {
-	@Autowired
+	//@Autowired
 	private UserDAO userDAO;
 	
 	@RequestMapping(method=RequestMethod.GET)
@@ -30,7 +30,6 @@ public class LoginController {
 		return "static/login.html";
 	}
 	
-
 	@PostMapping
 	public User login(@RequestBody User newUser, HttpSession session) {
 		System.out.println(newUser);
