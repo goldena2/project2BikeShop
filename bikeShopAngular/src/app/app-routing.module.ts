@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { MakeCustomerAcountComponent } from './make-customer-acount/make-customer-acount.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {path:'', component: FrontPageComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'home', component: HomeComponent},
   {path: 'allProducts', component: AllProductsComponent},
+  {path: 'products', component: ProductComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

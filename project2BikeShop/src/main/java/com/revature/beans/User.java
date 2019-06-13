@@ -25,7 +25,7 @@ public class User {
 	private String lname;
 	@Column(name="title")
 	private Integer title;
-	@Column(name="phone_number")
+	@Column(name="phone_numer")
 	private String phoneNumber;
 	@Column(name="email")
 	private String email;
