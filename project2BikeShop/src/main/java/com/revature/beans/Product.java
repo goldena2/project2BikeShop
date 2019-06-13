@@ -1,5 +1,6 @@
 package com.revature.beans;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,125 +14,78 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="product")
 	@SequenceGenerator(name="product", sequenceName="product_seq", allocationSize=1)
-
-	private Integer Id;
-	private String Name;
-	private String Upc;
-	private Integer Price;
-	private String Description;
-	private Integer Stock;
+	private Integer id;
+	private String name;
+	@Column(name="upc")
+	private String UPC;
+	private Double price;
+	private String description;
+	private Integer stock;
 	
 	public Product() {
 		super();
 	}
-	
-	
-
-	public Product(Integer id) {
-		super();
-		Id = id;
-	}
-
-
-
-	public Product(Integer id, String name, String upc, Integer price, String description, Integer stock) {
-		super();
-		Id = id;
-		Name = name;
-		Upc = upc;
-		Price = price;
-		Description = description;
-		Stock = stock;
-	}
-
-
 
 	public Integer getId() {
-		return Id;
+		return id;
 	}
-
-
 
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
-
-
 
 	public String getName() {
-		return Name;
+		return name;
 	}
-
-
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
-
-
-	public String getUpc() {
-		return Upc;
+	public String getUPC() {
+		return UPC;
 	}
 
-
-
-	public void setUpc(String upc) {
-		Upc = upc;
+	public void setUPC(String uPC) {
+		UPC = uPC;
 	}
 
-
-
-	public Integer getPrice() {
-		return Price;
+	public Double getPrice() {
+		return price;
 	}
 
-
-
-	public void setPrice(Integer price) {
-		Price = price;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
-
-
 
 	public String getDescription() {
-		return Description;
+		return description;
 	}
-
-
 
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
-
-
 
 	public Integer getStock() {
-		return Stock;
+		return stock;
 	}
-
-
 
 	public void setStock(Integer stock) {
-		Stock = stock;
+		this.stock = stock;
 	}
-
-
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Description == null) ? 0 : Description.hashCode());
-		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
-		result = prime * result + ((Name == null) ? 0 : Name.hashCode());
-		result = prime * result + ((Price == null) ? 0 : Price.hashCode());
-		result = prime * result + ((Stock == null) ? 0 : Stock.hashCode());
-		result = prime * result + ((Upc == null) ? 0 : Upc.hashCode());
+		result = prime * result + ((UPC == null) ? 0 : UPC.hashCode());
+		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
+		result = prime * result + ((stock == null) ? 0 : stock.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -142,46 +96,42 @@ public class Product {
 		if (getClass() != obj.getClass())
 			return false;
 		Product other = (Product) obj;
-		if (Description == null) {
-			if (other.Description != null)
+		if (UPC == null) {
+			if (other.UPC != null)
 				return false;
-		} else if (!Description.equals(other.Description))
+		} else if (!UPC.equals(other.UPC))
 			return false;
-		if (Id == null) {
-			if (other.Id != null)
+		if (description == null) {
+			if (other.description != null)
 				return false;
-		} else if (!Id.equals(other.Id))
+		} else if (!description.equals(other.description))
 			return false;
-		if (Name == null) {
-			if (other.Name != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!Name.equals(other.Name))
+		} else if (!id.equals(other.id))
 			return false;
-		if (Price == null) {
-			if (other.Price != null)
+		if (name == null) {
+			if (other.name != null)
 				return false;
-		} else if (!Price.equals(other.Price))
+		} else if (!name.equals(other.name))
 			return false;
-		if (Stock == null) {
-			if (other.Stock != null)
+		if (price == null) {
+			if (other.price != null)
 				return false;
-		} else if (!Stock.equals(other.Stock))
+		} else if (!price.equals(other.price))
 			return false;
-		if (Upc == null) {
-			if (other.Upc != null)
+		if (stock == null) {
+			if (other.stock != null)
 				return false;
-		} else if (!Upc.equals(other.Upc))
+		} else if (!stock.equals(other.stock))
 			return false;
 		return true;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return "Product [Id=" + Id + ", Name=" + Name + ", Upc=" + Upc + ", Price=" + Price + ", Description="
-				+ Description + ", Stock=" + Stock + "]";
+		return "Product [id=" + id + ", name=" + name + ", UPC=" + UPC + ", price=" + price + ", description="
+				+ description + ", stock=" + stock + "]";
 	}
-
-	
 }

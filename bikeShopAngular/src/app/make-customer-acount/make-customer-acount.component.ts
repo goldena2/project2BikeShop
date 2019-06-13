@@ -17,7 +17,7 @@ export class MakeCustomerAcountComponent{
         if(data['success']){
           this.router.navigateByUrl('');
         }else{
-          alert("Unable to make an account at this time please try again later");
+          alert(data['message']);
         }
       });
   }

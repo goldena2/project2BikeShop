@@ -1,0 +1,11 @@
+.productsList{
+width: 90%;
+margin: auto;
+border: 1px solid red;
+}
+
+#BikeFooter{
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the bottom of the page */
+    width: 100%; /* Full width */
+}

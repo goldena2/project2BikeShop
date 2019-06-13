@@ -3,27 +3,28 @@
    Drop database if it exists
 ********************************************************************************/
 
-DROP USER project2 CASCADE;
+DROP USER projectTwo CASCADE;
 
 /*******************************************************************************
    Create database
 ********************************************************************************/
 
 
-CREATE USER project2
+CREATE USER projectTwo
 IDENTIFIED BY password
 DEFAULT TABLESPACE users
 TEMPORARY TABLESPACE temp
 QUOTA 10M ON users;
 
-GRANT connect to project2;
-GRANT resource to project2;
-GRANT create session TO project2;
-GRANT create table TO project2;
-GRANT create view TO project2;
+GRANT connect to projectTwo;
+GRANT resource to projectTwo;
+GRANT create session TO projectTwo;
+GRANT create table TO projectTwo;
+GRANT create view TO projectTwo;
 
 conn project2/password
 create sequence users_seq;
+
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -138,6 +139,12 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
+
+/*******************************************************************************
+Creating the Sequences
+********************************************************************************/
+create sequence product_seq;
+
 
 /*******************************************************************************
    Manually inserted table entries
