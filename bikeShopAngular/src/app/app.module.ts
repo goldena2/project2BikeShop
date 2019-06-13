@@ -2,7 +2,6 @@ import { GetUserService } from './get-user.service';
 import { LoginService } from './login.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {DpDatePickerModule} from 'ng2-date-picker';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrontPageComponent } from './front-page/front-page.component';
@@ -17,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -30,6 +30,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
+    ProductComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
   ],
@@ -37,7 +38,6 @@ import { AllProductsComponent } from './all-products/all-products.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DpDatePickerModule
   ],
   providers: [MakeAccountService, HttpClient, GetUserService, LoginService],
   bootstrap: [AppComponent]
