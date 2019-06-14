@@ -10,11 +10,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   @Input() user : Object;
+  links : Object[];
   constructor(private userService: GetUserService, private currUser: CurrUserService, private router: Router) { 
     this.user = this.currUser.getUser();
     if(this.user){
       console.log(this.user['fname']);
     }
+    this.links = [
+      {'link': 'allProducts', 'name': 'All Products'},
+      {'link': 'bikes', 'name': 'Bikes'},
+      {'link': 'parts', 'name': 'Parts'},
+      {'link': 'scheduleService', 'name': 'Schedule Services'}
+      ];
+      if(this.currUser.getUser['title'] == 1){
+        this.links.push({'link': 'myServices','name': 'My services'});
+      }
   }
 
   ngOnInit() {

@@ -3,27 +3,27 @@
    Drop database if it exists
 ********************************************************************************/
 
-DROP USER projectTwo CASCADE;
+DROP USER project2 CASCADE;
 
 /*******************************************************************************
    Create database
 ********************************************************************************/
 
 
-CREATE USER projectTwo
+CREATE USER project2
 IDENTIFIED BY password
 DEFAULT TABLESPACE users
 TEMPORARY TABLESPACE temp
 QUOTA 10M ON users;
 
-GRANT connect to projectTwo;
-GRANT resource to projectTwo;
-GRANT create session TO projectTwo;
-GRANT create table TO projectTwo;
-GRANT create view TO projectTwo;
+GRANT connect to project2;
+GRANT resource to project2;
+GRANT create session TO project2;
+GRANT create table TO project2;
+GRANT create view TO project2;
 
 conn project2/password
-create sequence users_seq;
+
 
 /*******************************************************************************
    Create Tables
@@ -83,6 +83,15 @@ create table availibility(
 	start_time number default 0,
 	end_time number default 0,
 	CONSTRAINT availibility_pk PRIMARY KEY (id)
+);
+
+create table services(
+	id number not null,
+	description varchar(1024),
+	user_id number not null,
+	day varchar(12),
+	appointment_time number,
+	CONSTRAINT services_pk PRIMARY KEY (id)
 );
 
 create table day_of_week(
@@ -145,7 +154,8 @@ ALTER TABLE shift ADD CONSTRAINT FK_dayid
 Creating the Sequences
 ********************************************************************************/
 create sequence product_seq;
-
+create sequence users_seq;
+create sequence services_seq;
 
 /*******************************************************************************
    Manually inserted table entries
