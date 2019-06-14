@@ -1,4 +1,5 @@
 <nav id="topNavbar" class="navbar navbar-light bg-light">
   <a routerLink='' class="navbar-brand mb-0 h1">BikeShop</a>
   <a *ngFor="let link of otherLinks" class="navbar-brand mb-0" routerLink="/{{ link['link'] }}">{{ link['name'] }}</a>
+  <a *ngIf="isCustomer()" class="navbar-brand mb-0" routerLink='/myServices'>My services</a>
 </nav>

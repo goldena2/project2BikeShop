@@ -79,6 +79,15 @@ create table availability(
 	CONSTRAINT availability_pk PRIMARY KEY (id)
 );
 
+create table services(
+	id number not null,
+	description varchar(1024),
+	user_id number not null,
+	day varchar(12),
+	appointment_time number,
+	CONSTRAINT services_pk PRIMARY KEY (id)
+);
+
 create table day_of_week(
 	id number not null,
 	day_of_the_week varchar(16) not null,
