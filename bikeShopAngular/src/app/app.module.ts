@@ -40,6 +40,8 @@ import { ProductListElementComponent } from './product-list-element/product-list
     ProductListElementComponent,
     ProductComponent,
     MyServicesComponent,
+    ProductListElementComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

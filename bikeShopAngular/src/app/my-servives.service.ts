@@ -7,10 +7,16 @@ import { PortConfigService } from './port-config.service';
   providedIn: 'root'
 })
 export class MyServivesService {
-
+  services : any;
   constructor(private http: HttpClient, private port: PortConfigService, private user: CurrUserService) { }
 
     getMyServices(){
-      return this.http.get('http://localhost:'+this.port.getPort()+'/bikeShop/services');
+      this.http.get('http://localhost:'+this.port.getPort()+'/bikeShop/services').subscribe(data=>{
+        this.services = data;
+      });
+    }
+
+    getServices(){
+      return this.services;
     }
 }
