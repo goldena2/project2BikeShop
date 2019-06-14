@@ -1,3 +1,4 @@
+import { MyServicesComponent } from './my-services/my-services.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'allProducts', component: AllProductsComponent},
   {path: 'addProduct', component: AddProductComponent},
+  {path: 'myServices', component: MyServicesComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

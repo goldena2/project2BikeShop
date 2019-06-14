@@ -3,7 +3,7 @@ drop table users cascade constraints;
 drop table title cascade constraints;
 drop table product cascade constraints;
 drop table invoice cascade constraints;
-drop table image cascade constraints;
+drop table product_type cascade constraints;
 drop table day_of_week cascade constraints;
 drop table schedule cascade constraints;
 drop table invoice_line cascade constraints;
@@ -34,6 +34,11 @@ create table title(
 	CONSTRAINT title_pk PRIMARY KEY (id)
 );
 
+create table product_type(
+    id number primary key,
+	type_name varchar(32)
+);
+
 create table product(
 	id number not null,
 	name varchar(16) not null,
@@ -42,13 +47,9 @@ create table product(
 	description varchar(64) not null,
 	stock number,
     image varchar2(100),
-	CONSTRAINT product_pk PRIMARY KEY (id)
-);
-
-create table image(
-    id number primary key,
-	product_id number not null,
-	image varchar(32)
+    type_id number,
+	CONSTRAINT product_pk PRIMARY KEY (id),
+    CONSTRAINT product_type foreign key (type_id) references product_type (id) 
 );
 
 create table invoice(
@@ -103,9 +104,6 @@ create table schedule(
 ALTER TABLE users ADD CONSTRAINT FK_titleid
     FOREIGN KEY (title) REFERENCES title (id);
 
-ALTER TABLE image ADD CONSTRAINT FK_productid
-    FOREIGN KEY (product_id) REFERENCES product (id);
-
 ALTER TABLE invoice ADD CONSTRAINT FK_userid
     FOREIGN KEY (user_id) REFERENCES users (id);
 
@@ -144,15 +142,46 @@ create sequence users_seq;
 ********************************************************************************/
 insert into TITLE(id, title)
 values(1, 'non-employee');
-
-insert into USERS(id, username, password, fname, lname, title, phone_number, email)
-values(1, 'user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
-
+insert into TITLE(id, title)
+values(2, 'employee');
 insert into TITLE(id, title)
 values(3, 'manager');
 
 insert into USERS(id, username, password, fname, lname, title, phone_number, email)
-values(2, 'bdole', 'pass', 'firstname', 'lastname', 3, '111-1111', 'email@email.com');
+values(1, 'user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
+insert into USERS(id, username, password, fname, lname, title, phone_number, email)
+values(2, 'emp', 'pass', 'empFN', 'empLN', 2, '222-2222', 'email@email.com');
+insert into USERS(id, username, password, fname, lname, title, phone_number, email)
+values(3, 'man', 'pass', 'manFN', 'manLN', 3, '333-3333', 'email@email.com');
+
+insert into day_of_week(id, day_of_the_week)
+values(1, 'monday');
+insert into day_of_week(id, day_of_the_week)
+values(2, 'tuesday');
+insert into day_of_week(id, day_of_the_week)
+values(3, 'wednesday');
+insert into day_of_week(id, day_of_the_week)
+values(4, 'thursday');
+insert into day_of_week(id, day_of_the_week)
+values(5, 'friday');
+insert into day_of_week(id, day_of_the_week)
+values(6, 'saturday');
+insert into day_of_week(id, day_of_the_week)
+values(7, 'sunday');
+
+insert into product_type(id, type_name)
+values(1, 'bike');
+insert into product_type(id, type_name)
+values(2, 'part');
+insert into product_type(id, type_name)
+values(3, 'other');
+
+insert into product(id, name, upc, price, description, stock, type_id)
+values(1,'Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1);
+insert into product(id, name, upc, price, description, stock, type_id)
+values(2,'Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
+insert into product(id, name, upc, price, description, stock, type_id)
+values(3,'Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
 
 commit;
 exit;
