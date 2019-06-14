@@ -9,6 +9,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { MakeCustomerAcountComponent } from './make-customer-acount/make-customer-acount.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductComponent } from './product/product.component';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 
 const routes: Routes = [
   {path:'', component: FrontPageComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'allProducts', component: AllProductsComponent},
   {path: 'products', component: ProductComponent},
   {path: 'myServices', component: MyServicesComponent},
+  {path: 'createEmployee', component: CreateEmployeeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
