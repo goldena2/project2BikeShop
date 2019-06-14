@@ -1,7 +1,6 @@
 /*******************************************************************************
    Drop Tables
 ********************************************************************************/
-<<<<<<< HEAD
 
 DROP USER project2 CASCADE;
 
@@ -23,9 +22,7 @@ GRANT create table TO project2;
 GRANT create view TO project2;
 
 conn project2/password
-create sequence users_seq;
 
-=======
 drop table users CASCADE CONSTRAINTS;
 drop table title CASCADE CONSTRAINTS;
 drop table product CASCADE CONSTRAINTS;
@@ -44,7 +41,7 @@ drop sequence invoice_seq;
 drop sequence availability_seq;
 drop sequence shift_seq;
 drop sequence schedule_seq;
->>>>>>> 7d238c5ed0a2b011dc07e202c5c80d3d29b24675
+drop sequence services_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -185,6 +182,7 @@ create sequence invoice_seq;
 create sequence availability_seq;
 create sequence shift_seq;
 create sequence schedule_seq;
+create sequence services_seq;
 
 /*******************************************************************************
    Manually inserted table entries
