@@ -1,6 +1,10 @@
 td{
     padding-right: 50px;
+    width: 200px;
+    table-layout: fixed;
+    overflow: hidden;
 }
-#productElement{
+
+/* #productElement{
     border-style: solid;
-}
+} */

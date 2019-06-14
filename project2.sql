@@ -19,6 +19,7 @@ drop sequence invoice_seq;
 drop sequence availability_seq;
 drop sequence shift_seq;
 drop sequence schedule_seq;
+drop sequence services_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
