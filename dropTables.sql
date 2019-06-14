@@ -36,7 +36,7 @@ create table title(
 
 create table product_type(
     id number primary key,
-	type_name varchar(32)
+	type_name varchar(32) not null
 );
 
 create table product(
@@ -98,6 +98,15 @@ create table schedule(
 	CONSTRAINT schedule_pk PRIMARY KEY (id)
 );
 
+create table services(
+	id number not null,
+	description varchar(1024),
+	user_id number not null,
+	day varchar(12),
+	appointment_time number,
+	CONSTRAINT services_pk PRIMARY KEY (id),
+    constraint services_user foreign key (user_id) references users (id)
+);
 /*******************************************************************************
    Create Foreign Keys
 ********************************************************************************/
@@ -131,10 +140,21 @@ ALTER TABLE shift ADD CONSTRAINT FK_dayid
 /*******************************************************************************
 Creating the Sequences
 ********************************************************************************/
-drop sequence product_seq;
 drop sequence users_seq;
-create sequence product_seq;
+drop sequence product_seq;
+drop sequence invoice_seq;
+drop sequence availability_seq;
+drop sequence shift_seq;
+drop sequence schedule_seq;
+drop sequence services_seq;
+
 create sequence users_seq;
+create sequence product_seq;
+create sequence invoice_seq;
+create sequence availability_seq;
+create sequence shift_seq;
+create sequence schedule_seq;
+create sequence services_seq;
 
 create or replace trigger user_pk_trig
 before insert or update on users
