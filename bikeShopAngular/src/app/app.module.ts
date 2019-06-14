@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
-import { ProductComponent } from './product/product.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 
@@ -30,9 +30,9 @@ import { ProductComponent } from './product/product.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ProductComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

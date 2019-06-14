@@ -21,9 +21,18 @@ public class Product {
 	private Double price;
 	private String description;
 	private Integer stock;
+	private String image;
 	
 	public Product() {
 		super();
+	}
+	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public Integer getId() {
@@ -81,6 +90,7 @@ public class Product {
 		result = prime * result + ((UPC == null) ? 0 : UPC.hashCode());
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((image == null) ? 0 : image.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((price == null) ? 0 : price.hashCode());
 		result = prime * result + ((stock == null) ? 0 : stock.hashCode());
@@ -111,6 +121,11 @@ public class Product {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+		if (image == null) {
+			if (other.image != null)
+				return false;
+		} else if (!image.equals(other.image))
+			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
@@ -132,6 +147,6 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", UPC=" + UPC + ", price=" + price + ", description="
-				+ description + ", stock=" + stock + "]";
+				+ description + ", stock=" + stock + ", image=" + image + "]";
 	}
 }

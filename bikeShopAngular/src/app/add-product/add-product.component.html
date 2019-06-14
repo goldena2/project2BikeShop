@@ -17,10 +17,14 @@
       <label for="stock"><b>Stock</b></label>
       <input required #stock class="name" type="number" placeholder="25" name="stock">
 
+      <label for="image"><b>Image upload</b></label>
+      <input required #image class="name" type="file" name="image">
+
       <button type="button" 
-      (click)="addProduct(name.value, upc.value, price.value, desc.value, stock.value); $event.preventDefault()" 
+      (click)="addProduct(name.value, upc.value, price.value, desc.value, stock.value, image.value); $event.preventDefault()" 
       class="btn">Create</button>
     </form>
   </div>
-  <app-footer></app-footer>
+  <!-- <app-footer></app-footer> -->
+
 
