@@ -43,10 +43,10 @@ create table product(
 	id number not null,
 	name varchar(16) not null,
 	upc varchar(24) not null,
-	price number not null,
+	price number(8,2) not null,
 	description varchar(64) not null,
 	stock number,
-    image varchar2(100),
+    image varchar2(1000),
     type_id number,
 	CONSTRAINT product_pk PRIMARY KEY (id),
     CONSTRAINT product_type foreign key (type_id) references product_type (id) 
@@ -136,6 +136,30 @@ drop sequence users_seq;
 create sequence product_seq;
 create sequence users_seq;
 
+create or replace trigger user_pk_trig
+before insert or update on users
+for each row
+begin
+    if INSERTING then
+        select users_seq.nextVal into :new.id from dual;
+    elsif UPDATING then
+        select :old.id into :new.id from dual;
+    end if;
+end;
+/
+create or replace trigger product_pk_trig
+before insert or update on product
+for each row
+begin
+    if INSERTING then
+        select product_seq.nextVal into :new.id from dual;
+    elsif UPDATING then
+        select :old.id into :new.id from dual;
+    end if;
+end;
+/
+
+
 
 /*******************************************************************************
    Manually inserted table entries
@@ -147,12 +171,12 @@ values(2, 'employee');
 insert into TITLE(id, title)
 values(3, 'manager');
 
-insert into USERS(id, username, password, fname, lname, title, phone_number, email)
-values(1, 'user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
-insert into USERS(id, username, password, fname, lname, title, phone_number, email)
-values(2, 'emp', 'pass', 'empFN', 'empLN', 2, '222-2222', 'email@email.com');
-insert into USERS(id, username, password, fname, lname, title, phone_number, email)
-values(3, 'man', 'pass', 'manFN', 'manLN', 3, '333-3333', 'email@email.com');
+insert into USERS(username, password, fname, lname, title, phone_number, email)
+values('user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
+insert into USERS(username, password, fname, lname, title, phone_number, email)
+values('emp', 'pass', 'empFN', 'empLN', 2, '222-2222', 'email@email.com');
+insert into USERS(username, password, fname, lname, title, phone_number, email)
+values('man', 'pass', 'manFN', 'manLN', 3, '333-3333', 'email@email.com');
 
 insert into day_of_week(id, day_of_the_week)
 values(1, 'monday');
@@ -176,12 +200,15 @@ values(2, 'part');
 insert into product_type(id, type_name)
 values(3, 'other');
 
-insert into product(id, name, upc, price, description, stock, type_id)
-values(1,'Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1);
-insert into product(id, name, upc, price, description, stock, type_id)
-values(2,'Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
-insert into product(id, name, upc, price, description, stock, type_id)
-values(3,'Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
+insert into product(name, upc, price, description, stock, type_id)
+values('Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1);
+insert into product(name, upc, price, description, stock, type_id)
+values('Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
+insert into product(name, upc, price, description, stock, type_id)
+values('Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
+
+drop trigger user_pk_trig;
+drop trigger product_pk_trig;
 
 commit;
 exit;

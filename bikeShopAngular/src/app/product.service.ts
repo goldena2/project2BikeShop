@@ -12,14 +12,15 @@ export class ProductService {
   }
 
  create(name: string, upc: string, price: number, 
-   desc: string, stock: number, image: File) {
+   desc: string, stock: number, image: string, type_id: number) {
      return this.httpClient.post<boolean>('http://localhost:'+this.portNumber.getPort()+'/bikeShop/products', {
-       'name': name,
-       'upc': upc,
-       'price': price,
-       'description': desc,
-       'stock': stock,
-       'image': image
+        'name': name,
+        'upc': upc,
+        'price': price,
+        'description': desc,
+        'stock': stock,
+        'image': image,
+        'type_id': type_id
      });
  }
 }

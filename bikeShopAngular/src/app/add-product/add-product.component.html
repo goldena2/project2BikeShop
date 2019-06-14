@@ -18,10 +18,19 @@
       <input required #stock class="name" type="number" placeholder="25" name="stock">
 
       <label for="image"><b>Image upload</b></label>
-      <input required #image class="name" type="file" name="image">
+      <input required #image class="name" type="text" name="image">
+
+      <label for="type"><b>Type of Product</b></label>
+      <select (change)="log(type.value)" #type required name="type">
+        <option selected> </option>
+        <option value="1">Bike</option>
+        <option value="2">Part</option>
+        <option value="3">Other</option>
+      </select>
+      <!-- <h5>What you picked: {{ type.value }}</h5> -->
 
       <button type="button" 
-      (click)="addProduct(name.value, upc.value, price.value, desc.value, stock.value, image.value); $event.preventDefault()" 
+      (click)="addProduct(name.value, upc.value, price.value, desc.value, stock.value, image.value, type.value); $event.preventDefault()" 
       class="btn">Create</button>
     </form>
   </div>

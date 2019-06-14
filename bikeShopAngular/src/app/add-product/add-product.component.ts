@@ -12,8 +12,9 @@ export class AddProductComponent implements OnInit {
 
   constructor(private productService: ProductService, private router: Router) { }
 
-  addProduct(name: string, upc: string, price: number, description: string, stock: number, image: File) {
-    this.productService.create(name, upc, price, description, stock, image).subscribe(data => {
+  addProduct(name: string, upc: string, price: number, description: string, stock: number, image: string, type_id: number) {
+    console.log(type_id);
+    this.productService.create(name, upc, price, description, stock, image, type_id).subscribe(data => {
         if(data != null){
           this.router.navigateByUrl('home');
         }else{
@@ -22,5 +23,8 @@ export class AddProductComponent implements OnInit {
       });
   }
 
+  log(value){
+    console.log(value);
+  }
 }
 
