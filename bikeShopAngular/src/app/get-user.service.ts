@@ -10,6 +10,6 @@ export class GetUserService {
   constructor(private http :HttpClient, private portNumber : PortConfigService) { }
 
   getUser(){
-    return this.http.get('http://localhost:' + this.portNumber.getPort() + '/bikeShop/getUser');
+    return this.http.get('http://localhost:' + this.portNumber.getPort() + '/bikeShop/getUser', {withCredentials: true});
   }
 }

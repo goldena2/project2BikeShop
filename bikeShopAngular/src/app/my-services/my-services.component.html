@@ -1,0 +1,18 @@
+<nav-bar [otherLinks]="[{'link': 'home', 'name': 'Home'}, {'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
+<table>
+  <tr>
+    <th>Reason for service</th>
+    <th>Date of service</th>
+    <th>Appointment time</th>
+  </tr>
+  <tr *ngFor="let service of services">
+    <td>{{ service['desc'] }}</td>
+    <td>{{ service['day'] }}</td>
+    <td>{{ calcTime(service) }}</td>
+  </tr>
+</table>
+

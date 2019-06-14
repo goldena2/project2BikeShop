@@ -1,8 +1,7 @@
 package com.revature.data.hibernate;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -54,14 +53,13 @@ public class ProductHibernate implements ProductDAO {
 	}
 
 	@Override
-	public Set<Product> getProducts() {
+	public List<Product> getProducts() {
+		List<Product> productList = new ArrayList<Product>();
 		Session s = hu.getSession();
 		String query = "FROM Product";
 		Query<Product> q = s.createQuery(query, Product.class);
-		List<Product> productList = q.getResultList();
-		Set<Product> productSet = new HashSet<Product>();
-		productSet.addAll(productList);
-		return productSet;
+		productList = q.getResultList();
+		return productList;
 	}
 
 	@Override

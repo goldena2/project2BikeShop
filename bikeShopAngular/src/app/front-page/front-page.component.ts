@@ -11,7 +11,9 @@ import { Component } from '@angular/core';
 
 
 export class FrontPageComponent {
-  constructor(private loginBuilder: LoginService, private router: Router, private getUser: CurrUserService) {}
+  constructor(private loginBuilder: LoginService, private router: Router, private getUser: CurrUserService) {
+    getUser.setuser({'title': -1});
+  }
 
   login(username: string, password: string){
     this.loginBuilder.login(username, password).subscribe(data =>{

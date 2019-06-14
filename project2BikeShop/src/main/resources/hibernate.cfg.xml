@@ -22,6 +22,8 @@
 		<!-- Mappings -->
 		<mapping class="com.revature.beans.User"/>
 		<mapping class="com.revature.beans.Product"/>
+		<mapping class="com.revature.beans.ServiceRequest"/>
+		
 		
 	</session-factory>
 </hibernate-configuration>

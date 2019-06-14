@@ -1,9 +1,24 @@
 .productsList{
-width: 90%;
+width: 70%;
 margin: auto;
-margin-top: 10px;
+margin-top: 20px;
 
 }
 .table th {
     border-top: none; 
+}
+.column1{
+    width:10%;
+}
+.column2{
+    width:40%;
+}
+.column3{
+    width:10%;
+}
+.column4{
+    width:20%;
+}
+.column5{
+    width:20%;
 }

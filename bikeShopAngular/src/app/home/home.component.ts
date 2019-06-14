@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { CurrUserService } from './../curr-user.service';
 import { GetUserService } from '../get-user.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { MyServivesService } from '../my-servives.service';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,26 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   @Input() user : Object;
-  constructor(private userService: GetUserService, private currUser: CurrUserService, private router: Router) { 
+  links : Object[];
+  constructor(private services: MyServivesService, private currUser: CurrUserService, private router: Router) { 
     this.user = this.currUser.getUser();
+    services.getMyServices();
     if(this.user){
       console.log(this.user['fname']);
     }
+    this.links = [
+      {'link': 'allProducts', 'name': 'All Products'},
+      {'link': 'bikes', 'name': 'Bikes'},
+      {'link': 'parts', 'name': 'Parts'},
+      {'link': 'scheduleService', 'name': 'Schedule Services'}
+      ];
+      if(this.currUser.getUser['title'] == 1){
+        this.links.push({'link': 'myServices','name': 'My services'});
+      }
   }
 
   ngOnInit() {
-    if(!this.currUser.getUser()){
+    if(this.currUser.getUser()['id'] == -1){
       this.router.navigateByUrl('');
     }
   }

@@ -1,7 +1,13 @@
-<nav-bar [otherLinks]="[]"></nav-bar>
+<nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
 <div class="bg-img">
     <form class="container">
-      <h1>Make an account</h1>
+      <h1>Add a new employee</h1>
       <label for="username"><b>Username</b></label>
       <input class="form-cotrol" #username type="text" placeholder="Enter Username" name="username" required>
   
