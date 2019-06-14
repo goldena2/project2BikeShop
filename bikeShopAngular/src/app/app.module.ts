@@ -23,6 +23,7 @@ import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 
 
@@ -43,7 +44,8 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
