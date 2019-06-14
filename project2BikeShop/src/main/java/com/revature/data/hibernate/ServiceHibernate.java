@@ -43,9 +43,8 @@ public class ServiceHibernate implements ServicesDOA {
 		User user;
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive
-		String query = "from ServiceRequest u where u.userId=:userid";
+		String query = "from ServiceRequest u";
 		Query<ServiceRequest> q = s.createQuery(query, ServiceRequest.class);
-		q.setParameter("userid", userId);
 		return q.list();
 	}
 

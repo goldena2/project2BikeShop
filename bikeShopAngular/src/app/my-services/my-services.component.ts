@@ -11,21 +11,18 @@ export class MyServicesComponent implements OnInit {
   services: any;
 
   constructor(private getServices: MyServivesService, private user: CurrUserService) { 
-    if(this.services == null){
-      this.services = [];
+    this.services = getServices.getServices();
+    for(var i; i < this.services.length; i++){
+      console.log(this.services[i]);
+      console.log(this.user.getUser()['id']);
+      if(this.services[i]['userId'] != this.user.getUser()['id']){
+        delete this.services[i];
+      }
     }
   }
 
   ngOnInit() {
-    this.getServices.getMyServices().subscribe(data=>{
-      this.services = data;
-      let i = 0;
-      for (let entry of this.services){
-        if(entry['userId'] != this.user.getUser()['id']){
-          delete data[i];
-        }
-      }
-    });
+    this.services = this. getServices.getServices();
   }
 
   calcTime(service){
@@ -40,7 +37,8 @@ export class MyServicesComponent implements OnInit {
   }
 
   isId(id: number){
-    return id == this.user.getUser()['id'];
+    console.log(id);
+    return id === this.user.getUser()['id'];
   }
 
 }

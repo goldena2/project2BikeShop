@@ -37,6 +37,8 @@ import { ProductListElementComponent } from './product-list-element/product-list
     ScheduleServiceComponent,
     AllProductsComponent,
     MyServicesComponent,
+    ProductListElementComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
