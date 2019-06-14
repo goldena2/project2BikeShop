@@ -1,6 +1,28 @@
 /*******************************************************************************
    Drop Tables
 ********************************************************************************/
+
+DROP USER project2 CASCADE;
+
+/*******************************************************************************
+   Create database
+********************************************************************************/
+
+
+CREATE USER project2
+IDENTIFIED BY password
+DEFAULT TABLESPACE users
+TEMPORARY TABLESPACE temp
+QUOTA 10M ON users;
+
+GRANT connect to project2;
+GRANT resource to project2;
+GRANT create session TO project2;
+GRANT create table TO project2;
+GRANT create view TO project2;
+
+conn project2/password
+
 drop table users CASCADE CONSTRAINTS;
 drop table title CASCADE CONSTRAINTS;
 drop table product CASCADE CONSTRAINTS;

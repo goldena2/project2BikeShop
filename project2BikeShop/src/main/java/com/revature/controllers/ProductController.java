@@ -31,6 +31,7 @@ public class ProductController {
 	
 	@PostMapping
 	public CreateAccountResponse addProduct(@RequestBody Product p) {
+		System.out.println(p);
 		CreateAccountResponse status = new CreateAccountResponse();
 		status.setSuccess(pd.addProduct(p));
 		return status;
