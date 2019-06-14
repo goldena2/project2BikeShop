@@ -5,7 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class CurrUserService {
   user : any;
-  constructor() { }
+  constructor() { 
+    if(this.user == null){
+      this.user = {};
+    }
+  }
 
   getUser(){
     return this.user;

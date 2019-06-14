@@ -1,3 +1,4 @@
+import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
 import { LoginService } from './login.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { ProductComponent } from './product/product.component';
+import { MyServicesComponent } from './my-services/my-services.component';
+import { MyServivesService } from './my-servives.service';
 
 
 
@@ -33,13 +36,19 @@ import { ProductComponent } from './product/product.component';
     ProductComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
+    MyServicesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [MakeAccountService, HttpClient, GetUserService, LoginService],
+  providers: [MakeAccountService, 
+    HttpClient, 
+    GetUserService, 
+    LoginService, 
+    ScheduledServicesService, 
+    MyServivesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

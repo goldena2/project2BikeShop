@@ -1,3 +1,6 @@
+import { CurrUserService } from './../curr-user.service';
+import { GetUserService } from './../get-user.service';
+import { ScheduledServicesService } from './../scheduled-services.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleServiceComponent implements OnInit {
   date;
-  constructor() { }
+  constructor(private scheduler: ScheduledServicesService, private user: CurrUserService) { }
 
   ngOnInit() {
   }
@@ -15,11 +18,12 @@ export class ScheduleServiceComponent implements OnInit {
   log(value){
     console.log(value.value);
   }
-  submitForm(desc: string, date: string , time: string, bike: string){
-    console.log(date);
-    console.log(desc);
-    console.log(bike);
-
+  submitForm(desc: string, day: string , time: string, bike: string){
+      console.log(this.user.getUser());
+      let splittime = time.split(':');
+      let numTime = 0;
+      numTime = (+splittime[0])*60 + (+splittime[1]);
+      this.scheduler.makeServiceRequest(desc, day, numTime, bike, this.user.getUser()['id']).subscribe();
   }
 
 }

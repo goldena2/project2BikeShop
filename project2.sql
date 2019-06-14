@@ -3,24 +3,24 @@
    Drop database if it exists
 ********************************************************************************/
 
-DROP USER projectTwo CASCADE;
+DROP USER project2 CASCADE;
 
 /*******************************************************************************
    Create database
 ********************************************************************************/
 
 
-CREATE USER projectTwo
+CREATE USER project2
 IDENTIFIED BY password
 DEFAULT TABLESPACE users
 TEMPORARY TABLESPACE temp
 QUOTA 10M ON users;
 
-GRANT connect to projectTwo;
-GRANT resource to projectTwo;
-GRANT create session TO projectTwo;
-GRANT create table TO projectTwo;
-GRANT create view TO projectTwo;
+GRANT connect to project2;
+GRANT resource to project2;
+GRANT create session TO project2;
+GRANT create table TO project2;
+GRANT create view TO project2;
 
 conn project2/password
 
@@ -86,6 +86,7 @@ create table availibility(
 
 create table services(
 	id number not null,
+	description varchar(1024),
 	user_id number not null,
 	day varchar(12),
 	appointment_time number,
