@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(!this.currUser.getUser()){
+    if(this.currUser.getUser()['id'] == -1){
       this.router.navigateByUrl('');
     }
   }

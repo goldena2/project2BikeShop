@@ -159,6 +159,7 @@ create sequence invoice_seq;
 create sequence availability_seq;
 create sequence shift_seq;
 create sequence schedule_seq;
+create sequence services_seq;
 
 /*******************************************************************************
    Manually inserted table entries
