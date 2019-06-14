@@ -16,4 +16,13 @@ export class NavBarComponent{
   isCustomer() : boolean{
     return this.currUser.getUser()['title'] == 1;
   }
+
+  isManager() : boolean{
+    return this.currUser.getUser()['title'] == 3;
+  }
+
+  isEmployee(): boolean{
+    return this.currUser.getUser()['title'] == 2;
+  }
+
 }

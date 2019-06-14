@@ -10,29 +10,28 @@ import { MyServivesService } from '../my-servives.service';
 export class MyServicesComponent implements OnInit {
   services: any;
 
-  constructor(private getServices: MyServivesService, private user: CurrUserService) { 
-    this.services = getServices.getServices();
-    for(var i; i < this.services.length; i++){
-      console.log(this.services[i]);
-      console.log(this.user.getUser()['id']);
-      if(this.services[i]['userId'] != this.user.getUser()['id']){
-        delete this.services[i];
-      }
-    }
-  }
+  constructor(private getServices: MyServivesService, private user: CurrUserService) { }
 
   ngOnInit() {
-    this.services = this. getServices.getServices();
+    let temp = this.getServices.getServices();
+    let myServices =[];
+    for(let service of temp){
+      if(service['userId'] == this.user.getUser()['id']){
+        myServices.push(service);
+      }
+    }
+    this.services = myServices;
   }
 
   calcTime(service){
     let hour = Math.floor(service['time']/60);
     let min = service['time']%60;
-    let temp = 'AM';
-    if(hour > 12){
+    let temp = hour >= 12 ? 'PM' : 'AM';
+    if(hour >12){
       hour -= 12;
       temp = 'PM';
     }
+    
     return hour+':'+min+temp;
   }
 
