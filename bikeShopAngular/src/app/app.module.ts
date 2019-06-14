@@ -1,3 +1,4 @@
+import { ProductComponent } from './product/product.component';
 import { GetUserService } from './get-user.service';
 import { LoginService } from './login.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,6 +34,7 @@ import { ProductListElementComponent } from './product-list-element/product-list
     ScheduleServiceComponent,
     AllProductsComponent,
     ProductListElementComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
