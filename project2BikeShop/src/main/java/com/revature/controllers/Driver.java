@@ -1,6 +1,6 @@
 package com.revature.controllers;
 
-import java.util.Set;
+import java.util.List;
 
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
@@ -17,7 +17,7 @@ public class Driver {
 		p.setStock(25);
 		p.setUPC("298832593260053762");
 		pd.addProduct(p);
-		Set<Product> products = pd.getProducts();
+		List<Product> products = pd.getProducts();
 		for (Product product : products) {
 			System.out.println(product);
 		}
