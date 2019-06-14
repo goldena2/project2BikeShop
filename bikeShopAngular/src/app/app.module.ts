@@ -1,3 +1,4 @@
+import { AllProductsService } from './all-products.service';
 import { ProductComponent } from './product/product.component';
 import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
@@ -50,7 +51,9 @@ import { ProductListElementComponent } from './product-list-element/product-list
     GetUserService, 
     LoginService, 
     ScheduledServicesService, 
-    MyServivesService],
+    MyServivesService,
+    AllProductsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

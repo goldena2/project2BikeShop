@@ -1,7 +1,11 @@
 package com.revature.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +21,13 @@ import com.revature.data.ProductDAO;
 public class ProductController {
 	@Autowired
 	private ProductDAO pd;
+	
+	@GetMapping
+	public List<Product> getProducts(){
+		List<Product> productList = new ArrayList<Product>();
+		productList = pd.getProducts();
+		return productList;
+	}
 	
 	@PostMapping
 	public CreateAccountResponse addProduct(@RequestBody Product p) {

@@ -10,7 +10,7 @@ export class AllProductsService {
   constructor( private httpClient: HttpClient, private portNumber: PortConfigService ) { }
 
   getProducts(){
-    return this.httpClient.get<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/allProducts', {
+    return this.httpClient.get<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/products', {
     });
   }
 }

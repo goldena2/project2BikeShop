@@ -38,6 +38,9 @@ public class LoginController {
 			session.setAttribute("user", user);
 			return user;
 		}
+		else {
+			System.out.println("no user found.");
+		}
 		return user;
 	}
 }
