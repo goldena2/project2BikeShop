@@ -20,6 +20,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
 import { ProductComponent } from './product/product.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
+import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 
 
 
@@ -33,7 +34,6 @@ import { MyServivesService } from './my-servives.service';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ProductComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
     MyServicesComponent,
