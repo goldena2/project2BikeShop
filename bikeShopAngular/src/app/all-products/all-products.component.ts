@@ -1,3 +1,5 @@
+import { CurrUserService } from './../curr-user.service';
+import { AllProductsService } from './../all-products.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productListBuilder: AllProductsService, private getUser: CurrUserService) { }
 
   ngOnInit() {
+    this.productListBuilder.getProducts().subscribe(data =>{
+      if(data != null){
+        console.log(data);
+      }
+  });
   }
-
 }
