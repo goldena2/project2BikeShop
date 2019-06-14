@@ -1,30 +1,24 @@
-/**
 /*******************************************************************************
-   Drop database if it exists
+   Drop Tables
 ********************************************************************************/
+drop table users CASCADE CONSTRAINTS;
+drop table title CASCADE CONSTRAINTS;
+drop table product CASCADE CONSTRAINTS;
+drop table image CASCADE CONSTRAINTS;
+drop table invoice CASCADE CONSTRAINTS;
+drop table invoice_line CASCADE CONSTRAINTS;
+drop table availability CASCADE CONSTRAINTS;
+drop table day_of_week CASCADE CONSTRAINTS;
+drop table shift CASCADE CONSTRAINTS;
+drop table schedule CASCADE CONSTRAINTS;
+drop table product_type CASCADE CONSTRAINTS;
 
-DROP USER project2 CASCADE;
-
-/*******************************************************************************
-   Create database
-********************************************************************************/
-
-
-CREATE USER project2
-IDENTIFIED BY password
-DEFAULT TABLESPACE users
-TEMPORARY TABLESPACE temp
-QUOTA 10M ON users;
-
-GRANT connect to project2;
-GRANT resource to project2;
-GRANT create session TO project2;
-GRANT create table TO project2;
-GRANT create view TO project2;
-
-conn project2/password
-
-
+drop sequence users_seq;
+drop sequence product_seq;
+drop sequence invoice_seq;
+drop sequence availability_seq;
+drop sequence shift_seq;
+drop sequence schedule_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -76,13 +70,13 @@ create table invoice_line(
 );
 
 -- start and end time are caculated in 24 hour format the numbers are the minutes past midnight so 01:00 = 60, 02:30 = 150
-create table availibility(
+create table availability(
 	id number not null,
 	user_id number not null,
 	date_id number not null,
 	start_time number default 0,
 	end_time number default 0,
-	CONSTRAINT availibility_pk PRIMARY KEY (id)
+	CONSTRAINT availability_pk PRIMARY KEY (id)
 );
 
 create table services(
@@ -117,6 +111,12 @@ create table schedule(
 	CONSTRAINT schedule_pk PRIMARY KEY (id)
 );
 
+create table product_type(
+    id number not null,
+    type varchar2(50) not null,
+    CONSTRAINT product_type_pk PRIMARY KEY (id)
+);
+
 /*******************************************************************************
    Create Foreign Keys
 ********************************************************************************/
@@ -135,10 +135,10 @@ ALTER TABLE invoice_line ADD CONSTRAINT FK_invoiceid
 ALTER TABLE invoice_line ADD CONSTRAINT FK_invoiceProductid
     FOREIGN KEY (product_id) REFERENCES product (id);
 
-ALTER TABLE availibility ADD CONSTRAINT FK_enployeeid
+ALTER TABLE availability ADD CONSTRAINT FK_enployeeid
     FOREIGN KEY (user_id) REFERENCES users (id);
 
-ALTER TABLE availibility ADD CONSTRAINT FK_avilibilitDateid
+ALTER TABLE availability ADD CONSTRAINT FK_avilibilitDateid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
 
 ALTER TABLE shift ADD CONSTRAINT FK_userShiftid
@@ -153,18 +153,58 @@ ALTER TABLE shift ADD CONSTRAINT FK_dayid
 /*******************************************************************************
 Creating the Sequences
 ********************************************************************************/
-create sequence product_seq;
 create sequence users_seq;
-create sequence services_seq;
+create sequence product_seq;
+create sequence invoice_seq;
+create sequence availability_seq;
+create sequence shift_seq;
+create sequence schedule_seq;
 
 /*******************************************************************************
    Manually inserted table entries
 ********************************************************************************/
 insert into TITLE(id, title)
 values(1, 'non-employee');
+insert into TITLE(id, title)
+values(2, 'employee');
+insert into TITLE(id, title)
+values(3, 'manager');
 
 insert into USERS(id, username, password, fname, lname, title, phone_number, email)
-values(1, 'user', 'pass', 'firstname', 'lastname', 0, '111-1111', 'email@email.com');
+values(1, 'user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
+insert into USERS(id, username, password, fname, lname, title, phone_number, email)
+values(2, 'emp', 'pass', 'empFN', 'empLN', 2, '222-2222', 'email@email.com');
+insert into USERS(id, username, password, fname, lname, title, phone_number, email)
+values(3, 'man', 'pass', 'manFN', 'manLN', 3, '333-3333', 'email@email.com');
+
+insert into day_of_week(id, day_of_the_week)
+values(1, 'monday');
+insert into day_of_week(id, day_of_the_week)
+values(2, 'tuesday');
+insert into day_of_week(id, day_of_the_week)
+values(3, 'wednesday');
+insert into day_of_week(id, day_of_the_week)
+values(4, 'thursday');
+insert into day_of_week(id, day_of_the_week)
+values(5, 'friday');
+insert into day_of_week(id, day_of_the_week)
+values(6, 'saturday');
+insert into day_of_week(id, day_of_the_week)
+values(7, 'sunday');
+
+insert into product_type(id, type)
+values(1, 'bike');
+insert into product_type(id, type)
+values(2, 'part');
+insert into product_type(id, type)
+values(3, 'other');
+
+insert into product(id, name, upc, price, description, stock, type)
+values(1,'Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1);
+insert into product(id, name, upc, price, description, stock, type)
+values(2,'Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
+insert into product(id, name, upc, price, description, stock, type)
+values(3,'Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
 
 commit;
 exit;

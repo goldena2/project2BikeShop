@@ -1,3 +1,4 @@
+import { ProductComponent } from './product/product.component';
 import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
 import { LoginService } from './login.service';
@@ -17,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
-import { ProductComponent } from './product/product.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
@@ -36,6 +36,8 @@ import { ProductListElementComponent } from './product-list-element/product-list
     HomeComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
+    ProductListElementComponent,
+    ProductComponent,
     MyServicesComponent,
   ],
   imports: [
