@@ -20,7 +20,7 @@ public class UserHibernate implements UserDAO {
 		User user;
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive
-		String query = "from User u where u.username=:username and u.password=:password";
+		String query = "from Users u where u.username=:username and u.password=:password";
 		Query<User> q = s.createQuery(query, User.class);
 		q.setParameter("username", username);
 		q.setParameter("password", password);
@@ -34,7 +34,7 @@ public class UserHibernate implements UserDAO {
 		User user;
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive
-		String query = "from User u where u.username=:username";
+		String query = "from Users u where u.username=:username";
 		Query<User> q = s.createQuery(query, User.class);
 		q.setParameter("username", username);
 		user = q.uniqueResult();

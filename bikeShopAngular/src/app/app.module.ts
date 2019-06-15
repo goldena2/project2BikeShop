@@ -40,15 +40,12 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     ScheduleServiceComponent,
     AllProductsComponent,
     ProductListElementComponent,
-<<<<<<< HEAD
     RemoveProductComponent,
-=======
     ProductComponent,
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent
->>>>>>> bd31ccb4755070db07a6a33586b4b873552a8432
   ],
   imports: [
     BrowserModule,

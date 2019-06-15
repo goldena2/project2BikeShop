@@ -1,13 +1,20 @@
 <nav-bar [otherLinks]="[]"></nav-bar>
-<div>
-  <table id="products" class="table">
-     
-    <tr>
-          
-          <th>Id</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Remove</th>
-    </tr>
-  </table>
-</div>
+  <div class="productsList">
+    <table class="table" id="productListTable">
+      <thead>
+        <tr>
+          <th class="column1" scope="col">Product</th>
+          <th class="column2" scope="col">Description</th>
+          <th class="column3" scope="col">Quantity</th>
+          <th class="column4" scope="col">Price</th>
+          <th class="column5" scope="col">Action</th>
+          <th class="column6" scope="col">Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- insert product-list-element with *ngFor here -->
+        <app-product-list-element *ngFor="let product of products" [product]="product"></app-product-list-element>
+      </tbody>
+    </table>
+  </div>
+<app-footer></app-footer>
