@@ -1,28 +1,6 @@
 /*******************************************************************************
    Drop Tables
 ********************************************************************************/
-
-DROP USER project2 CASCADE;
-
-/*******************************************************************************
-   Create database
-********************************************************************************/
-
-
-CREATE USER project2
-IDENTIFIED BY password
-DEFAULT TABLESPACE users
-TEMPORARY TABLESPACE temp
-QUOTA 10M ON users;
-
-GRANT connect to project2;
-GRANT resource to project2;
-GRANT create session TO project2;
-GRANT create table TO project2;
-GRANT create view TO project2;
-
-conn project2/password
-
 drop table users CASCADE CONSTRAINTS;
 drop table title CASCADE CONSTRAINTS;
 drop table product CASCADE CONSTRAINTS;
@@ -33,6 +11,7 @@ drop table availability CASCADE CONSTRAINTS;
 drop table day_of_week CASCADE CONSTRAINTS;
 drop table shift CASCADE CONSTRAINTS;
 drop table schedule CASCADE CONSTRAINTS;
+drop table services CASCADE CONSTRAINTS;
 drop table product_type CASCADE CONSTRAINTS;
 
 drop sequence users_seq;
@@ -70,7 +49,7 @@ create table product(
 	price number not null,
 	description varchar(64) not null,
 	stock number,
-    type number,
+    type_id number,
 	CONSTRAINT product_pk PRIMARY KEY (id)
 );
 
@@ -223,11 +202,11 @@ values(2, 'part');
 insert into product_type(id, type)
 values(3, 'other');
 
-insert into product(id, name, upc, price, description, stock, type)
+insert into product(id, name, upc, price, description, stock, type_id)
 values(1,'Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1);
-insert into product(id, name, upc, price, description, stock, type)
+insert into product(id, name, upc, price, description, stock, type_id)
 values(2,'Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
-insert into product(id, name, upc, price, description, stock, type)
+insert into product(id, name, upc, price, description, stock, type_id)
 values(3,'Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
 
 commit;
