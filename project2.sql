@@ -48,7 +48,8 @@ create table product(
 	upc varchar(24) not null,
 	price number not null,
 	description varchar(64) not null,
-	stock number,
+	stock number not null,
+    image varchar2(300),
     type_id number,
 	CONSTRAINT product_pk PRIMARY KEY (id)
 );

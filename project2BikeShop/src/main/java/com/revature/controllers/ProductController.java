@@ -9,28 +9,27 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.beans.CreateAccountResponse;
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value="/products")
 public class ProductController {
 	@Autowired
 	private ProductDAO pd;
-	
-	@GetMapping
+	private ObjectMapper om = new ObjectMapper();
+	@GetMapping(value="/products")
 	public List<Product> getProducts(){
 		List<Product> productList = new ArrayList<Product>();
 		productList = pd.getProducts();
 		return productList;
 	}
 	
-	@PostMapping
+	@PostMapping(value="/products")
 	public CreateAccountResponse addProduct(@RequestBody Product p) {
 		System.out.println(p);
 		CreateAccountResponse status = new CreateAccountResponse();
@@ -38,10 +37,9 @@ public class ProductController {
 		return status;
 	}
 	
-//	@DeleteMapping
-//	public void deleteproduct(@RequestBody Product productId) {
-//		pd.deleteProduct(productId);
-//		
-//	}
+	@PostMapping(value="/products/makePurchase")
+	public void updateStock(@RequestBody Product product) {
+		pd.updateStock(product);
+	}
 	
 }

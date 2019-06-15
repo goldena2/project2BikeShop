@@ -14,4 +14,5 @@ public interface ProductDAO {
 	public void deleteProduct(Product product);
 	
 	public List<Product> getProducts();
+	public void updateStock(Product product);
 }
