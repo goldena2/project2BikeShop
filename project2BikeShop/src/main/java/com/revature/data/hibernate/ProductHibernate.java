@@ -60,7 +60,14 @@ public class ProductHibernate implements ProductDAO {
 		productList = q.getResultList();
 		return productList;
 	}
-	
-	
-	
+
+	@Override
+	public void updateStock(Product product) {
+		Session s = hu.getSession();
+		Transaction t = s.beginTransaction();
+		System.out.println(product.getId());
+		s.saveOrUpdate(product);
+		t.commit();
+		s.close();
+	}
 }

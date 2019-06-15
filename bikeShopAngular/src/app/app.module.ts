@@ -1,3 +1,4 @@
+import { MakePurchaseService } from './make-purchase.service';
 import { AllProductsService } from './all-products.service';
 import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
@@ -60,6 +61,7 @@ import { ProductComponent } from './product/product.component';
     ScheduledServicesService, 
     MyServivesService,
     AllProductsService,
+    MakePurchaseService,
   ],
   bootstrap: [AppComponent]
 })

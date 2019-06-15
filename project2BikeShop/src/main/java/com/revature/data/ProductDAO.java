@@ -10,4 +10,5 @@ public interface ProductDAO {
 	public boolean addProduct(Product p);
 	public Product getProduct(String upc);
 	public List<Product> getProducts();
+	public void updateStock(Product product);
 }
