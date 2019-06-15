@@ -1,5 +1,4 @@
 import { AllProductsService } from './all-products.service';
-import { ProductComponent } from './product/product.component';
 import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
 import { LoginService } from './login.service';
@@ -19,11 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { RemoveProductComponent } from './remove-product/remove-product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -39,13 +41,18 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     HomeComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
+    AddProductComponent,
     ProductListElementComponent,
+<<<<<<< HEAD
     RemoveProductComponent,
     ProductComponent,
+=======
+>>>>>>> 53650a0262368a98a84913ae3f177861084f125a
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
