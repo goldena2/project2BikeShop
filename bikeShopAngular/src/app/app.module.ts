@@ -43,11 +43,8 @@ import { ProductComponent } from './product/product.component';
     AllProductsComponent,
     AddProductComponent,
     ProductListElementComponent,
-<<<<<<< HEAD
     RemoveProductComponent,
     ProductComponent,
-=======
->>>>>>> 53650a0262368a98a84913ae3f177861084f125a
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
