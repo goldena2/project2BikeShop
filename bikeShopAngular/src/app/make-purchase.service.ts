@@ -1,3 +1,4 @@
+import { CurrUserService } from './curr-user.service';
 import { PortConfigService } from './port-config.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,12 +8,13 @@ import { Injectable } from '@angular/core';
 })
 export class MakePurchaseService {
 
-  constructor(private httpClient: HttpClient, private portNumber: PortConfigService) { }
+  constructor(private httpClient: HttpClient, private portNumber: PortConfigService, private currUser: CurrUserService) {
+   }
 
   makePuchase(product: object) {
-    console.log('Sending product:' + product);
     return this.httpClient.post<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/products/makePurchase', {
-      //'product': product
+
+      // 'product': product,
       'id': product['id'],
       'name': product['name'],
       'upc': product['upc'],
@@ -21,6 +23,16 @@ export class MakePurchaseService {
       'stock': product['stock'],
       'image': product['image'],
       'type_id': product['type_id'],
+    });
+  }
+  createInvoice(product: object, purchaseQuantity: number) {
+    const user = this.currUser.getUser();
+    console.log("User ID: " + user['id']);
+    return this.httpClient.post<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/products/createInvoice', {
+      'product_id': product['id'],
+      'user_id': user['id'],
+      'quantity': purchaseQuantity,
+      'unitPrice': product['price']
     });
   }
 }
