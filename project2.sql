@@ -61,11 +61,15 @@ create table image(
 
 create table invoice(
 	id number not null,
+    product_id number not null,
 	user_id number not null,
-	total_cost number not null,
+	quantity number not null,
+    --unit_price is stored here to account for sales
+    unit_price number not null,
 	CONSTRAINT invoice_pk PRIMARY KEY (id)
 );
 
+--Probably deprecated
 create table invoice_line(
 	invoice_id number not null,
 	product_id number not null,
