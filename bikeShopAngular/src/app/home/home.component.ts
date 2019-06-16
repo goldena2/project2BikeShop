@@ -3,6 +3,8 @@ import { CurrUserService } from './../curr-user.service';
 import { GetUserService } from '../get-user.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { MyServivesService } from '../my-servives.service';
+import { AllProductsService } from '../all-products.service';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,8 @@ import { MyServivesService } from '../my-servives.service';
 export class HomeComponent implements OnInit {
   @Input() user : Object;
   links : Object[];
-  constructor(private services: MyServivesService, private currUser: CurrUserService, private router: Router) { 
+  products;
+  constructor(private services: MyServivesService, private currUser: CurrUserService, private router: Router, private allProducts: AllProductsService) { 
     this.user = this.currUser.getUser();
     services.getMyServices();
     if(this.user){
@@ -33,6 +36,24 @@ export class HomeComponent implements OnInit {
     if(this.currUser.getUser()['id'] == -1){
       this.router.navigateByUrl('');
     }
+    if(this.getType() == 'employee'){
+      this.allProducts.getProducts().subscribe(data =>{
+        if (data != null){
+          console.log('Getting new data:');
+          console.log(data);
+          this.products = data;
+          console.log(this.products);
+          let alertString = "";
+          for (let product of this.products) {
+            if (product.stock == 0) {
+              alertString += product.name+" Product ID: "+product.id+", stock empty.\n";
+            }
+          }
+          if (alertString != "")
+            alert(alertString);
+        }
+      });
+    }
   }
 
   getCurrUser(): string{
@@ -42,5 +63,4 @@ export class HomeComponent implements OnInit {
   getType(): string{
     return this.currUser.getUser()['title'] == 1 ? 'customer' : this.currUser.getUser()['title'] == 2 ? 'employee' : 'manager';
   }
-
 }

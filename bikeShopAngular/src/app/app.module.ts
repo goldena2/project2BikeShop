@@ -1,3 +1,4 @@
+import { MakePurchaseService } from './make-purchase.service';
 import { AllProductsService } from './all-products.service';
 import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
@@ -23,6 +24,7 @@ import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 
 
@@ -44,7 +46,8 @@ import { ProductComponent } from './product/product.component';
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { ProductComponent } from './product/product.component';
     ScheduledServicesService, 
     MyServivesService,
     AllProductsService,
+    MakePurchaseService,
   ],
   bootstrap: [AppComponent]
 })

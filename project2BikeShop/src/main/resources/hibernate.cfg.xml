@@ -23,6 +23,7 @@
 		
 		<!-- Mappings -->
 		<mapping class="com.revature.beans.User"/>
+		<mapping class="com.revature.beans.Invoice"/>
 		<mapping class="com.revature.beans.Product"/>
 		<mapping class="com.revature.beans.ServiceRequest"/>
 		
