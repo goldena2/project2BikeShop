@@ -161,7 +161,8 @@ ALTER TABLE shift ADD CONSTRAINT FK_dayid
 Creating the Sequences
 ********************************************************************************/
 create sequence users_seq;
-create sequence product_seq;
+create sequence product_seq
+    START WITH 4;
 create sequence invoice_seq;
 create sequence availability_seq;
 create sequence shift_seq;
