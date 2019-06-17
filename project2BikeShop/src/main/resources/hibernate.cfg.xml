@@ -3,8 +3,8 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@mmiller-revature-db.cnf3jaxsxrm8.us-east-2.rds.amazonaws.com:1521:ORCL</property>
-<!-- 		<property name="hibernate.connection.url">jdbc:oracle:thin:@patrickscall-db.cuznqlggtms3.us-east-2.rds.amazonaws.com:1521:ORCL</property> -->
+		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@mmiller-revature-db.cnf3jaxsxrm8.us-east-2.rds.amazonaws.com:1521:ORCL</property> -->
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@patrickscall-db.cuznqlggtms3.us-east-2.rds.amazonaws.com:1521:ORCL</property>
 		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@revaturetraining.cq0lu2eyldot.us-east-2.rds.amazonaws.com:1521:ORCL</property> -->
 		
 		
