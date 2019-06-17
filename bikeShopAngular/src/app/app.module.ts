@@ -29,6 +29,7 @@ import { InputAvalibilityComponent } from './input-avalibility/input-avalibility
 import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { SalesComponent } from './sales/sales.component';
 
 
 
@@ -53,7 +54,8 @@ import { ProductComponent } from './product/product.component';
     ProductComponent,
     CreateEmployeeComponent,
     InputAvalibilityComponent,
-    ProductListComponent
+    ProductListComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,14 @@
-<nav-bar [otherLinks]="[]"></nav-bar>
-  <app-product-list></app-product-list>
+<div *ngIf="this.currUser.isManager();else customerNavbar">
+  <nav-bar [otherLinks]="[
+  {'link': 'home', 'name': 'Home'},
+  {'link': 'sales', 'name': 'Sales'},
+  {'link': 'scheduleService', 'name': 'Schedule Services'}
+  ]"></nav-bar>
+</div>
+<ng-template #customerNavbar ><nav-bar #customerNavbar [otherLinks]="[
+  {'link': 'home', 'name': 'Home'},
+  {'link': 'scheduleService', 'name': 'Schedule Services'}
+  ]"></nav-bar>
+</ng-template>
+<app-product-list></app-product-list>
 <app-footer></app-footer>

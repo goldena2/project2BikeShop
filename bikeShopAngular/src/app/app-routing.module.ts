@@ -1,3 +1,4 @@
+import { SalesComponent } from './sales/sales.component';
 import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'inputAvlibility', component: InputAvalibilityComponent},
   {path: 'createEmployee', component: CreateEmployeeComponent},
   {path: 'removeProduct', component: RemoveProductComponent},
+  {path: 'sales', component: SalesComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
