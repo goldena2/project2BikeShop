@@ -29,6 +29,7 @@ import { InputAvalibilityComponent } from './input-avalibility/input-avalibility
 import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { ScheduleService } from './schedule.service';
 
 
 
@@ -69,6 +70,7 @@ import { ProductComponent } from './product/product.component';
     AllProductsService,
     SubmitAvalibiltyService,
     MakePurchaseService,
+    ScheduleService
   ],
   bootstrap: [AppComponent]
 })
