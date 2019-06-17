@@ -1,6 +1,29 @@
 td{
+    font-size: 16px;
+    text-align: left;
     padding-right: 50px;
+    width: 200px;
+    table-layout: auto;
+    overflow: hidden;
 }
-#productElement{
-    border-style: solid;
+
+#purchaseBtn{
+    width: 100%;
+    margin-top: 10px;
+}
+#nameElement{
+    width: 1000px;
+}
+#costElement{
+    vertical-align: middle;
+}
+#productName{
+    font-size: 18px;
+    font-weight: bold;
+}
+#stockElement{
+    vertical-align: middle;
+}
+#rowElements{
+    
 }

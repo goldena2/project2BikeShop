@@ -1,18 +1,3 @@
 <nav-bar [otherLinks]="[]"></nav-bar>
-  <div class="productsList">
-    <table class="table" id="productListTable">
-      <thead>
-        <tr>
-          <th scope="col">Product</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Price</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- insert product-list-element with *ngFor here -->
-        <app-product-list-element></app-product-list-element>
-      </tbody>
-    </table>
-  </div>
+  <app-product-list></app-product-list>
 <app-footer></app-footer>

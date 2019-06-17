@@ -9,17 +9,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { MakeCustomerAcountComponent } from './make-customer-acount/make-customer-acount.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { ProductComponent } from './product/product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 
 const routes: Routes = [
-  {path:'', component: FrontPageComponent},
+  {path: '', component: FrontPageComponent},
   {path: 'scheduleService', component: ScheduleServiceComponent},
   {path: 'makeAcount', component: MakeCustomerAcountComponent},
   {path: 'about', component: AboutComponent},
   {path: 'home', component: HomeComponent},
   {path: 'allProducts', component: AllProductsComponent},
-  {path: 'products', component: ProductComponent},
+  {path: 'addProduct', component: AddProductComponent},
   {path: 'myServices', component: MyServicesComponent},
   {path: 'inputAvlibility', component: InputAvalibilityComponent},
   {path: 'createEmployee', component: CreateEmployeeComponent},

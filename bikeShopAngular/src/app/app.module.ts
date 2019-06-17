@@ -1,5 +1,5 @@
+import { MakePurchaseService } from './make-purchase.service';
 import { AllProductsService } from './all-products.service';
-import { ProductComponent } from './product/product.component';
 import { ScheduledServicesService } from './scheduled-services.service';
 import { GetUserService } from './get-user.service';
 import { LoginService } from './login.service';
@@ -19,12 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
 import { SubmitAvalibiltyService } from './submit-avalibilty.service';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -40,13 +43,17 @@ import { SubmitAvalibiltyService } from './submit-avalibilty.service';
     HomeComponent,
     ScheduleServiceComponent,
     AllProductsComponent,
+    AddProductComponent,
     ProductListElementComponent,
-    ProductComponent,
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
+<<<<<<< HEAD
     InputAvalibilityComponent
+=======
+    ProductListComponent
+>>>>>>> c5d2b46a9cc28fd8446fcaafd638dc6bfacacb29
   ],
   imports: [
     BrowserModule,
@@ -60,7 +67,11 @@ import { SubmitAvalibiltyService } from './submit-avalibilty.service';
     ScheduledServicesService, 
     MyServivesService,
     AllProductsService,
+<<<<<<< HEAD
     SubmitAvalibiltyService
+=======
+    MakePurchaseService,
+>>>>>>> c5d2b46a9cc28fd8446fcaafd638dc6bfacacb29
   ],
   bootstrap: [AppComponent]
 })
