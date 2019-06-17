@@ -23,6 +23,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
+import { RemoveProductComponent } from './remove-product/remove-product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
 import { SubmitAvalibiltyService } from './submit-avalibilty.service';
@@ -45,6 +46,8 @@ import { ProductComponent } from './product/product.component';
     AllProductsComponent,
     AddProductComponent,
     ProductListElementComponent,
+    RemoveProductComponent,
+    ProductComponent,
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,

@@ -23,5 +23,7 @@ export class ProductService {
         'type_id': type_id,
 
      });
+
+     
  }
 }
