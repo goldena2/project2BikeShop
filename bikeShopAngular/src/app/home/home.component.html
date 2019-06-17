@@ -11,4 +11,5 @@
 {'link': 'scheduleService', 'name': 'Schedule Services'}
 ]"></nav-bar></ng-template>
 <h1 id="welcomeUser">Welcome {{ getType() }} {{ getCurrUser() }}</h1>
+<button class="btn" (click)="generateSchedule()" *ngIf="getTypeId() == 3">Generate Schedule</button>
 <app-footer></app-footer>
