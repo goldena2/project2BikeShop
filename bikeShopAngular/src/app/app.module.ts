@@ -25,6 +25,8 @@ import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { RemoveProductComponent } from './remove-product/remove-product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
+import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 
@@ -50,6 +52,7 @@ import { ProductComponent } from './product/product.component';
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
+    InputAvalibilityComponent,
     ProductListComponent
   ],
   imports: [
@@ -57,18 +60,19 @@ import { ProductComponent } from './product/product.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [MakeAccountService, 
-    HttpClient, 
-    GetUserService, 
-    LoginService, 
-    ScheduledServicesService, 
+  providers: [MakeAccountService,
+    HttpClient,
+    GetUserService,
+    LoginService,
+    ScheduledServicesService,
     MyServivesService,
     AllProductsService,
+    SubmitAvalibiltyService,
     MakePurchaseService,
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  currUser : object;
+  currUser: object;
 
  }

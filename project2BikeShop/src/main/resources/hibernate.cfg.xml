@@ -3,15 +3,9 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@myfirstoracledb.chqbohtifldx.us-east-2.rds.amazonaws.com:1521:ORCL</property>
-		<property name="hibernate.connection.username">project2</property>
-
-		
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@revaturetraining.cq0lu2eyldot.us-east-2.rds.amazonaws.com:1521:ORCL</property>		
 		<property name="hibernate.connection.username">Project2</property>
-
 		<property name="hibernate.connection.password">password</property>
-		
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
 		
 		<!-- We can some hibernate specific things -->
@@ -27,6 +21,7 @@
 		<mapping class="com.revature.beans.Invoice"/>
 		<mapping class="com.revature.beans.Product"/>
 		<mapping class="com.revature.beans.ServiceRequest"/>
+		<mapping class="com.revature.beans.Avalibility"/>
 		
 		
 	</session-factory>

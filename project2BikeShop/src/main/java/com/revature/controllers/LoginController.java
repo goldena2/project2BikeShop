@@ -41,6 +41,8 @@ public class LoginController {
 	@PostMapping
 	public User login(@RequestBody User newUser, HttpSession session) {
 		System.out.println(newUser);
+		System.out.println(newUser.getPassword());
+
 		User user = userDAO.getUser(newUser.getUsername(), newUser.getPassword());
 		if(user != null) {
 			session.setAttribute("user", user);
