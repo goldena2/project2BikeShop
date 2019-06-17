@@ -20,7 +20,9 @@ public class Driver {
 		List<Product> products = pd.getProducts();
 		for (Product product : products) {
 			System.out.println(product);
+			pd.deleteProduct(product);
 		}
+		
 		
 		//System.out.println(pd.getProduct(id));
 	}

@@ -1,3 +1,4 @@
+import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
@@ -11,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductComponent } from './product/product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { RemoveProductComponent } from './remove-product/remove-product.component';
 
 const routes: Routes = [
   {path: '', component: FrontPageComponent},
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: 'allProducts', component: AllProductsComponent},
   {path: 'addProduct', component: AddProductComponent},
   {path: 'myServices', component: MyServicesComponent},
+  {path: 'inputAvlibility', component: InputAvalibilityComponent},
   {path: 'createEmployee', component: CreateEmployeeComponent},
+  {path: 'removeProduct', component: RemoveProductComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

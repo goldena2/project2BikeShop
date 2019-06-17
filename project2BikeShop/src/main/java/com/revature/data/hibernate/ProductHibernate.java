@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import com.revature.beans.Invoice;
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
+import com.revature.data.hibernate.ProductHibernate;
 import com.revature.utils.HibernateUtil;
 import com.revature.utils.LogUtil;
 
@@ -39,15 +40,15 @@ public class ProductHibernate implements ProductDAO {
 	}
 
 	@Override
-	public Product getProduct(String upc) {
-		System.out.println(upc);
+	public Product getProduct(int id) {
+		System.out.println(id);
 		Session s = hu.getSession();
 		Product product;
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive
-		String query = "from Product p where p.UPC=:upc";
+		String query = "from Product p where p.id=:id";
 		Query<Product> q = s.createQuery(query, Product.class);
-		q.setParameter("upc", upc);
+		q.setParameter("id", id);
 		product = q.uniqueResult();
 		return product;
 	}
@@ -63,6 +64,26 @@ public class ProductHibernate implements ProductDAO {
 	}
 
 	@Override
+	public void deleteProduct(Product product) {
+		Session s = hu.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.delete(product);
+			tx.commit();
+		} catch(Exception e) {
+			if (tx != null) {
+				tx.rollback();
+			}
+			LogUtil.logException(e, ProductHibernate.class);
+		} finally {
+			s.close();
+		}
+			
+	}
+	
+	
+	
 	public void updateStock(Product product) {
 		Session s = hu.getSession();
 		Transaction t = s.beginTransaction();

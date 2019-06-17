@@ -22,6 +22,7 @@ public class UserHibernate implements UserDAO {
 		// so the names are case sensitive
 		String query = "from User u where u.username=:username and u.password=:password";
 		Query<User> q = s.createQuery(query, User.class);
+		System.out.println(password);
 		q.setParameter("username", username);
 		q.setParameter("password", password);
 		user = q.uniqueResult();
