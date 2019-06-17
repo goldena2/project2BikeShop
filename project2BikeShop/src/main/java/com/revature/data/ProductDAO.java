@@ -10,7 +10,7 @@ public interface ProductDAO {
 	
 	
 	public boolean addProduct(Product p);
-	public Product getProduct(String upc);
+	public Product getProduct(int id);
 	public void deleteProduct(Product product);
 	
 	public List<Product> getProducts();

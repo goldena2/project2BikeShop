@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductComponent } from './product/product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { RemoveProductComponent } from './remove-product/remove-product.component';
 
 const routes: Routes = [
   {path: '', component: FrontPageComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'addProduct', component: AddProductComponent},
   {path: 'myServices', component: MyServicesComponent},
   {path: 'createEmployee', component: CreateEmployeeComponent},
+  {path: 'removeProduct', component: RemoveProductComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

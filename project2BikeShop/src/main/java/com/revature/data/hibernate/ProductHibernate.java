@@ -39,15 +39,15 @@ public class ProductHibernate implements ProductDAO {
 	}
 
 	@Override
-	public Product getProduct(String upc) {
-		System.out.println(upc);
+	public Product getProduct(int id) {
+		System.out.println(id);
 		Session s = hu.getSession();
 		Product product;
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive
-		String query = "from Product p where p.UPC=:upc";
+		String query = "from Product p where p.id=:id";
 		Query<Product> q = s.createQuery(query, Product.class);
-		q.setParameter("upc", upc);
+		q.setParameter("id", id);
 		product = q.uniqueResult();
 		return product;
 	}
