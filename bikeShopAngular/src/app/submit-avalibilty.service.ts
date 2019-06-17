@@ -13,4 +13,8 @@ export class SubmitAvalibiltyService {
     console.log(avalibilty);
     this.http.post('http://localhost:' + this.port.getPort() + '/bikeShop/submitAvalibility', avalibilty).subscribe();
   }
+
+  deleteOldvalues(id: number){
+    this.http.post('http://localhost:' + this.port.getPort() + '/bikeShop/deleteAvalibility', id).subscribe();
+  }
 }

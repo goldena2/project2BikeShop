@@ -46,5 +46,16 @@ public class AvalibilityHibernate implements AvalibilityDOA {
 		q.setParameter("day", day);
 		return q.list();	
 	}
+	
+	@Override
+	public void deleteUserAvalibility(Integer userId) {
+		Session s = hu.getSession();
+		Transaction txn = s.beginTransaction();
+		// in queries, you must use the Java side name, not the actual table name, 
+		// so the names are case sensitive
+		String hql = "delete from Avalibility where userId= :userId";
+		s.createQuery(hql).setInteger("userId", userId).executeUpdate();
+		txn.commit();
+	}
 
 }
