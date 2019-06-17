@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
     return this.currUser.getUser()['title'];
   }
 
-  generateSchedule(){
-    this.generator.generateSchedule();
+  generateSchedule(start: string, end: string){
+    this.generator.generateSchedule(start, end);
   }
 }
