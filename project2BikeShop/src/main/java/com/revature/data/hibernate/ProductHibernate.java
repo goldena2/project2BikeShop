@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
+import com.revature.beans.Invoice;
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
 import com.revature.data.hibernate.ProductHibernate;
@@ -90,5 +91,25 @@ public class ProductHibernate implements ProductDAO {
 		s.saveOrUpdate(product);
 		t.commit();
 		s.close();
+	}
+
+	@Override
+	public boolean createInvoice(Invoice invoice) {
+		Session s = hu.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.save(invoice);
+			tx.commit();
+		} catch(Exception e) {
+			if (tx != null) {
+				tx.rollback();
+			}
+			LogUtil.logException(e, ProductHibernate.class);
+			return false;
+		} finally {
+			s.close();		
+	}
+		return true;
 	}
 }

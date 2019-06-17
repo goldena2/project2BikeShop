@@ -28,8 +28,9 @@ public class LoginController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String goLogin(@RequestBody User newUser, HttpSession session) {
-		System.out.println(userDAO.getUser(newUser.getUsername(), newUser.getPassword()));
+		User user = userDAO.getUser(newUser.getUsername(), newUser.getPassword());
 		if(session.getAttribute("user")!=null) {
+			session.setAttribute("user_id", user.getId());
 			System.out.println("User already logged in");
 			return "redirect:home";
 		}

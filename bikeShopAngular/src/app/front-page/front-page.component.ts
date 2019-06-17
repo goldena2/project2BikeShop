@@ -21,6 +21,8 @@ export class FrontPageComponent {
         this.getUser.setuser(data);
         console.log(data)
         this.router.navigateByUrl('home');
+      }else{
+        alert('Invalid log in. Try again.');
       }
   });
   }

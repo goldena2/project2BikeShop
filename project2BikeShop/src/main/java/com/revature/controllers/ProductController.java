@@ -3,6 +3,8 @@ package com.revature.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.beans.CreateAccountResponse;
+import com.revature.beans.Invoice;
 import com.revature.beans.Product;
 import com.revature.data.ProductDAO;
 
@@ -40,9 +43,12 @@ public class ProductController {
 	}
 	
 	@PostMapping(value="/products/makePurchase")
-	public void updateStock(@RequestBody Product product) {
+	public void updateStock(@RequestBody Product product, HttpSession session) {
+		System.out.println(product);
+		
 		pd.updateStock(product);
 	}
+
 	@CrossOrigin
 	@RequestMapping(value="/deleteProduct/{productId}", method=RequestMethod.DELETE)
 	public void deleteProduct(@PathVariable("productId") int id) {
@@ -51,4 +57,11 @@ public class ProductController {
 		pd.deleteProduct(pd.getProduct(id));
 	}
 	
+
+	@PostMapping(value="/products/createInvoice")
+	public boolean createInvoice(@RequestBody Invoice invoice) {
+		System.out.println("Invoice: " + invoice);
+		return pd.createInvoice(invoice);
+	}
+
 }

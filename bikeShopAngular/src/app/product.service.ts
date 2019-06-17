@@ -20,7 +20,8 @@ export class ProductService {
         'description': desc,
         'stock': stock,
         'image': image,
-        'type_id': type_id
+        'type_id': type_id,
+
      });
 
      
