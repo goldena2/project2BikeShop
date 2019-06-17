@@ -1,0 +1,19 @@
+<div class="schedulesList">
+    <table class="table" id="scheduleListTable">
+      <thead>
+        <tr>
+          <th class="column1" scope="col">Sunday</th>
+          <th class="column2" scope="col">Monday </th>
+          <th class="column3" scope="col">Tuesday</th>
+          <th class="column4" scope="col">Wednesday</th>
+          <th class="column5" scope="col">Thursday</th>
+          <th class="column5" scope="col">Friday</th>
+          <th class="column5" scope="col">Saturday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- insert product-list-element with *ngFor here -->
+        <app-schedule-list-element *ngFor="let schedule of schedules" [schedule]="schedule"></app-schedule-list-element>
+      </tbody>
+    </table>
+  </div>

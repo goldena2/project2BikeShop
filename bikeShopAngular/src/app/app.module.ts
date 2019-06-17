@@ -27,6 +27,9 @@ import { RemoveProductComponent } from './remove-product/remove-product.componen
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { AllSchedulesComponent } from './all-schedules/all-schedules.component';
+import { ScheduleListComponent } from './schedule-list/schedule-list.component';
+import { ScheduleListElementComponent } from './schedule-list-element/schedule-list-element.component';
 
 
 
@@ -50,7 +53,10 @@ import { ProductComponent } from './product/product.component';
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
-    ProductListComponent
+    ProductListComponent,
+    AllSchedulesComponent,
+    ScheduleListComponent,
+    ScheduleListElementComponent
   ],
   imports: [
     BrowserModule,
