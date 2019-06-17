@@ -13,13 +13,18 @@ import com.revature.data.AvalibilityDOA;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping(value="/submitAvalibility")	
 public class AvalibilityController {
 	
 	@Autowired
 	AvalibilityDOA ad;
-	@PostMapping
+	
+	@PostMapping(value="/submitAvalibility")
 	public void submit(@RequestBody Avalibility newAvalibilty) {
 		ad.submitAvalibility(newAvalibilty);
+	}
+	
+	@PostMapping(value="/deleteAvalibility")
+	public void deleteOldValues(@RequestBody Integer userId) {
+		ad.deleteUserAvalibility(userId);
 	}
 }

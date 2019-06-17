@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.revature.beans.Avalibility;
+import com.revature.beans.ServiceRequest;
+import com.revature.beans.User;
 import com.revature.data.AvalibilityDOA;
 import com.revature.utils.HibernateUtil;
 
@@ -34,9 +37,25 @@ public class AvalibilityHibernate implements AvalibilityDOA {
 	}
 
 	@Override
-	public List<Avalibility> getDayAvalibility(String day) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Avalibility> getDayAvalibility(int day) {
+		Session s = hu.getSession();
+		// in queries, you must use the Java side name, not the actual table name, 
+		// so the names are case sensitive
+		String query = "from Avalibility a where a.dateId = :day and a.startTime != a.endTime";
+		Query<Avalibility> q = s.createQuery(query, Avalibility.class);
+		q.setParameter("day", day);
+		return q.list();	
+	}
+	
+	@Override
+	public void deleteUserAvalibility(Integer userId) {
+		Session s = hu.getSession();
+		Transaction txn = s.beginTransaction();
+		// in queries, you must use the Java side name, not the actual table name, 
+		// so the names are case sensitive
+		String hql = "delete from Avalibility where userId= :userId";
+		s.createQuery(hql).setInteger("userId", userId).executeUpdate();
+		txn.commit();
 	}
 
 }

@@ -30,6 +30,7 @@ import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { SalesComponent } from './sales/sales.component';
+import { ScheduleService } from './schedule.service';
 
 
 
@@ -71,6 +72,7 @@ import { SalesComponent } from './sales/sales.component';
     AllProductsService,
     SubmitAvalibiltyService,
     MakePurchaseService,
+    ScheduleService
   ],
   bootstrap: [AppComponent]
 })

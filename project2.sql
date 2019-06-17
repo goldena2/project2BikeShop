@@ -115,8 +115,8 @@ create table shift(
 
 create table schedule(
 	id number not null,
-	start_date date not null,
-	end_date date not null,
+	start_date varchar(12) not null,
+	end_date varchar(12) not null,
 	CONSTRAINT schedule_pk PRIMARY KEY (id)
 );
 
@@ -172,7 +172,8 @@ ALTER TABLE sales ADD CONSTRAINT FK_salesid_productid
 /*******************************************************************************
 Creating the Sequences
 ********************************************************************************/
-create sequence users_seq;
+create sequence users_seq
+    START WITH 4;
 create sequence product_seq
     START WITH 4;
 create sequence invoice_seq;

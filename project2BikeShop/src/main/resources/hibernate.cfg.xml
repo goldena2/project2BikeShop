@@ -27,6 +27,9 @@
 		<mapping class="com.revature.beans.Product"/>
 		<mapping class="com.revature.beans.ServiceRequest"/>
 		<mapping class="com.revature.beans.Avalibility"/>
+		<mapping class="com.revature.beans.Schedule"/>
+		<mapping class="com.revature.beans.Shift"/>
+		
 		
 		
 	</session-factory>
