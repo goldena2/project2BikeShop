@@ -1,10 +1,12 @@
 .btn {
     background-color: #4CAF50;
     color: white;
+    padding: 16px 20px;
     border: none;
     cursor: pointer;
     opacity: 0.9;
   }
-  #dayHelp{
-    color: green;
-}
+  
+  .btn:hover {
+    opacity: 1;
+  }

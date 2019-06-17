@@ -25,11 +25,17 @@ import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { RemoveProductComponent } from './remove-product/remove-product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
+import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+<<<<<<< HEAD
 import { AllSchedulesComponent } from './all-schedules/all-schedules.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 import { ScheduleListElementComponent } from './schedule-list-element/schedule-list-element.component';
+=======
+import { ScheduleService } from './schedule.service';
+>>>>>>> 94b94c68bc8cf91bbc882547cc6c72263d0b7afe
 
 
 
@@ -53,28 +59,35 @@ import { ScheduleListElementComponent } from './schedule-list-element/schedule-l
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
+<<<<<<< HEAD
     ProductListComponent,
     AllSchedulesComponent,
     ScheduleListComponent,
     ScheduleListElementComponent
+=======
+    InputAvalibilityComponent,
+    ProductListComponent
+>>>>>>> 94b94c68bc8cf91bbc882547cc6c72263d0b7afe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [MakeAccountService, 
-    HttpClient, 
-    GetUserService, 
-    LoginService, 
-    ScheduledServicesService, 
+  providers: [MakeAccountService,
+    HttpClient,
+    GetUserService,
+    LoginService,
+    ScheduledServicesService,
     MyServivesService,
     AllProductsService,
+    SubmitAvalibiltyService,
     MakePurchaseService,
+    ScheduleService
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  currUser : object;
+  currUser: object;
 
  }

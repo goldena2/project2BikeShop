@@ -1,3 +1,4 @@
+import { ScheduleService } from './../schedule.service';
 import { Router } from '@angular/router';
 import { CurrUserService } from './../curr-user.service';
 import { GetUserService } from '../get-user.service';
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   @Input() user : Object;
   links : Object[];
   products;
-  constructor(private services: MyServivesService, private currUser: CurrUserService, private router: Router, private allProducts: AllProductsService) { 
+  constructor(private generator: ScheduleService,private services: MyServivesService, private currUser: CurrUserService, private router: Router, private allProducts: AllProductsService) { 
     this.user = this.currUser.getUser();
     services.getMyServices();
     if(this.user){
@@ -62,5 +63,13 @@ export class HomeComponent implements OnInit {
 
   getType(): string{
     return this.currUser.getUser()['title'] == 1 ? 'customer' : this.currUser.getUser()['title'] == 2 ? 'employee' : 'manager';
+  }
+
+  getTypeId() : number{
+    return this.currUser.getUser()['title'];
+  }
+
+  generateSchedule(){
+    this.generator.generateSchedule();
   }
 }

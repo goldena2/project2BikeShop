@@ -1,0 +1,22 @@
+<nav-bar [otherLinks]="[
+{'link':'home', 'name':'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
+<form>
+  <div *ngFor="let day of days" class="form-group">
+    <h3>{{ day }}</h3>
+    <label for="{{ day }}-start">Start time</label>
+    <select #{{day}}Start id="{{ day }}-start">
+      <option class="form-control" *ngFor="let time of times" value="time">{{ time }}</option>
+    </select>
+    <br>
+    <label for="{{ day }}-end">End time</label>
+    <select id="{{ day }}-end">
+      <option class="form-control" *ngFor="let time of times" value="time">{{ time }}</option>
+    </select>
+  </div>
+  <button (click)="log()" class="btn btn-primary" type="button">Submit</button>
+</form>
