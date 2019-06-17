@@ -49,33 +49,27 @@ import { ProductComponent } from './product/product.component';
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
-<<<<<<< HEAD
-    InputAvalibilityComponent
-=======
+    InputAvalibilityComponent,
     ProductListComponent
->>>>>>> c5d2b46a9cc28fd8446fcaafd638dc6bfacacb29
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [MakeAccountService, 
-    HttpClient, 
-    GetUserService, 
-    LoginService, 
-    ScheduledServicesService, 
+  providers: [MakeAccountService,
+    HttpClient,
+    GetUserService,
+    LoginService,
+    ScheduledServicesService,
     MyServivesService,
     AllProductsService,
-<<<<<<< HEAD
-    SubmitAvalibiltyService
-=======
+    SubmitAvalibiltyService,
     MakePurchaseService,
->>>>>>> c5d2b46a9cc28fd8446fcaafd638dc6bfacacb29
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  currUser : object;
+  currUser: object;
 
  }
