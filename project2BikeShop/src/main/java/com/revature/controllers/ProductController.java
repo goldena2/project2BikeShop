@@ -8,8 +8,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -45,9 +48,20 @@ public class ProductController {
 		
 		pd.updateStock(product);
 	}
+
+	@CrossOrigin
+	@RequestMapping(value="/deleteProduct/{productId}", method=RequestMethod.DELETE)
+	public void deleteProduct(@PathVariable("productId") int id) {
+		
+	
+		pd.deleteProduct(pd.getProduct(id));
+	}
+	
+
 	@PostMapping(value="/products/createInvoice")
 	public boolean createInvoice(@RequestBody Invoice invoice) {
 		System.out.println("Invoice: " + invoice);
 		return pd.createInvoice(invoice);
 	}
+
 }
