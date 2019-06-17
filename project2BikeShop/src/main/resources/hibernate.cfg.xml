@@ -21,6 +21,7 @@
 		<mapping class="com.revature.beans.User"/>
 		<mapping class="com.revature.beans.Product"/>
 		<mapping class="com.revature.beans.ServiceRequest"/>
+		<mapping class="com.revature.beans.Avalibility"/>
 		
 		
 	</session-factory>

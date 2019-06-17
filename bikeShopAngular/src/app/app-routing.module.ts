@@ -1,3 +1,4 @@
+import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
 import { AllProductsComponent } from './all-products/all-products.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'allProducts', component: AllProductsComponent},
   {path: 'products', component: ProductComponent},
   {path: 'myServices', component: MyServicesComponent},
+  {path: 'inputAvlibility', component: InputAvalibilityComponent},
   {path: 'createEmployee', component: CreateEmployeeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

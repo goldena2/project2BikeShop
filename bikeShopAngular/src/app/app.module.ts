@@ -23,6 +23,8 @@ import { MyServicesComponent } from './my-services/my-services.component';
 import { MyServivesService } from './my-servives.service';
 import { ProductListElementComponent } from './product-list-element/product-list-element.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
+import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 
 
 
@@ -43,7 +45,8 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     MyServicesComponent,
     ProductListElementComponent,
     ProductComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    InputAvalibilityComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,7 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     ScheduledServicesService, 
     MyServivesService,
     AllProductsService,
+    SubmitAvalibiltyService
   ],
   bootstrap: [AppComponent]
 })
