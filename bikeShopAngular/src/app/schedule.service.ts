@@ -9,7 +9,7 @@ export class ScheduleService {
 
   constructor(private http: HttpClient, private port: PortConfigService) { }
 
-  generateSchedule(){
-    this.http.post('http://localhost:' + this.port.getPort() + '/bikeShop/generateSchedule',['day1', 'day2']).subscribe();
+  generateSchedule(start, end){
+    this.http.post('http://localhost:' + this.port.getPort() + '/bikeShop/generateSchedule',[start, end]).subscribe();
   }
 }

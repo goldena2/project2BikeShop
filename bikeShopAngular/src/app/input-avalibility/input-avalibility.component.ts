@@ -42,6 +42,7 @@ export class InputAvalibilityComponent implements OnInit {
   }
 
   log(value){
+    this.deleteOldValues();
     let avalibilties = [];
     let i = 1;
     for(let day of this.days){
@@ -64,6 +65,10 @@ export class InputAvalibilityComponent implements OnInit {
     for(j = 1; j < 6; j++){
       this.submiter.submit(avalibilties[j]);
     }
+  }
+
+  deleteOldValues(){
+    this.submiter.deleteOldvalues(this.user.getUser()['id']);
   }
 
 }

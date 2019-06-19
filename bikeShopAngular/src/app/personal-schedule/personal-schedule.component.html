@@ -1,3 +1,24 @@
-<p>
-  personal-schedule works!
-</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label for="schedules">Schedules</label>
+  <select formControlName="schedules" id="schedules">
+    <option *ngFor="let schedule of schedules; let i = index" [value]="schedules[i].id">
+      Start Date: {{schedules[i].startDate}}, End Date: {{schedules[i].endDate}}
+    </option>
+  </select>
+  <button>submit</button>
+</form>
+
+<div class="shiftList">
+  <table class="table" id="shiftListTable">
+    <!-- <thead>
+      <tr>
+        <th class="column1" scope="col">Shift Day</th>
+        <th class="column2" scope="col">Start Time</th>
+        <th class="column3" scope="col">End Time</th>
+      </tr>
+    </thead> -->
+    <tbody>
+      <app-shift-list-element *ngFor="let shift of shifts" [shift]="shift"></app-shift-list-element>
+    </tbody>
+  </table>
+</div>

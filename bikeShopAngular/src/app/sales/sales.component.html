@@ -1,0 +1,19 @@
+<nav-bar></nav-bar>
+
+<form>
+  <div class="form-group">
+    Select a product to discount:
+    <select name="productSelect" id="productDiscountSelect">
+      <div *ngFor="let p of products">
+        <option value="{{p['id']}}">{{p['name']}}</option>
+      </div>
+    </select>
+    
+    <br>
+    Choose a discount percentage:
+    <input #discount id="discountInput" type="number" name="quantity" min="1" max="100">
+    <br>
+    <input #createDiscount class="btn btn-success" type="button" value="Create Discount">
+
+  </div>
+</form> 

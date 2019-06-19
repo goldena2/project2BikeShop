@@ -11,5 +11,17 @@
 {'link': 'scheduleService', 'name': 'Schedule Services'}
 ]"></nav-bar></ng-template>
 <h1 id="welcomeUser">Welcome {{ getType() }} {{ getCurrUser() }}</h1>
-<button class="btn" (click)="generateSchedule()" *ngIf="getTypeId() == 3">Generate Schedule</button>
+<div *ngIf="getTypeId() == 3">
+    <form >
+        <div class="form-group">
+            <label for="start">Start day </label>
+            <input #start id="start" type="text">
+        </div>
+        <div class="form-group">
+            <label for="end">End day </label>
+            <input #end id="end" type="text">
+        </div>
+        <button type="button" class="btn" (click)="generateSchedule(start.value, end.value)" >Generate Schedule</button>
+    </form>
+</div>
 <app-footer></app-footer>
