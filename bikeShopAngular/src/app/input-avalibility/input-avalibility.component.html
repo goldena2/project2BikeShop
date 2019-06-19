@@ -5,7 +5,7 @@
 {'link': 'parts', 'name': 'Parts'},
 {'link': 'scheduleService', 'name': 'Schedule Services'}
 ]"></nav-bar>
-<form>
+<form [formGroup]="form">
   <div *ngFor="let day of days" class="form-group">
     <h3>{{ day }}</h3>
     <label for="{{ day }}-start">Start time</label>

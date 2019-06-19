@@ -2,6 +2,7 @@ import { CurrUserService } from './../curr-user.service';
 import { GetUserService } from './../get-user.service';
 import { ScheduledServicesService } from './../scheduled-services.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-schedule-service',
@@ -10,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleServiceComponent implements OnInit {
   date;
-  constructor(private scheduler: ScheduledServicesService, private user: CurrUserService) { }
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder, private scheduler: ScheduledServicesService, private user: CurrUserService) {
+    this.form = this.formBuilder.group({});
+   }
 
   ngOnInit() {
   }

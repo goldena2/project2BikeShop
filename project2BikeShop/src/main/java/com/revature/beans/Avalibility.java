@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 @Entity
-@Table(name="availability")
+@Table(name="availibility")
 public class Avalibility {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="avalibileties")
