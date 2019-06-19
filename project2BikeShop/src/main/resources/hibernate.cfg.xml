@@ -24,6 +24,7 @@
 		<mapping class="com.revature.beans.Avalibility"/>
 		<mapping class="com.revature.beans.Schedule"/>
 		<mapping class="com.revature.beans.Shift"/>
+		<mapping class="com.revature.beans.Day"/>
 		
 		
 		
