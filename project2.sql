@@ -49,7 +49,7 @@ create table product(
 	name varchar(16) not null,
 	upc varchar(24) not null,
 	price number not null,
-	description varchar(64) not null,
+	description varchar(256) not null,
 	stock number not null,
     image varchar2(300),
     type_id number,
