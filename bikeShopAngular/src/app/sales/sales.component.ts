@@ -1,5 +1,6 @@
 import { AllProductsService } from './../all-products.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-sales',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesComponent implements OnInit {
   products;
-  constructor(private allProducts: AllProductsService) { }
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder, private allProducts: AllProductsService) { 
+    this.form = this.formBuilder.group({});
+  }
 
   ngOnInit() {
     this.allProducts.getProducts().subscribe(data => {

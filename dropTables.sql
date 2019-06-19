@@ -217,7 +217,9 @@ values(3, 'manager');
 insert into USERS(username, password, fname, lname, title, phone_number, email)
 values('user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
 insert into USERS(username, password, fname, lname, title, phone_number, email)
-values('emp', 'pass', 'empFN', 'empLN', 2, '222-2222', 'email@email.com');
+values('emp1', 'pass', 'emp1FN', 'emp1LN', 2, '222-2222', 'email@email.com');
+insert into USERS(username, password, fname, lname, title, phone_number, email)
+values('emp2', 'pass', 'emp2FN', 'emp2LN', 2, '222-2222', 'email@email.com');
 insert into USERS(username, password, fname, lname, title, phone_number, email)
 values('man', 'pass', 'manFN', 'manLN', 3, '333-3333', 'email@email.com');
 
@@ -257,6 +259,8 @@ insert into shift(user_id, start_time, end_time, date_id, schedule_id)
 values(2,8,5,1,1);
 insert into shift(user_id, start_time, end_time, date_id, schedule_id)
 values(2,8,5,2,1);
+insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+values(3,10,12,2,1);
 
 drop trigger user_pk_trig;
 drop trigger product_pk_trig;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-product',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
+  form: FormGroup;
   ngOnInit(){}
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private productService: ProductService, private router: Router) { 
+    this.form = this.formBuilder.group({});
+  }
 
   addProduct(name: string, upc: string, price: number, description: string, stock: number, image: string, type_id: number) {
     console.log(type_id);

@@ -70,12 +70,13 @@ public class ScheduleHibernate implements ScheduleDOA {
 	}
 
 	@Override
-	public List<Shift> getShifts(Integer scheduleId) {
+	public List<Shift> getShifts(Integer scheduleId, Integer userId) {
 		List<Shift> shiftList = new ArrayList<Shift>();
 		Session s = hu.getSession();
-		String query = "FROM Shift s where s.scheduleId =:scheduleId";
+		String query = "FROM Shift s where s.scheduleId =:scheduleId and s.userId =:userId";
 		Query<Shift> q = s.createQuery(query, Shift.class);
 		q.setParameter("scheduleId", scheduleId);
+		q.setParameter("userId", userId);
 		shiftList = q.getResultList();
 		return shiftList;
 	}

@@ -6,7 +6,7 @@
 {'link': 'scheduleService', 'name': 'Schedule Services'}
 ]"></nav-bar>
 <div class="bg-img">
-    <form class="container">
+    <form [formGroup]="form" class="container">
       <h1>Add a new employee</h1>
       <label for="username"><b>Username</b></label>
       <input class="form-cotrol" #username type="text" placeholder="Enter Username" name="username" required>

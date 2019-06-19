@@ -10,6 +10,6 @@ public interface ScheduleDOA {
 	public int createSchedule(String start, String end);
 	public void createShift(Shift newShift);
 	public List<Schedule> getSchedules();
-	public List<Shift> getShifts(Integer scheduleId);
+	public List<Shift> getShifts(Integer scheduleId, Integer userId);
 	public Day getDay(Integer id);
 }

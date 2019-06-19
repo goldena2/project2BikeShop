@@ -12,7 +12,7 @@
 ]"></nav-bar></ng-template>
 <h1 id="welcomeUser">Welcome {{ getType() }} {{ getCurrUser() }}</h1>
 <div *ngIf="getTypeId() == 3">
-    <form >
+    <form [formGroup]="form">
         <div class="form-group">
             <label for="start">Start day </label>
             <input #start id="start" type="text">

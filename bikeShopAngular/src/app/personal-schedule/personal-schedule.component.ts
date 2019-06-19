@@ -21,6 +21,7 @@ export class PersonalScheduleComponent implements OnInit {
       schedules: ['']
     });
     this.user = this.currUser.getUser();
+    console.log(this.user['id']);
   }
 
   ngOnInit() {
@@ -36,10 +37,8 @@ export class PersonalScheduleComponent implements OnInit {
   submit() {
     console.log(this.form.value.schedules);
     let shift = new Shift();
-    shift.day = new Day();
     shift.scheduleId = this.form.value.schedules;
-    shift.day.id = 1;
-    shift.day.dayOfTheWeek = "Monday";
+    shift.userId = this.user['id'];
     console.log(shift);
     this.scheduleService.getShifts(shift).subscribe((data) =>{
       if (data != null){

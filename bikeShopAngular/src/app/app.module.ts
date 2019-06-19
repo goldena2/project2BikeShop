@@ -32,7 +32,8 @@ import { ProductComponent } from './product/product.component';
 import { PersonalScheduleComponent } from './personal-schedule/personal-schedule.component';
 import { SalesComponent } from './sales/sales.component';
 import { ScheduleService } from './schedule.service';
-
+import { PersonalScheduleShiftComponent } from './personal-schedule-shift/personal-schedule-shift.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -58,12 +59,14 @@ import { ScheduleService } from './schedule.service';
     InputAvalibilityComponent,
     ProductListComponent,
     PersonalScheduleComponent,
-    SalesComponent
+    SalesComponent,
+    PersonalScheduleShiftComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MakeAccountService,
     HttpClient,
