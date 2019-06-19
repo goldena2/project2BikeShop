@@ -41,7 +41,7 @@ public class AvalibilityHibernate implements AvalibilityDOA {
 		Session s = hu.getSession();
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive
-		String query = "from Avalibility a where a.dateId = :day and a.startTime != a.endTime";
+		String query = "from Avalibility a where a.dateId = :day and a.startTime < a.endTime";
 		Query<Avalibility> q = s.createQuery(query, Avalibility.class);
 		q.setParameter("day", day);
 		return q.list();	
