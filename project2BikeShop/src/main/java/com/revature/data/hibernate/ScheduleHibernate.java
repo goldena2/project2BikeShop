@@ -1,7 +1,11 @@
 package com.revature.data.hibernate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.revature.beans.Schedule;
@@ -52,6 +56,16 @@ public class ScheduleHibernate implements ScheduleDOA {
 		} finally {
 			s.close();
 		}
+	}
+
+	@Override
+	public List<Schedule> getSchedules() {
+		List<Schedule> scheduleList = new ArrayList<Schedule>();
+		Session s = hu.getSession();
+		String query = "FROM Schedule";
+		Query<Schedule> q = s.createQuery(query, Schedule.class);
+		scheduleList = q.getResultList();
+		return scheduleList;
 	}
 
 }

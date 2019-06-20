@@ -5,12 +5,14 @@ import { PortConfigService } from './port-config.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AllSchedulesService {
+export class ViewShiftsService {
+  length: number;
 
   constructor( private httpClient: HttpClient, private portNumber: PortConfigService) { }
-  
-  // getSchedules(){
-  //   return this.httpClient.get<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/allSchedules/' , {
-  //   });
-  //}
+
+  getShifts(id:number){
+    return this.httpClient.get('http://localhost:' + this.portNumber.getPort() + '/bikeShop/allSchedules/' + id)
+    
+
+  }
 }

@@ -29,13 +29,11 @@ import { InputAvalibilityComponent } from './input-avalibility/input-avalibility
 import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
-<<<<<<< HEAD
 import { AllSchedulesComponent } from './all-schedules/all-schedules.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 import { ScheduleListElementComponent } from './schedule-list-element/schedule-list-element.component';
-=======
 import { ScheduleService } from './schedule.service';
->>>>>>> 94b94c68bc8cf91bbc882547cc6c72263d0b7afe
+import { ViewallSchedulesComponent } from './viewall-schedules/viewall-schedules.component';
 
 
 
@@ -59,15 +57,13 @@ import { ScheduleService } from './schedule.service';
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
-<<<<<<< HEAD
     ProductListComponent,
     AllSchedulesComponent,
     ScheduleListComponent,
-    ScheduleListElementComponent
-=======
+    ScheduleListElementComponent,
     InputAvalibilityComponent,
-    ProductListComponent
->>>>>>> 94b94c68bc8cf91bbc882547cc6c72263d0b7afe
+    ViewallSchedulesComponent
+   
   ],
   imports: [
     BrowserModule,
