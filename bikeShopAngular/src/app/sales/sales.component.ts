@@ -13,7 +13,6 @@ export class SalesComponent implements OnInit {
   ngOnInit() {
     this.allProducts.getProducts().subscribe(data => {
       if (data != null) {
-        console.log(data);
         this.products = data;
       }
   });
