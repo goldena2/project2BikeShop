@@ -9,7 +9,7 @@ export class PortConfigService {
     this.port = 8081;
    }
 
-   getPort(){
+   getPort() {
      return this.port;
    }
 }
