@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MakeAccountService } from '../make-account.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'create-employee',
@@ -8,7 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent{
-  constructor(private accountBuilder : MakeAccountService, private router: Router) { 
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder, private accountBuilder : MakeAccountService, private router: Router) { 
+    this.form = this.formBuilder.group({});
   }
 
 

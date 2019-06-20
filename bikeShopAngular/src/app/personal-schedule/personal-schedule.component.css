@@ -1,0 +1,8 @@
+tr{
+    display: table-column-group;
+}
+.shiftList{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}

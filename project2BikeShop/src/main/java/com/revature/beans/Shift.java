@@ -1,10 +1,14 @@
 package com.revature.beans;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -17,8 +21,14 @@ public class Shift {
 	private Integer id;
 	@Column(name="user_id")
 	private Integer userId;
-	@Column(name="date_id")
-	private Integer dateId;
+	
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="date_id")
+	private Day day;
+	
+//	@Column(name="date_id")
+//	private Integer dateId;
+	
 	@Column(name="start_time")
 	private Integer startTime;
 	@Column(name="end_time")
@@ -33,7 +43,7 @@ public class Shift {
 	public Integer getId() {
 		return id;
 	}
-
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -46,12 +56,12 @@ public class Shift {
 		this.userId = userId;
 	}
 
-	public Integer getDateId() {
-		return dateId;
+	public Day getDay() {
+		return day;
 	}
 
-	public void setDateId(Integer dateId) {
-		this.dateId = dateId;
+	public void setDay(Day day) {
+		this.day = day;
 	}
 
 	public Integer getStartTime() {
@@ -62,27 +72,37 @@ public class Shift {
 		this.startTime = startTime;
 	}
 
+
+
 	public Integer getEndTime() {
 		return endTime;
 	}
+
+
 
 	public void setEndTime(Integer endTime) {
 		this.endTime = endTime;
 	}
 
+
+
 	public Integer getScheduleId() {
 		return scheduleId;
 	}
+
+
 
 	public void setScheduleId(Integer scheduleId) {
 		this.scheduleId = scheduleId;
 	}
 
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dateId == null) ? 0 : dateId.hashCode());
+		result = prime * result + ((day == null) ? 0 : day.hashCode());
 		result = prime * result + ((endTime == null) ? 0 : endTime.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((scheduleId == null) ? 0 : scheduleId.hashCode());
@@ -90,6 +110,8 @@ public class Shift {
 		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -100,10 +122,10 @@ public class Shift {
 		if (getClass() != obj.getClass())
 			return false;
 		Shift other = (Shift) obj;
-		if (dateId == null) {
-			if (other.dateId != null)
+		if (day == null) {
+			if (other.day != null)
 				return false;
-		} else if (!dateId.equals(other.dateId))
+		} else if (!day.equals(other.day))
 			return false;
 		if (endTime == null) {
 			if (other.endTime != null)
@@ -133,11 +155,11 @@ public class Shift {
 		return true;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Shift [id=" + id + ", userId=" + userId + ", dateId=" + dateId + ", startTime=" + startTime
-				+ ", endTime=" + endTime + ", scheduleId=" + scheduleId + "]";
+		return "Shift [id=" + id + ", userId=" + userId + ", day=" + day + ", startTime=" + startTime + ", endTime="
+				+ endTime + ", scheduleId=" + scheduleId + "]";
 	}
-	
-	
 }
