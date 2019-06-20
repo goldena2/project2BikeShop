@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MyServivesService } from '../my-servives.service';
 import { AllProductsService } from '../all-products.service';
 import { ProductService } from '../product.service';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +15,12 @@ import { ProductService } from '../product.service';
 })
 export class HomeComponent implements OnInit {
   @Input() user : Object;
+  form: FormGroup;
   links : Object[];
   products;
-  constructor(private generator: ScheduleService,private services: MyServivesService, private currUser: CurrUserService, private router: Router, private allProducts: AllProductsService) { 
+  constructor(private formBuilder: FormBuilder, private generator: ScheduleService,private services: MyServivesService, private currUser: CurrUserService, private router: Router, private allProducts: AllProductsService) { 
     this.user = this.currUser.getUser();
+    this.form = this.formBuilder.group({});
     services.getMyServices();
     if(this.user){
       console.log(this.user['fname']);
@@ -69,7 +72,7 @@ export class HomeComponent implements OnInit {
     return this.currUser.getUser()['title'];
   }
 
-  generateSchedule(){
-    this.generator.generateSchedule();
+  generateSchedule(start: string, end: string){
+    this.generator.generateSchedule(start, end);
   }
 }

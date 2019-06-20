@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
+import com.revature.beans.Day;
 import com.revature.beans.Schedule;
 import com.revature.beans.Shift;
 import com.revature.data.ScheduleDOA;
@@ -66,6 +67,30 @@ public class ScheduleHibernate implements ScheduleDOA {
 		Query<Schedule> q = s.createQuery(query, Schedule.class);
 		scheduleList = q.getResultList();
 		return scheduleList;
+	}
+
+
+	@Override
+	public List<Shift> getShifts(Integer scheduleId, Integer userId) {
+		List<Shift> shiftList = new ArrayList<Shift>();
+		Session s = hu.getSession();
+		String query = "FROM Shift s where s.scheduleId =:scheduleId and s.userId =:userId";
+		Query<Shift> q = s.createQuery(query, Shift.class);
+		q.setParameter("scheduleId", scheduleId);
+		q.setParameter("userId", userId);
+		shiftList = q.getResultList();
+		return shiftList;
+	}
+
+	@Override
+	public Day getDay(Integer id) {
+		Day d;
+		Session s = hu.getSession();
+		String query = "from Day d where d.id =:id";
+		Query<Day> q = s.createQuery(query, Day.class);
+		q.setParameter("id", id);
+		d = q.uniqueResult();
+		return d;
 	}
 
 }

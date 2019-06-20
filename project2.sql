@@ -13,6 +13,7 @@ drop table shift CASCADE CONSTRAINTS;
 drop table schedule CASCADE CONSTRAINTS;
 drop table services CASCADE CONSTRAINTS;
 drop table product_type CASCADE CONSTRAINTS;
+drop table sales CASCADE CONSTRAINTS;
 
 drop sequence users_seq;
 drop sequence product_seq;
@@ -21,6 +22,7 @@ drop sequence availability_seq;
 drop sequence shift_seq;
 drop sequence schedule_seq;
 drop sequence services_seq;
+drop sequence sales_seq;
 /*******************************************************************************
    Create Tables
 ********************************************************************************/
@@ -124,6 +126,13 @@ create table product_type(
     CONSTRAINT product_type_pk PRIMARY KEY (id)
 );
 
+create table sales(
+    id number not null,
+    product_id number not null,
+    sale number,
+    CONSTRAINT sales_pk PRIMARY KEY (id)
+);
+
 /*******************************************************************************
    Create Foreign Keys
 ********************************************************************************/
@@ -156,6 +165,9 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
+    
+ALTER TABLE sales ADD CONSTRAINT FK_salesid_productid
+    FOREIGN KEY (product_id) REFERENCES product (id);
 
 /*******************************************************************************
 Creating the Sequences
@@ -169,6 +181,7 @@ create sequence availability_seq;
 create sequence shift_seq;
 create sequence schedule_seq;
 create sequence services_seq;
+create sequence sales_seq;
 
 /*******************************************************************************
    Manually inserted table entries

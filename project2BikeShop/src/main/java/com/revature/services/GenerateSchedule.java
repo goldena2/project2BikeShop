@@ -48,7 +48,8 @@ public class GenerateSchedule {
 		newShift.setStartTime(currTime);
 		newShift.setEndTime(avalibility.getEndTime());
 		newShift.setScheduleId(id);
-		newShift.setDateId(avalibility.getDateId());
+		newShift.setDay(sd.getDay(avalibility.getDateId()));
+		//newShift.setDateId(avalibility.getDateId());
 		sd.createShift(newShift);
 	}
 	

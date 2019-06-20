@@ -11,7 +11,7 @@ export class ViewShiftsService {
   constructor( private httpClient: HttpClient, private portNumber: PortConfigService) { }
 
   getShifts(id:number){
-    return this.httpClient.get('http://localhost:' + this.portNumber.getPort() + '/bikeShop/allSchedules/' + id)
+    return this.httpClient.get('http://localhost:' + this.portNumber.getPort() + '/bikeShop/schedules/' + id)
     
 
   }

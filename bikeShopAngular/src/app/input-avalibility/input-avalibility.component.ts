@@ -1,6 +1,7 @@
 import { SubmitAvalibiltyService } from './../submit-avalibilty.service';
 import { CurrUserService } from './../curr-user.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-input-avalibility',
@@ -10,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 export class InputAvalibilityComponent implements OnInit {
   times: string[];
   days: string[];
-  constructor(private user : CurrUserService, private submiter: SubmitAvalibiltyService) { }
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder, private user : CurrUserService, private submiter: SubmitAvalibiltyService) {
+    this.form = this.formBuilder.group({});
+   }
 
   ngOnInit() {
     this.times = [
@@ -42,6 +46,7 @@ export class InputAvalibilityComponent implements OnInit {
   }
 
   log(value){
+    this.deleteOldValues();
     let avalibilties = [];
     let i = 1;
     for(let day of this.days){
@@ -64,6 +69,10 @@ export class InputAvalibilityComponent implements OnInit {
     for(j = 1; j < 6; j++){
       this.submiter.submit(avalibilties[j]);
     }
+  }
+
+  deleteOldValues(){
+    this.submiter.deleteOldvalues(this.user.getUser()['id']);
   }
 
 }

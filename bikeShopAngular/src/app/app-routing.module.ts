@@ -1,3 +1,4 @@
+import { SalesComponent } from './sales/sales.component';
 import { InputAvalibilityComponent } from './input-avalibility/input-avalibility.component';
 import { MyServicesComponent } from './my-services/my-services.component';
 import { ScheduleServiceComponent } from './schedule-service/schedule-service.component';
@@ -14,6 +15,7 @@ import { ProductComponent } from './product/product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { RemoveProductComponent } from './remove-product/remove-product.component';
 import { AllSchedulesComponent } from  './all-schedules/all-schedules.component';
+import { PersonalScheduleComponent } from './personal-schedule/personal-schedule.component';
 
 const routes: Routes = [
   {path: '', component: FrontPageComponent},
@@ -28,6 +30,8 @@ const routes: Routes = [
   {path: 'createEmployee', component: CreateEmployeeComponent},
   {path: 'removeProduct', component: RemoveProductComponent},
   {path: 'allSchedules', component: AllSchedulesComponent},
+  {path: 'viewPersonalSchedule', component: PersonalScheduleComponent},
+  {path: 'sales', component: SalesComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

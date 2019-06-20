@@ -32,9 +32,13 @@ import { ProductComponent } from './product/product.component';
 import { AllSchedulesComponent } from './all-schedules/all-schedules.component';
 import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 import { ScheduleListElementComponent } from './schedule-list-element/schedule-list-element.component';
-import { ScheduleService } from './schedule.service';
 import { ViewallSchedulesComponent } from './viewall-schedules/viewall-schedules.component';
 
+import { PersonalScheduleComponent } from './personal-schedule/personal-schedule.component';
+import { SalesComponent } from './sales/sales.component';
+import { ScheduleService } from './schedule.service';
+import { PersonalScheduleShiftComponent } from './personal-schedule-shift/personal-schedule-shift.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -62,13 +66,18 @@ import { ViewallSchedulesComponent } from './viewall-schedules/viewall-schedules
     ScheduleListComponent,
     ScheduleListElementComponent,
     InputAvalibilityComponent,
-    ViewallSchedulesComponent
-   
+    ViewallSchedulesComponent,
+  
+    ProductListComponent,
+    PersonalScheduleComponent,
+    SalesComponent,
+    PersonalScheduleShiftComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MakeAccountService,
     HttpClient,
