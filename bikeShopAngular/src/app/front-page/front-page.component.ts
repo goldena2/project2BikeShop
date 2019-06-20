@@ -2,6 +2,7 @@ import { CurrUserService } from './../curr-user.service';
 import { Router } from '@angular/router';
 import { LoginService } from './../login.service';
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'front-page',
@@ -11,8 +12,10 @@ import { Component } from '@angular/core';
 
 
 export class FrontPageComponent {
-  constructor(private loginBuilder: LoginService, private router: Router, private getUser: CurrUserService) {
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder, private loginBuilder: LoginService, private router: Router, private getUser: CurrUserService) {
     getUser.setuser({'title': -1});
+    this.form = this.formBuilder.group({});
   }
 
   login(username: string, password: string){

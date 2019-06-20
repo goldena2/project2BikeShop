@@ -14,6 +14,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ProductComponent } from './product/product.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { RemoveProductComponent } from './remove-product/remove-product.component';
+import { PersonalScheduleComponent } from './personal-schedule/personal-schedule.component';
 
 const routes: Routes = [
   {path: '', component: FrontPageComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'inputAvlibility', component: InputAvalibilityComponent},
   {path: 'createEmployee', component: CreateEmployeeComponent},
   {path: 'removeProduct', component: RemoveProductComponent},
+  {path: 'viewPersonalSchedule', component: PersonalScheduleComponent},
   {path: 'sales', component: SalesComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

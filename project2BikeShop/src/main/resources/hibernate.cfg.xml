@@ -8,6 +8,7 @@
 		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@patrickscall-db.cuznqlggtms3.us-east-2.rds.amazonaws.com:1521:ORCL</property> -->
 		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@revaturetraining.cq0lu2eyldot.us-east-2.rds.amazonaws.com:1521:ORCL</property> 	 -->	
 		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@revaturetraining.cq0lu2eyldot.us-east-2.rds.amazonaws.com:1521:ORCL</property> -->
+
 		
 		<property name="hibernate.connection.username">Project2</property>
 		<property name="hibernate.connection.password">password</property>
@@ -29,6 +30,7 @@
 		<mapping class="com.revature.beans.Avalibility"/>
 		<mapping class="com.revature.beans.Schedule"/>
 		<mapping class="com.revature.beans.Shift"/>
+		<mapping class="com.revature.beans.Day"/>
 		
 		
 		

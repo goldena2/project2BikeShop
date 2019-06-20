@@ -1,0 +1,18 @@
+td{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 50px;
+    width: 200px;
+    table-layout: auto;
+    overflow: hidden;
+}
+#nameElement{
+    width: 1000px;
+}
+.shiftTime{
+    vertical-align: middle;
+}
+#shiftDay{
+    font-size: 18px;
+    font-weight: bold;
+}

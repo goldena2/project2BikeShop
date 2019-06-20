@@ -9,6 +9,7 @@ drop table schedule cascade constraints;
 drop table invoice_line cascade constraints;
 drop table availibility cascade constraints;
 drop table shift cascade constraints;
+drop table services cascade constraints;
 
 
 
@@ -93,8 +94,8 @@ create table shift(
 
 create table schedule(
 	id number not null,
-	start_date date not null,
-	end_date date not null,
+	start_date varchar2(15) not null,
+	end_date varchar2(15) not null,
 	CONSTRAINT schedule_pk PRIMARY KEY (id)
 );
 
@@ -178,6 +179,28 @@ begin
     end if;
 end;
 /
+create or replace trigger schedule_pk_trig
+before insert or update on schedule
+for each row
+begin
+    if INSERTING then
+        select schedule_seq.nextVal into :new.id from dual;
+    elsif UPDATING then
+        select :old.id into :new.id from dual;
+    end if;
+end;
+/
+create or replace trigger shift_pk_trig
+before insert or update on shift
+for each row
+begin
+    if INSERTING then
+        select shift_seq.nextVal into :new.id from dual;
+    elsif UPDATING then
+        select :old.id into :new.id from dual;
+    end if;
+end;
+/
 
 
 
@@ -194,7 +217,9 @@ values(3, 'manager');
 insert into USERS(username, password, fname, lname, title, phone_number, email)
 values('user', 'pass', 'firstname', 'lastname', 1, '111-1111', 'email@email.com');
 insert into USERS(username, password, fname, lname, title, phone_number, email)
-values('emp', 'pass', 'empFN', 'empLN', 2, '222-2222', 'email@email.com');
+values('emp1', 'pass', 'emp1FN', 'emp1LN', 2, '222-2222', 'email@email.com');
+insert into USERS(username, password, fname, lname, title, phone_number, email)
+values('emp2', 'pass', 'emp2FN', 'emp2LN', 2, '222-2222', 'email@email.com');
 insert into USERS(username, password, fname, lname, title, phone_number, email)
 values('man', 'pass', 'manFN', 'manLN', 3, '333-3333', 'email@email.com');
 
@@ -227,8 +252,20 @@ values('Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
 insert into product(name, upc, price, description, stock, type_id)
 values('Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
 
+insert into schedule(start_date, end_date)
+values('2019-6-9', '2019-6-15');
+
+insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+values(2,8,5,1,1);
+insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+values(2,8,5,2,1);
+insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+values(3,10,12,2,1);
+
 drop trigger user_pk_trig;
 drop trigger product_pk_trig;
+drop trigger schedule_pk_trig;
+drop trigger shift_pk_trig;
 
 commit;
 exit;
