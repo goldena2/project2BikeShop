@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@an
 import { ShiftScheduleService } from '../shift-schedule.service';
 import { CurrUserService } from '../curr-user.service';
 import { Shift } from '../shift';
-import { Day } from '../day';
+import { User } from '../user';
 
 @Component({
   selector: 'app-personal-schedule',
@@ -37,8 +37,9 @@ export class PersonalScheduleComponent implements OnInit {
   submit() {
     console.log(this.form.value.schedules);
     let shift = new Shift();
+    shift.user = new User();
     shift.scheduleId = this.form.value.schedules;
-    shift.userId = this.user['id'];
+    shift.user['id'] = this.user['id'];
     console.log(shift);
     this.scheduleService.getShifts(shift).subscribe((data) =>{
       if (data != null){

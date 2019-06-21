@@ -1,4 +1,10 @@
-<nav-bar [otherLinks]="[]"></nav-bar>
+<nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
 <div class="bg-img">
     <form [formGroup]="form" class="container">
       <h1>Add a product</h1>

@@ -74,7 +74,7 @@ public class ScheduleHibernate implements ScheduleDOA {
 	public List<Shift> getShifts(Integer scheduleId, Integer userId) {
 		List<Shift> shiftList = new ArrayList<Shift>();
 		Session s = hu.getSession();
-		String query = "FROM Shift s where s.scheduleId =:scheduleId and s.userId =:userId";
+		String query = "FROM Shift s where s.scheduleId =:scheduleId and s.user.id =:userId";
 		Query<Shift> q = s.createQuery(query, Shift.class);
 		q.setParameter("scheduleId", scheduleId);
 		q.setParameter("userId", userId);
