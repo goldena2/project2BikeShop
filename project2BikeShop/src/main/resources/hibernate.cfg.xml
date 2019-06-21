@@ -9,7 +9,6 @@
 		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@revaturetraining.cq0lu2eyldot.us-east-2.rds.amazonaws.com:1521:ORCL</property> 	 -->	
 		<!-- <property name="hibernate.connection.url">jdbc:oracle:thin:@revaturetraining.cq0lu2eyldot.us-east-2.rds.amazonaws.com:1521:ORCL</property> -->
 
-		
 		<property name="hibernate.connection.username">Project2</property>
 		<property name="hibernate.connection.password">password</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>

@@ -29,6 +29,11 @@ import { InputAvalibilityComponent } from './input-avalibility/input-avalibility
 import { SubmitAvalibiltyService } from './submit-avalibilty.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
+import { AllSchedulesComponent } from './all-schedules/all-schedules.component';
+import { ScheduleListComponent } from './schedule-list/schedule-list.component';
+import { ScheduleListElementComponent } from './schedule-list-element/schedule-list-element.component';
+import { ViewallSchedulesComponent } from './viewall-schedules/viewall-schedules.component';
+
 import { PersonalScheduleComponent } from './personal-schedule/personal-schedule.component';
 import { SalesComponent } from './sales/sales.component';
 import { ScheduleService } from './schedule.service';
@@ -56,7 +61,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductListElementComponent,
     ProductComponent,
     CreateEmployeeComponent,
+    ProductListComponent,
+    AllSchedulesComponent,
+    ScheduleListComponent,
+    ScheduleListElementComponent,
     InputAvalibilityComponent,
+    ViewallSchedulesComponent,
+  
     ProductListComponent,
     PersonalScheduleComponent,
     SalesComponent,

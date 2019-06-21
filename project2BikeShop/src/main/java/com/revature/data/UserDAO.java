@@ -10,4 +10,6 @@ public interface UserDAO {
 
 	public User getUser(String username);
 	
+	public User getUser(Integer Id);
+	
 }

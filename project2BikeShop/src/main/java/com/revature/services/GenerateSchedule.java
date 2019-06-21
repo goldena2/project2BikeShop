@@ -9,6 +9,7 @@ import com.revature.beans.Avalibility;
 import com.revature.beans.Shift;
 import com.revature.data.AvalibilityDOA;
 import com.revature.data.ScheduleDOA;
+import com.revature.data.UserDAO;
 
 @Component
 public class GenerateSchedule {
@@ -17,6 +18,8 @@ public class GenerateSchedule {
 	AvalibilityDOA ad;
 	@Autowired
 	ScheduleDOA sd;
+	@Autowired
+	UserDAO ud;
 	
 	public void generate(String start, String end) {
 		int id = sd.createSchedule(start, end);
@@ -44,7 +47,7 @@ public class GenerateSchedule {
 	
 	private void createShift(int currTime, Avalibility avalibility, int id) {
 		Shift newShift = new Shift();
-		newShift.setUserId(avalibility.getUserId());
+		newShift.setUser(ud.getUser(avalibility.getUserId()));
 		newShift.setStartTime(currTime);
 		newShift.setEndTime(avalibility.getEndTime());
 		newShift.setScheduleId(id);

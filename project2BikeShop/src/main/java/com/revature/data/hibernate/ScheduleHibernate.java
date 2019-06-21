@@ -69,6 +69,7 @@ public class ScheduleHibernate implements ScheduleDOA {
 		return scheduleList;
 	}
 
+
 	@Override
 	public List<Shift> getShifts(Integer scheduleId, Integer userId) {
 		List<Shift> shiftList = new ArrayList<Shift>();

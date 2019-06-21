@@ -7,14 +7,23 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.beans.Day;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.beans.Product;
 import com.revature.beans.Schedule;
 import com.revature.beans.Shift;
 import com.revature.data.ScheduleDOA;
+import com.revature.data.ShiftDAO;
+import com.revature.beans.Day;
+
+
 import com.revature.services.GenerateSchedule;
 
 @CrossOrigin
@@ -23,8 +32,19 @@ public class ScheduleController {
 	@Autowired
 	GenerateSchedule gs;
 	@Autowired
-	ScheduleDOA sd;
+	private ScheduleDOA sd;
+	@Autowired
+	private ShiftDAO shd;
+	private ObjectMapper om = new ObjectMapper();
 	
+	@GetMapping(value="/allSchedules/{scheduleId}")
+	public List<Shift> getShifts(@PathVariable("scheduleId")int id){
+		List<Shift> shiftList = new ArrayList<Shift>();
+		shiftList = shd.getShifts(id);
+		return shiftList;
+	}
+	
+
 	@PostMapping(value="/generateSchedule")
 	public void generate(@RequestBody String[] dates){
 		System.out.println(Arrays.toString(dates));
@@ -43,7 +63,7 @@ public class ScheduleController {
 		List<Shift> shiftList = new ArrayList<Shift>();
 		System.out.println(s);
 		System.out.println(s.getScheduleId());
-		shiftList = sd.getShifts(s.getScheduleId(),s.getUserId());
+		shiftList = sd.getShifts(s.getScheduleId(),s.getUser().getId());
 		System.out.println(shiftList);
 		return shiftList;
 	}
