@@ -1,0 +1,37 @@
+<div >
+    <h1>Select a schedule to view:</h1>
+    <select id="view" name="view"
+    class="form-controller"  #schedule required name="schedule" >
+    <option *ngFor="let s of schedules" [value]="s['id']">
+      ID: {{s.id}},
+      StartDate: {{s.startDate}},
+      EndDate: {{s.endDate}}
+    
+  </option>
+  </select>
+  <br /><br />
+  <input   type="button" value="View"
+  (click)= "getShifts(schedule.value)"/><br /><br />
+  <br /><br />
+<div class="shiftsList">
+    <table class="table" id="scheduleListTable" >
+      <!-- <thead>
+        <tr>
+         
+          <th class="column1" scope="col">Monday </th>
+          <th class="column2" scope="col">Tuesday</th>
+          <th class="column3" scope="col">Wednesday</th>
+          <th class="column4" scope="col">Thursday</th>
+          <th class="column5" scope="col">Friday</th>
+    
+        </tr>
+      </thead> -->
+      <tbody>
+        <tr> </tr>
+        <td></td>
+       <!--insert product-list-element with *ngFor here -->
+       <app-schedule-list-element *ngFor = "let shift of shifts" [shift]="shift"></app-schedule-list-element>
+       
+      </tbody>
+    </table>
+  </div>

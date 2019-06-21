@@ -5,17 +5,17 @@
 {'link': 'scheduleService', 'name': 'Schedule Services'}]"></nav-bar>
   <div >
     <h1>Select a product to remove:</h1>
-    <select id="remove" name="remove"
-    class="form-controller"  #product required name="product" >
-    <option *ngFor="let p of products" [value]="p['id']">
-      {{p.name}}
+    <select id="view" name="view"
+    class="form-controller"  #schedule required name="schedule" >
+    <option *ngFor="let s of schedules" [value]="s['id']">
+      {{s.id}}
     
   </option>
   </select>
 <br /><br />
-
+<!-- 
 <input   type="button" value="Remove"
- (click)= "deleteProduct(product.value)"/><br /><br />
+ (click)= "deleteProduct(product.value)"/><br /><br /> -->
 
 
   </div>
