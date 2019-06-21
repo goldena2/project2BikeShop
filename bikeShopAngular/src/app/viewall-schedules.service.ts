@@ -10,7 +10,7 @@ export class ViewallSchedulesService {
   constructor(private httpClient: HttpClient, private portNumber: PortConfigService) { }
 
   getSchedules(){
-  return this.httpClient.get<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/allSchedules', {
+  return this.httpClient.get<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/schedules', {
   });
   }
 }

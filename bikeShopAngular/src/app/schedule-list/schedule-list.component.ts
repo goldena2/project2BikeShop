@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AllSchedulesService } from '../all-schedules.service';
+
 import { CurrUserService } from '../curr-user.service';
 import { ViewallSchedulesComponent } from '../viewall-schedules/viewall-schedules.component';
 import { ViewallSchedulesService } from '../viewall-schedules.service';

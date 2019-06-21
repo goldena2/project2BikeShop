@@ -19,8 +19,12 @@ public class Shift {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="shifts")
 	@SequenceGenerator(name="shifts", sequenceName="shift_seq", allocationSize=1)
 	private Integer id;
-	@Column(name="user_id")
-	private Integer userId;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="user_id")
+	private User user;
+	
+//	@Column(name="user_id")
+//	private Integer userId;
 	
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="date_id")
@@ -43,17 +47,17 @@ public class Shift {
 	public Integer getId() {
 		return id;
 	}
-	
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public Integer getUserId() {
-		return userId;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public Day getDay() {
@@ -72,31 +76,21 @@ public class Shift {
 		this.startTime = startTime;
 	}
 
-
-
 	public Integer getEndTime() {
 		return endTime;
 	}
-
-
 
 	public void setEndTime(Integer endTime) {
 		this.endTime = endTime;
 	}
 
-
-
 	public Integer getScheduleId() {
 		return scheduleId;
 	}
 
-
-
 	public void setScheduleId(Integer scheduleId) {
 		this.scheduleId = scheduleId;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -107,11 +101,9 @@ public class Shift {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((scheduleId == null) ? 0 : scheduleId.hashCode());
 		result = prime * result + ((startTime == null) ? 0 : startTime.hashCode());
-		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
+		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -147,19 +139,19 @@ public class Shift {
 				return false;
 		} else if (!startTime.equals(other.startTime))
 			return false;
-		if (userId == null) {
-			if (other.userId != null)
+		if (user == null) {
+			if (other.user != null)
 				return false;
-		} else if (!userId.equals(other.userId))
+		} else if (!user.equals(other.user))
 			return false;
 		return true;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return "Shift [id=" + id + ", userId=" + userId + ", day=" + day + ", startTime=" + startTime + ", endTime="
+		return "Shift [id=" + id + ", user=" + user + ", day=" + day + ", startTime=" + startTime + ", endTime="
 				+ endTime + ", scheduleId=" + scheduleId + "]";
 	}
+
+
 }

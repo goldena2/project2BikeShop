@@ -63,7 +63,7 @@ public class ScheduleController {
 		List<Shift> shiftList = new ArrayList<Shift>();
 		System.out.println(s);
 		System.out.println(s.getScheduleId());
-		shiftList = sd.getShifts(s.getScheduleId(),s.getUserId());
+		shiftList = sd.getShifts(s.getScheduleId(),s.getUser().getId());
 		System.out.println(shiftList);
 		return shiftList;
 	}
