@@ -68,4 +68,19 @@ public class UserHibernate implements UserDAO {
 		}
 		return resp;
 	}
+
+	@Override
+	public User getUser(Integer Id) {
+		
+		Session s = hu.getSession();
+		User user;
+		// in queries, you must use the Java side name, not the actual table name, 
+		// so the names are case sensitive
+		String query = "from User u where u.id=:id";
+		Query<User> q = s.createQuery(query, User.class);
+		q.setParameter("id", Id);
+		user = q.uniqueResult();
+		return user;
+	
+	}
 }
