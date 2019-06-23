@@ -1,4 +1,10 @@
-<nav-bar [otherLinks]="[]"></nav-bar>
+<nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
 <form [formGroup]="form" (ngSubmit)="submit()">
   <label for="schedules">Schedules</label>
   <select formControlName="schedules" id="schedules">

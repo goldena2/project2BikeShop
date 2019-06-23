@@ -1,3 +1,4 @@
+import { SaleService } from './../sale.service';
 import { CurrUserService } from './../curr-user.service';
 import { AllProductsService } from './../all-products.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,15 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   products;
-  constructor(private productListBuilder: AllProductsService, private getUser: CurrUserService) { }
+  sales;
+  constructor(private productListBuilder: AllProductsService, private getUser: CurrUserService, private saleService: SaleService) { }
 
-ngOnInit() {
-  this.productListBuilder.getProducts().subscribe(data =>{
-    if (data != null){
-      console.log('Getting new data:');
-      console.log(data);
-      this.products = data;
-    }
-});
-}
+  ngOnInit() {
+    this.productListBuilder.getProducts().subscribe(data =>{
+      if (data != null){
+        console.log('Getting new product list data:');
+        console.log(data);
+        this.products = data;
+      }
+    });
+    this.saleService.getSales().subscribe(salesData =>{
+      if(salesData != null){
+        console.log('Sales data found.');
+        console.log(salesData);
+        console.log(salesData[0]['productID']);
+        this.sales = salesData;
+      }
+    });
+  }
 }
