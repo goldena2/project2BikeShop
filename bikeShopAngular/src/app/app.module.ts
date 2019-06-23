@@ -38,8 +38,9 @@ import { PersonalScheduleComponent } from './personal-schedule/personal-schedule
 import { SalesComponent } from './sales/sales.component';
 import { ScheduleService } from './schedule.service';
 import { PersonalScheduleShiftComponent } from './personal-schedule-shift/personal-schedule-shift.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { GetEmployeesService } from './get-employees.service'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
