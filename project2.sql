@@ -49,7 +49,7 @@ create table product(
 	name varchar(16) not null,
 	upc varchar(24) not null,
 	price number not null,
-	description varchar(64) not null,
+	description varchar(256) not null,
 	stock number not null,
     image varchar2(300),
     type_id number,
@@ -166,8 +166,8 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
     
-ALTER TABLE sales ADD CONSTRAINT FK_salesid_productid
-    FOREIGN KEY (product_id) REFERENCES product (id);
+--ALTER TABLE sales ADD CONSTRAINT FK_salesid_productid
+--    FOREIGN KEY (product_id) REFERENCES product (id);
 
 /*******************************************************************************
 Creating the Sequences

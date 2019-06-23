@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,18 +21,37 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.beans.CreateAccountResponse;
 import com.revature.beans.Invoice;
 import com.revature.beans.Product;
+import com.revature.beans.Sale;
 import com.revature.data.ProductDAO;
+import com.revature.data.SaleDAO;
 
 @CrossOrigin
 @RestController
 public class ProductController {
 	@Autowired
 	private ProductDAO pd;
+	@Autowired
+	private SaleDAO sd;
 	private ObjectMapper om = new ObjectMapper();
 	@GetMapping(value="/products")
 	public List<Product> getProducts(){
 		List<Product> productList = new ArrayList<Product>();
+		List<Sale> saleList = new ArrayList<Sale>();
 		productList = pd.getProducts();
+		saleList = sd.getSales();
+		System.out.println(productList);
+		for (Product product : productList) {
+			System.out.println(product);
+			for (Sale sale : saleList) {
+				if (product.getId() == sale.getProductID() & sale.getDiscount() != 0) {
+					product.setPrice((round(product.getPrice()*((100 - sale.getDiscount())/100.0f),2)));
+					System.out.println(product.getPrice());
+					saleList.remove(sale);
+					break;
+				}
+			}
+		}
+		System.out.println(productList);
 		return productList;
 	}
 	
@@ -64,4 +85,11 @@ public class ProductController {
 		return pd.createInvoice(invoice);
 	}
 
+	
+	public static double round(double value, int places) {
+	    if (places < 0) throw new IllegalArgumentException();
+	    BigDecimal bd = new BigDecimal(value);
+	    bd = bd.setScale(places, RoundingMode.HALF_UP);
+	    return bd.doubleValue();
+	}
 }
