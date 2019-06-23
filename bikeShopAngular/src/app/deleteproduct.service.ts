@@ -10,10 +10,8 @@ export class DeleteproductService {
   constructor(private httpClient :HttpClient, private portNumber : PortConfigService) {   
   }
 
-deleteProduct(id:number){
-  return this.httpClient.delete<void>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/deleteProduct/'+id ,{ 
-    
-});
-}
-                                                 
+  deleteProduct(id:number){
+    return this.httpClient.delete<void>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/deleteProduct/'+id ,{ 
+    });
+  }
 }
