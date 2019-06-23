@@ -3,17 +3,17 @@
 <form [formGroup]="form">
   <div class="form-group">
     Select a product to discount:
-    <select name="productSelect" id="productDiscountSelect">
-      <div *ngFor="let p of products">
-        <option value="{{p['id']}}">{{p['name']}}</option>
-      </div>
+    <!-- <h3 *ngFor="let p of products">
+      {{p['name']}}
+    </h3> -->
+    <select #selectProduct name="productSelect" id="productDiscountSelect">
+        <option *ngFor="let p of this.products" value="{{p['id']}}">{{p['name']}}</option>
     </select>
-    
-    <br>
+    <br><br>
     Choose a discount percentage:
     <input #discount id="discountInput" type="number" name="quantity" min="1" max="100">
-    <br>
-    <input #createDiscount class="btn btn-success" type="button" value="Create Discount">
+    <br><br>
+    <input #createDiscount (click)="createSale(discount.value, selectProduct.value)" class="btn btn-success" type="button" value="Create Discount">
 
   </div>
 </form> 

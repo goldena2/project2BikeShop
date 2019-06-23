@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModule }      from '@angular/core';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
 import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
@@ -13,10 +11,21 @@ import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn, Validators
 export class AddProductComponent implements OnInit {
   form: FormGroup;
   ngOnInit(){
+
+
+    
   }
 
   constructor(private formBuilder: FormBuilder, private productService: ProductService, private router: Router) { 
-    this.form = this.formBuilder.group({});
+    this.form = this.formBuilder.group({
+      //   'pName': ['', Validators.required],
+      //   'upc': ['', Validators.required],
+      //   'price': ['', Validators.required],
+      //   'desc': ['', Validators.required],
+      //   'stock': ['', Validators.required],
+      //   'image': ['', Validators.required],
+      //   'type': ['', Validators.required]
+      });
   }
 
   addProduct(name: string, upc: string, price: number, description: string, stock: number, image: string, type_id: number) {
