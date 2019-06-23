@@ -10,8 +10,11 @@ import { ViewShiftsService } from '../view-shifts.service';
 })
 export class ScheduleListElementComponent implements OnInit {
 @Input() shift: object;
+notGone: boolean;
 
-  constructor(private shiftListBuilder:  ViewShiftsService ,private currUser: CurrUserService, private router: Router) { }
+  constructor(private shiftListBuilder:  ViewShiftsService ,private currUser: CurrUserService, private router: Router) { 
+    this.notGone = true;
+  }
   id: number
   ngOnInit(){
   //   this.shiftListBuilder.getShifts(id).subscribe(data =>{
@@ -21,6 +24,27 @@ export class ScheduleListElementComponent implements OnInit {
   //       this.shifts = data;
   //     }
   // });
+  }
+
+  getTime(time: number): string{
+    let hour = Math.floor(time / 60);
+    if(hour > 12){
+      hour -= 12;
+    }
+    const min = time % 60;
+    let format = hour + ':' + min;
+    if (min === 0){
+      format += '0';
+    }
+    return format;
+  }
+  
+  removeShift(id: number){
+    this.shiftListBuilder.removeShift(id).subscribe(data => {
+        this.notGone = false;
+      }
+    )
+    console.log(id);
   }
 
 

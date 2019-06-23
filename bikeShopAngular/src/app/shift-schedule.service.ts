@@ -25,4 +25,10 @@ export class ShiftScheduleService {
         map((resp) => resp as Shift[])
     );
   }
+
+  removeShift(id: number){
+
+  }
+
+
 }
