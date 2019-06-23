@@ -1,11 +1,15 @@
 package com.revature.data.hibernate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
 import com.revature.beans.CreateAccountResponse;
+import com.revature.beans.Shift;
 import com.revature.beans.User;
 import com.revature.data.UserDAO;
 import com.revature.utils.HibernateUtil;
@@ -82,5 +86,15 @@ public class UserHibernate implements UserDAO {
 		user = q.uniqueResult();
 		return user;
 	
+	}
+
+	@Override
+	public List<User> getEmployees() {
+		List<User> emps = new ArrayList<User>();
+		Session se = hu.getSession(); 
+		String query = "FROM User u where u.title = 2";
+		Query<User> q = se.createQuery(query, User.class);
+		emps = q.getResultList();
+		return emps;
 	}
 }

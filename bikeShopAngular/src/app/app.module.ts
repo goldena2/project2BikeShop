@@ -39,7 +39,7 @@ import { SalesComponent } from './sales/sales.component';
 import { ScheduleService } from './schedule.service';
 import { PersonalScheduleShiftComponent } from './personal-schedule-shift/personal-schedule-shift.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { GetEmployeesService } from './get-employees.service'
 
 @NgModule({
   declarations: [
@@ -71,7 +71,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     PersonalScheduleComponent,
     SalesComponent,
-    PersonalScheduleShiftComponent
+    PersonalScheduleShiftComponent,
   ],
   imports: [
     BrowserModule,
@@ -88,7 +88,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AllProductsService,
     SubmitAvalibiltyService,
     MakePurchaseService,
-    ScheduleService
+    ScheduleService,
+    GetEmployeesService
   ],
   bootstrap: [AppComponent]
 })

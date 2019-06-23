@@ -38,6 +38,7 @@ public class AvalibilityHibernate implements AvalibilityDOA {
 
 	@Override
 	public List<Avalibility> getDayAvalibility(int day) {
+		System.out.println("day " + day);
 		Session s = hu.getSession();
 		// in queries, you must use the Java side name, not the actual table name, 
 		// so the names are case sensitive

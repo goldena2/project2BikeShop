@@ -8,4 +8,8 @@ public interface ShiftDAO {
 
 	public List<Shift> getShifts(int id);
 
+	public void deleteShift(Integer id);
+
+	public void addShift(Shift newShift);
+
 }
