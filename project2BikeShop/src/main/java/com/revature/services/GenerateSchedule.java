@@ -32,7 +32,7 @@ public class GenerateSchedule {
 		final int dayStart = 480;
 		final int dayEnd = 990;
 		int currTime = dayStart;
-		
+		System.out.println(dayAvalibility.size());
 		while(dayAvalibility.size() > 0 && currTime < dayEnd) {
 			int index = findFirstperson(dayAvalibility, currTime);
 			if(index > -1) {
@@ -53,6 +53,7 @@ public class GenerateSchedule {
 		newShift.setScheduleId(id);
 		newShift.setDay(sd.getDay(avalibility.getDateId()));
 		//newShift.setDateId(avalibility.getDateId());
+		System.out.println(newShift);
 		sd.createShift(newShift);
 	}
 	

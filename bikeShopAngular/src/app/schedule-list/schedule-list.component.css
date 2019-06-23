@@ -12,14 +12,6 @@
      background-size: cover;
      position: relative;
      } 
-.btn {
-   background-color: #4CAF50;
-   color: white;
-   border: none;
-   cursor: pointer;
-   opacity: 0.9;
-  
- }
 
  .drop{
    background-color: #4CAF50;
@@ -29,3 +21,19 @@
    opacity: 0.9;
 
  }
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  .cancel-btn{
+    background-color: darkgray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    margin-left: 5px;
+  }

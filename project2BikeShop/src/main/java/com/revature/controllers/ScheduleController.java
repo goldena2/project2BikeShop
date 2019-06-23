@@ -37,7 +37,7 @@ public class ScheduleController {
 	private ShiftDAO shd;
 	private ObjectMapper om = new ObjectMapper();
 	
-	@GetMapping(value="/allSchedules/{scheduleId}")
+	@GetMapping(value="/schedules/{scheduleId}")
 	public List<Shift> getShifts(@PathVariable("scheduleId")int id){
 		List<Shift> shiftList = new ArrayList<Shift>();
 		shiftList = shd.getShifts(id);
@@ -49,6 +49,17 @@ public class ScheduleController {
 	public void generate(@RequestBody String[] dates){
 		System.out.println(Arrays.toString(dates));
 		gs.generate(dates[0], dates[1]);
+	}
+	
+	@PostMapping(value="/schedules/deleteShift")
+	public void deleteShift(@RequestBody Integer id) {
+		shd.deleteShift(id);
+	}
+	
+	@PostMapping(value="/schedules/addShift")
+	public void removeShift(@RequestBody Shift newShift) {
+		System.out.println(newShift);
+		shd.addShift(newShift);
 	}
 	
 	@GetMapping(value="/schedules")
