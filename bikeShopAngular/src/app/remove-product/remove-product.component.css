@@ -7,21 +7,26 @@
     .table th {
         border-top: none; 
     }
-    .column1{
-        width:10%;
-    }
-    .column2{
-        width:40%;
-    }
-    .column3{
-        width:10%;
-    }
-    .column4{
-        width:20%;
-    }
-    .column5{
-        width:20%;
-    }
-    .column6{
-        width:20%;
-    }
+
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        opacity: 0.9;
+       
+      }
+      .bg-img{ 
+        background-image: url("https://images.pexels.com/photos/2372972/pexels-photo-2372972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    
+         /* Control the height of the image */
+         min-height: 380px;
+         width: auto;
+         height: 100%;
+       
+         /* Center and scale the image nicely */
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: relative;
+         } 

@@ -1,7 +1,7 @@
 <nav-bar [otherLinks]="[{'link': 'home', 'name': 'Home'},
 {'link': 'allProducts', 'name': 'All Products'},
 {'link': 'scheduleService', 'name': 'Schedule Services'}]"></nav-bar>
-  <div >
+  <div class = bg-img>
     <h1>Select a product to remove:</h1>
     <select id="remove" name="remove"
     class="form-controller"  #product required name="product" >
@@ -12,7 +12,7 @@
   </select>
 <br /><br />
 
-<input   type="button" value="Remove"
+<input   type="button" value="Remove" class ="btn"
  (click)= "deleteProduct(product.value)"/><br /><br />
 
 
