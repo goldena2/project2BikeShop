@@ -1,24 +1,36 @@
-<nav-bar [otherLinks]="[]"></nav-bar>
+<nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'bikes', 'name': 'Bikes'},
+{'link': 'parts', 'name': 'Parts'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
 <div class="bg-img">
     <form [formGroup]="form" class="container">
       <h1>Add a product</h1>
       <label for="name"><b>Name</b></label>
-      <input class="form-cotrol" #name type="text" placeholder="Enter Name" name="name" required>
+      <input #name class="form-cotrol" type="text" placeholder="Enter Name" name="name">
+      <!-- <div class="alert alert-danger" [hidden]="productName.valid">Required</div> -->
   
       <label for="upc"><b>UPC</b></label>
-      <input required #upc type="text" placeholder="Enter UPC code" name="upc" required>
+      <input required minLength="4" #upc type="text" placeholder="Enter UPC code" name="upc">
+      <!-- <div class="alert alert-danger" [hidden]="upc.valid || !(upc.dirty || upc.touched)">Required</div> -->
 
       <label for="number"><b>Price</b></label>
       <input required #price type="number" placeholder="10.00" minlength="10" maxlength="10" name="number">
+      <!-- <div class="alert alert-danger" [hidden]="price.valid && (price.dirty || price.touched)">Required</div> -->
     
       <label for="desc"><b>Description</b></label>
       <input required #desc class="name" type="text" placeholder="Example description" name="desc">
+      <!-- <div class="alert alert-danger" [hidden]="desc.valid && (stock.dirty || stock.touched)">Required</div> -->
         
       <label for="stock"><b>Stock</b></label>
       <input required #stock class="name" type="number" placeholder="25" name="stock">
+      <!-- <div class="alert alert-danger" [hidden]="stock.valid && (stock.dirty || stock.touched)">Required</div> -->
 
       <label for="image"><b>Image upload</b></label>
       <input required #image class="name" type="text" name="image">
+      <!-- <div class="alert alert-danger" [hidden]="image.valid && (image.dirty || image.touched)">Required</div> -->
 
       <label for="type"><b>Type of Product</b></label>
       <select (change)="log(type.value)" #type required name="type">
@@ -27,6 +39,7 @@
         <option value="2">Part</option>
         <option value="3">Other</option>
       </select>
+      <!-- <div class="alert alert-danger" [hidden]="type.valid && (type.dirty || type.touched)">Required</div> -->
       <!-- <h5>What you picked: {{ type.value }}</h5> -->
 
       <button type="button" 
