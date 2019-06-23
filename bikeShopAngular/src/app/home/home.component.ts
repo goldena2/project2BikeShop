@@ -27,8 +27,6 @@ export class HomeComponent implements OnInit {
     }
     this.links = [
       {'link': 'allProducts', 'name': 'All Products'},
-      {'link': 'bikes', 'name': 'Bikes'},
-      {'link': 'parts', 'name': 'Parts'},
       {'link': 'scheduleService', 'name': 'Schedule Services'}
       ];
       if(this.currUser.getUser['title'] == 1){
