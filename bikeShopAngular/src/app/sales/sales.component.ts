@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { SaleService } from '../sale.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sales',
@@ -12,7 +13,8 @@ import { SaleService } from '../sale.service';
 export class SalesComponent implements OnInit {
   products;
   form: FormGroup;
-  constructor(private formBuilder: FormBuilder, private manageSale: SaleService, private allProducts: AllProductsService) { 
+  constructor(private formBuilder: FormBuilder, private manageSale: SaleService, 
+              private allProducts: AllProductsService) { 
     this.form = this.formBuilder.group({});
   }
 
@@ -26,6 +28,7 @@ export class SalesComponent implements OnInit {
   createSale(discount: number, productID: number){
     console.log('Getting createSale call, sending: ' + discount + ' and: ' + productID);
     this.manageSale.createSale(discount, productID).subscribe(data => {
+      alert('New discount set!');
     });
   }
 }

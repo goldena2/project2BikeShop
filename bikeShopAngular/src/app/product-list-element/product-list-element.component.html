@@ -14,8 +14,15 @@
           <option>4</option>
           <option>5</option>		
         </select> 
-      <button 
-      (click)="makePurchase(purchaseQuantity.value)"
-      id="purchaseBtn" type="button" class="btn btn-success">Purchase</button>
+      <button *ngIf="this.currUser.isCustomer();else employeeButton" 
+        (click)="makePurchase(purchaseQuantity.value)"
+        id="purchaseBtn" type="button" class="btn btn-success">Purchase
+      </button>
+      <ng-template #employeeButton >
+        <button
+        (click)="makePurchase(purchaseQuantity.value)"
+        id="purchaseBtn" type="button" class="btn btn-success">Restock
+        </button>
+      </ng-template>
   </td>
 </tr>

@@ -1,13 +1,9 @@
 <div *ngIf="getType()==='manager'; else regularNavbar"><nav-bar [otherLinks]="[
 {'link': 'allProducts', 'name': 'All Products'},
-{'link': 'bikes', 'name': 'Bikes'},
-{'link': 'parts', 'name': 'Parts'},
 {'link': 'addProduct', 'name': 'Add a Product'}
 ]"></nav-bar></div>
 <ng-template #regularNavbar ><nav-bar #regularNavbar [otherLinks]="[
 {'link': 'allProducts', 'name': 'All Products'},
-{'link': 'bikes', 'name': 'Bikes'},
-{'link': 'parts', 'name': 'Parts'},
 {'link': 'scheduleService', 'name': 'Schedule Services'}
 ]"></nav-bar></ng-template>
 <h1 id="welcomeUser">Welcome {{ getType() }} {{ getCurrUser() }}</h1>
