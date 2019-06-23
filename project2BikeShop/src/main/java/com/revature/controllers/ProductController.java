@@ -39,19 +39,15 @@ public class ProductController {
 		List<Sale> saleList = new ArrayList<Sale>();
 		productList = pd.getProducts();
 		saleList = sd.getSales();
-		System.out.println(productList);
 		for (Product product : productList) {
-			System.out.println(product);
 			for (Sale sale : saleList) {
 				if (product.getId() == sale.getProductID() & sale.getDiscount() != 0) {
 					product.setPrice((round(product.getPrice()*((100 - sale.getDiscount())/100.0f),2)));
-					System.out.println(product.getPrice());
 					saleList.remove(sale);
 					break;
 				}
 			}
 		}
-		System.out.println(productList);
 		return productList;
 	}
 	
