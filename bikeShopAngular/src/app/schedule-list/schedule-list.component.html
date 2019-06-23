@@ -1,6 +1,7 @@
+<div class="bg-img">
 <div >
     <h1>Select a schedule to view:</h1>
-    <select id="view" name="view"
+    <select id="view" name="view" 
     class="form-controller"  #schedule required name="schedule" >
     <option *ngFor="let s of schedules" [value]="s['id']">
       ID: {{s.id}},
@@ -10,7 +11,7 @@
   </option>
   </select>
   <br /><br />
-  <input   type="button" value="View"
+  <input   type="button" value="View"  class="btn" 
   (click)= "getShifts(schedule.value)"/><br /><br />
   <br /><br />
 <div class="shiftsList">
@@ -34,4 +35,5 @@
        
       </tbody>
     </table>
+  </div>
   </div>
