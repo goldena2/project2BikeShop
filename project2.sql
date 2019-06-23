@@ -166,8 +166,8 @@ ALTER TABLE shift ADD CONSTRAINT FK_shiftDateid
 ALTER TABLE shift ADD CONSTRAINT FK_dayid
     FOREIGN KEY (date_id) REFERENCES day_of_week (id);
     
-ALTER TABLE sales ADD CONSTRAINT FK_salesid_productid
-    FOREIGN KEY (product_id) REFERENCES product (id);
+--ALTER TABLE sales ADD CONSTRAINT FK_salesid_productid
+--    FOREIGN KEY (product_id) REFERENCES product (id);
 
 /*******************************************************************************
 Creating the Sequences

@@ -71,7 +71,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     PersonalScheduleComponent,
     SalesComponent,
-    PersonalScheduleShiftComponent
+    PersonalScheduleShiftComponent,
   ],
   imports: [
     BrowserModule,

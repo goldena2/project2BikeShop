@@ -6,14 +6,14 @@
     <!-- <h3 *ngFor="let p of products">
       {{p['name']}}
     </h3> -->
-    <select name="productSelect" id="productDiscountSelect">
+    <select #selectProduct name="productSelect" id="productDiscountSelect">
         <option *ngFor="let p of this.products" value="{{p['id']}}">{{p['name']}}</option>
     </select>
     <br><br>
     Choose a discount percentage:
     <input #discount id="discountInput" type="number" name="quantity" min="1" max="100">
     <br><br>
-    <input #createDiscount class="btn btn-success" type="button" value="Create Discount">
+    <input #createDiscount (click)="createSale(discount.value, selectProduct.value)" class="btn btn-success" type="button" value="Create Discount">
 
   </div>
 </form> 

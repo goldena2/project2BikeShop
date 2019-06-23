@@ -10,6 +10,9 @@ export class SaleService {
   constructor( private httpClient: HttpClient, private portNumber: PortConfigService ) { }
 
   createSale(discount: number, productID: number) {
+    console.log('Getting to create sale request in sale service');
+    console.log('discount: ' + discount);
+    console.log('product: ' + productID);
     return this.httpClient.post<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/createSale', {
       'discount': discount,
       'productID': productID,
@@ -18,6 +21,10 @@ export class SaleService {
   deleteSale(productID: number) {
     return this.httpClient.post<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/deleteSale', {
       'productID': productID
+    })
+  }
+  getSales(){
+    return this.httpClient.get<boolean>('http://localhost:' + this.portNumber.getPort() + '/bikeShop/getSales', {
     })
   }
 }
