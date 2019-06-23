@@ -9,7 +9,7 @@
     <form [formGroup]="form" class="container">
       <h1>Add a product</h1>
       <label for="name"><b>Name</b></label>
-      <input class="form-cotrol" #name type="text" placeholder="Enter Name" name="name" required>
+      <input class="form-cotrol" type="text" placeholder="Enter Name" name="name" required #name>
   
       <label for="upc"><b>UPC</b></label>
       <input required #upc type="text" placeholder="Enter UPC code" name="upc" required>
