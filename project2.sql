@@ -46,12 +46,12 @@ create table title(
 
 create table product(
 	id number not null,
-	name varchar(16) not null,
+	name varchar(50) not null,
 	upc varchar(24) not null,
 	price number not null,
 	description varchar(256) not null,
 	stock number not null,
-    image varchar2(300),
+    image varchar2(1000),
     type_id number,
 	CONSTRAINT product_pk PRIMARY KEY (id)
 );
@@ -222,12 +222,12 @@ values(2, 'part');
 insert into product_type(id, type)
 values(3, 'other');
 
-insert into product(id, name, upc, price, description, stock, type_id)
-values(1,'Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1);
-insert into product(id, name, upc, price, description, stock, type_id)
-values(2,'Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
-insert into product(id, name, upc, price, description, stock, type_id)
-values(3,'Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
+insert into product(id, name, upc, price, description, stock, type_id, image)
+values(1,'Mountain Bike', '1 22222 33333 4', 500, 'A generic mountain bike', 5, 1, 'https://www.rei.com/media/product/119073');
+insert into product(id, name, upc, price, description, stock, type_id, image)
+values(2,'Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1, 'https://vader-prod.s3.amazonaws.com/1557328422-canyon-ultimate-cf-slx-disc-9-0-di2-bike-1557328393.jpg');
+insert into product(id, name, upc, price, description, stock, type_id, image)
+values(3,'Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3, 'https://www.big5sportinggoods.com/catalogimage/img/product/rwd/large/6196_12507_0030_700_large_02.jpg');
 
 commit;
 exit;
