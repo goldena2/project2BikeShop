@@ -1,4 +1,9 @@
+
+
 <tr id="rowElements">
+  <td>
+    <img height="100" width="120" src="{{product['image']}}" alt="">
+  </td>
   <td id="nameElement">
     <div id="productName">{{product['name']}}</div>
     {{product['description']}}
@@ -20,6 +25,7 @@
       </button>
       <ng-template #employeeButton >
         <button
+        style="background-color:coral; border-color: coral"
         (click)="makePurchase(purchaseQuantity.value)"
         id="purchaseBtn" type="button" class="btn btn-success">Restock
         </button>

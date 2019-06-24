@@ -23,9 +23,6 @@ export class ProductListComponent implements OnInit {
     });
     this.saleService.getSales().subscribe(salesData =>{
       if(salesData != null){
-        console.log('Sales data found.');
-        console.log(salesData);
-        console.log(salesData[0]['productID']);
         this.sales = salesData;
       }
     });
