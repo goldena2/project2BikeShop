@@ -6,8 +6,8 @@
 {'link': 'allProducts', 'name': 'All Products'},
 {'link': 'scheduleService', 'name': 'Schedule Services'}
 ]"></nav-bar></ng-template>
-<h1 id="welcomeUser">Welcome {{ getType() }} {{ getCurrUser() }}</h1>
-<div *ngIf="getTypeId() == 3">
+<h1 style="text-align: center" id="welcomeUser">Welcome {{ getType() }} {{ getCurrUser() }}</h1><br>
+<div *ngIf="getTypeId() == 3;else customerHome">
     <form [formGroup]="form">
         <div class="form-group">
             <label for="start">Start day </label>
@@ -20,4 +20,12 @@
         <button type="button" class="btn" (click)="generateSchedule(start.value, end.value)" >Generate Schedule</button>
     </form>
 </div>
+<ng-template #customerHome>
+    <div style="width:60%; margin:auto">
+        <p>Bacon ipsum dolor amet brisket t-bone rump ham hock capicola meatloaf, pancetta burgdoggen swine corned beef short loin picanha salami landjaeger. Venison pork turkey capicola. Ball tip venison hamburger boudin bresaola turducken rump jerky pastrami shankle meatloaf ham hock shank tenderloin leberkas. Rump boudin ribeye kevin jowl bacon prosciutto tail jerky capicola.</p>
+        <p>Swine t-bone turkey tail bresaola sirloin meatball shoulder. Burgdoggen ball tip pancetta, buffalo meatloaf meatball hamburger short ribs alcatra biltong doner pork shank beef cupim. Boudin bacon drumstick beef ribs andouille chicken flank buffalo kevin capicola tenderloin. Turkey bresaola porchetta, shank alcatra bacon cow pork chop drumstick cupim. Salami doner buffalo, cow shank bacon kielbasa flank tri-tip porchetta rump. Flank beef meatloaf tenderloin tongue beef ribs hamburger short loin bacon rump.</p>
+        <p>Cow pancetta sirloin filet mignon chicken, leberkas ribeye frankfurter buffalo strip steak short loin. Tenderloin buffalo pork, beef pork loin tail salami capicola landjaeger prosciutto. Pork loin ham hock biltong, spare ribs burgdoggen pastrami short ribs t-bone drumstick turkey. Pork pork belly tongue filet mignon shoulder. Pork loin ground round pig, rump biltong sirloin kielbasa. Pancetta ball tip beef ribs landjaeger venison, rump short ribs sausage pig spare ribs short loin pork. Swine tongue ham, brisket tri-tip pork belly biltong picanha landjaeger salami strip steak turducken short ribs.</p>
+        <p>Pig meatball buffalo cow, ground round tenderloin porchetta tri-tip pork chop rump alcatra short loin hamburger. Ham hock cupim turkey, jerky pastrami capicola shank. Pork belly pork doner brisket landjaeger sirloin turducken bresaola tongue flank pancetta pig alcatra. Burgdoggen jerky drumstick venison meatloaf ribeye buffalo filet mignon. Ham ham hock corned beef bresaola. Salami fatback burgdoggen, porchetta tenderloin cow landjaeger beef ribs swine. Kielbasa pork loin jerky shank, meatloaf pork chop rump pork belly shankle pork spare ribs brisket t-bone porchetta pancetta.</p>
+    </div>
+</ng-template>
 <app-footer></app-footer>
