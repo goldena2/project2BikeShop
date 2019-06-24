@@ -2,6 +2,6 @@
   <td id="nameElement">
     <div id="shiftDay">{{shift['day']['dayOfTheWeek']}}</div>
   </td>
-  <td class="shiftTime">{{shift['startTime']}}</td>
-  <td class="shiftTime">{{shift['endTime']}}</td>
+  <td class="shiftTime">{{ calcTime(shift['startTime'] )}}</td>
+  <td class="shiftTime">{{ calcTime(shift['endTime']) }}</td>
 </tr>
