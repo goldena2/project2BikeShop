@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class PortConfigService {
   port: number;
   constructor() {
-    this.port = 8081;
+    this.port = 8080;
    }
 
    getPort() {

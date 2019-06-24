@@ -30,6 +30,7 @@ export class AddProductComponent implements OnInit {
 
   addProduct(name: string, upc: string, price: number, description: string, stock: number, image: string, type_id: number) {
     console.log(type_id);
+    window.alert("adding a product.");
     this.productService.create(name, upc, price, description, stock, image, type_id).subscribe(data => {
         if(data != null){
           this.router.navigateByUrl('home');
