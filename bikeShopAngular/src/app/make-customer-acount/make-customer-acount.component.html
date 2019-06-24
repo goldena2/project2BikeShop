@@ -1,4 +1,8 @@
-<nav-bar [otherLinks]="[]"></nav-bar>
+<nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
 <div class="bg-img">
     <form [formGroup]="form" class="container">
       <h1>Make an account</h1>

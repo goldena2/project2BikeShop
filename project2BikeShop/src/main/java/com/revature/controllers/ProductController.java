@@ -53,6 +53,7 @@ public class ProductController {
 	
 	@PostMapping(value="/products")
 	public CreateAccountResponse addProduct(@RequestBody Product p) {
+		System.out.println("inserting a product");
 		System.out.println(p);
 		CreateAccountResponse status = new CreateAccountResponse();
 		status.setSuccess(pd.addProduct(p));

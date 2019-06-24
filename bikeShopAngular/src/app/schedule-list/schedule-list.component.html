@@ -1,3 +1,4 @@
+<div class="bg-img">
 <div >
     <h1>Select a schedule to view:</h1>
     <select id="view" name="view"
@@ -36,9 +37,6 @@
     <button class="btn" (click)="addShift({'userId': employee.value, 'day':day.value, 'startTime': start.value, 'endTime': end.value})" type="button">Add shift</button>
     <button class="cancel-btn btn" (click)="cancel()">Cancel</button>
   </div>
-  <br /><br />
-  <br /><br />
-  <br /><br />
 <div class="shiftsList">
     <table class="table" id="scheduleListTable" >
       <!-- <thead>
@@ -60,4 +58,5 @@
        
       </tbody>
     </table>
+  </div>
   </div>
