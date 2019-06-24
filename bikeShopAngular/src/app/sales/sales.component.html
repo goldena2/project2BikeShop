@@ -1,4 +1,8 @@
-<nav-bar></nav-bar>
+<nav-bar [otherLinks]="[
+{'link': 'home', 'name': 'Home'},
+{'link': 'allProducts', 'name': 'All Products'},
+{'link': 'scheduleService', 'name': 'Schedule Services'}
+]"></nav-bar>
 
 <form [formGroup]="form">
   <div class="form-group">

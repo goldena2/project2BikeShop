@@ -10,6 +10,7 @@ drop table invoice_line cascade constraints;
 drop table availibility cascade constraints;
 drop table shift cascade constraints;
 drop table services cascade constraints;
+drop table sales cascade constraints;
 
 
 
@@ -108,6 +109,13 @@ create table services(
 	CONSTRAINT services_pk PRIMARY KEY (id),
     constraint services_user foreign key (user_id) references users (id)
 );
+
+create table sales(
+    id number not null,
+    product_id number not null,
+    sale number,
+    CONSTRAINT sales_pk PRIMARY KEY (id)
+);
 /*******************************************************************************
    Create Foreign Keys
 ********************************************************************************/
@@ -148,6 +156,7 @@ drop sequence availability_seq;
 drop sequence shift_seq;
 drop sequence schedule_seq;
 drop sequence services_seq;
+drop sequence sales_seq;
 
 create sequence users_seq;
 create sequence product_seq;
@@ -156,6 +165,7 @@ create sequence availability_seq;
 create sequence shift_seq;
 create sequence schedule_seq;
 create sequence services_seq;
+create sequence sales_seq;
 
 create or replace trigger user_pk_trig
 before insert or update on users
@@ -252,15 +262,15 @@ values('Road Bike', '5 66666 77777 8', 300, 'A generic road bike', 3, 1);
 insert into product(name, upc, price, description, stock, type_id)
 values('Tire Pump', '1 11111 11111 1', 25, 'Inflates tires.', 10, 3);
 
-insert into schedule(start_date, end_date)
-values('2019-6-9', '2019-6-15');
-
-insert into shift(user_id, start_time, end_time, date_id, schedule_id)
-values(2,8,5,1,1);
-insert into shift(user_id, start_time, end_time, date_id, schedule_id)
-values(2,8,5,2,1);
-insert into shift(user_id, start_time, end_time, date_id, schedule_id)
-values(3,10,12,2,1);
+--insert into schedule(start_date, end_date)
+--values('2019-6-9', '2019-6-15');
+--
+--insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+--values(2,8,5,1,1);
+--insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+--values(2,8,5,2,1);
+--insert into shift(user_id, start_time, end_time, date_id, schedule_id)
+--values(3,10,12,2,1);
 
 drop trigger user_pk_trig;
 drop trigger product_pk_trig;
