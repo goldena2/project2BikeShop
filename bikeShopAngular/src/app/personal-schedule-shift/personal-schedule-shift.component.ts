@@ -13,4 +13,13 @@ export class PersonalScheduleShiftComponent implements OnInit {
   ngOnInit() {
   }
 
+  calcTime(time:number){
+    let hour = Math.floor(time/60);
+    let min = time%60;
+    if(hour > 12){
+      hour -= 12;
+    }
+    return hour + ':' + (min>=10 ? min : min + '0'); 
+  }
+
 }
